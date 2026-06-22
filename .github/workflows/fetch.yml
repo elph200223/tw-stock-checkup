@@ -1,0 +1,37 @@
+name: 每日自動抓台股資料
+
+on:
+  schedule:
+    # 台灣時間每天早上 08:00(UTC 00:00)。GitHub 排程可能延遲數分鐘,屬正常。
+    - cron: '0 0 * * *'
+  workflow_dispatch:        # 也可在 GitHub 網頁上手動按一下立刻跑
+
+permissions:
+  contents: write           # 允許把抓回來的資料 commit 回 repo
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 取出程式碼
+        uses: actions/checkout@v4
+
+      - name: 安裝 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 抓取最新台股資料
+        run: python3 fetch_data.py
+
+      - name: 有變動才 commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add data.json data.js
+          if git diff --staged --quiet; then
+            echo "資料無變動,不 commit。"
+          else
+            git commit -m "chore: 自動更新台股資料 $(date -u +%Y-%m-%d)"
+            git push
+          fi

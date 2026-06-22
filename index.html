@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台股 財報健檢 + 月營收追蹤</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4F2EC; --card:#FFFFFF; --ink:#1E242C; --sub:#6E6A5F;
+    --line:#E4E0D6; --brand:#0F766E; --brand-soft:#E3F0EE;
+    --green:#2E7D52; --green-bg:#E4F0E8;
+    --amber:#9A6A14; --amber-bg:#F4ECDB;
+    --red:#B23A2E; --red-bg:#F6E6E2;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Noto Sans TC",sans-serif;
+    line-height:1.7; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:100%;
+  }
+  .mono{font-family:"Space Mono",monospace}
+  header{
+    background:var(--bg); border-bottom:2px solid var(--ink);
+    padding:22px 18px 0; position:sticky; top:0; z-index:10;
+  }
+  header h1{
+    font-size:clamp(24px,4.5vw,34px); margin:0; font-weight:900; letter-spacing:-.01em;
+    display:flex; align-items:center; gap:10px;
+  }
+  header .sub{
+    font-family:"Space Mono",monospace; font-size:11.5px; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--brand); margin-top:8px;
+  }
+  .tabs{display:flex; gap:0; margin-top:14px; flex-wrap:wrap}
+  .tab{
+    border:none; border-bottom:3px solid transparent; background:none; color:var(--sub);
+    padding:10px 16px; font-size:15px; font-weight:700; cursor:pointer; margin-bottom:-2px;
+    font-family:"Noto Sans TC",sans-serif;
+  }
+  .tab.active{color:var(--ink); border-bottom-color:var(--brand)}
+  main{max-width:880px; margin:0 auto; padding:22px 22px 60px}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:10px;
+    padding:20px; margin-bottom:18px;
+  }
+  .card h2{font-size:clamp(19px,3vw,24px); margin:0 0 4px; font-weight:900}
+  .card .hint{font-size:13.5px; color:var(--sub); margin:0 0 16px; font-weight:500}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px}
+  label.field{
+    display:flex; flex-direction:column; gap:4px;
+    font-family:"Space Mono",monospace; font-size:11.5px; letter-spacing:.04em; color:var(--sub);
+  }
+  label.field input,label.field select{
+    border:1px solid var(--line); border-radius:7px; padding:9px 11px;
+    font-size:15px; color:var(--ink); background:var(--card); width:100%;
+    font-family:"Space Mono",monospace;
+  }
+  label.field input:focus,select:focus{outline:none; border-color:var(--brand); box-shadow:0 0 0 3px var(--brand-soft)}
+  .btn{
+    border:none; border-radius:7px; padding:10px 18px; font-size:14.5px;
+    cursor:pointer; font-weight:700; font-family:"Noto Sans TC",sans-serif;
+  }
+  .btn.primary{background:var(--ink); color:#fff}
+  .btn.ghost{background:var(--card); border:1px solid var(--line); color:var(--ink); font-weight:500}
+  .btn.danger{background:var(--card); border:1px solid var(--red); color:var(--red); font-weight:500}
+  .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+  .metric{
+    border:1px solid var(--line); border-left:3px solid var(--line);
+    border-radius:8px; padding:13px 16px; margin-bottom:10px; background:var(--card);
+  }
+  .metric .top{display:flex; justify-content:space-between; align-items:baseline; gap:8px}
+  .metric .name{font-weight:700; font-size:14.5px}
+  .metric .val{font-family:"Space Mono",monospace; font-size:22px; font-weight:700; margin-top:2px}
+  .metric .say{font-size:13.5px; color:var(--sub); margin-top:5px; font-weight:500}
+  .badge{
+    font-family:"Space Mono",monospace; font-size:11.5px; padding:3px 10px;
+    border-radius:6px; font-weight:700; white-space:nowrap;
+  }
+  .b-green{background:var(--green-bg); color:var(--green)}
+  .b-amber{background:var(--amber-bg); color:var(--amber)}
+  .b-red{background:var(--red-bg); color:var(--red)}
+  .b-gray{background:#EDEAE1; color:var(--sub)}
+  .l-green{border-left-color:var(--green)}
+  .l-amber{border-left-color:var(--amber)}
+  .l-red{border-left-color:var(--red)}
+  .l-gray{border-left-color:var(--line)}
+  .alert{
+    background:var(--red-bg); border-left:3px solid var(--red); color:var(--ink);
+    border-radius:8px; padding:11px 15px; font-size:13.5px; margin-bottom:10px; font-weight:500;
+  }
+  .alert b{color:var(--red)}
+  select.watch{font-size:15px; padding:9px 11px; border-radius:7px; border:1px solid var(--line); font-family:"Space Mono",monospace}
+  table{width:100%; border-collapse:collapse; font-size:14px; margin-top:8px}
+  th,td{padding:9px 8px; text-align:right; border-bottom:1px solid var(--line)}
+  td{font-family:"Space Mono",monospace}
+  th:first-child,td:first-child{text-align:left}
+  th{color:var(--sub); font-weight:700; font-size:11.5px; letter-spacing:.06em; border-bottom:2px solid var(--ink); font-family:"Space Mono",monospace}
+  .spark{display:flex; align-items:flex-end; gap:4px; height:60px; margin:12px 0}
+  .spark .bar{flex:1; background:var(--brand-soft); border:1px solid var(--brand); border-bottom:none; border-radius:3px 3px 0 0; min-height:2px}
+  .spark .bar.neg{background:var(--red-bg); border-color:var(--red)}
+  .log-item{border:1px solid var(--line); border-left:3px solid var(--brand); border-radius:8px; padding:11px 14px; margin-bottom:9px; background:var(--card)}
+  .log-item .meta{font-size:12px; color:var(--sub); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; font-family:"Space Mono",monospace}
+  .log-item .body{font-size:14px; margin-top:5px; white-space:pre-wrap; font-weight:500}
+  textarea{
+    width:100%; border:1px solid var(--line); border-radius:7px; padding:9px 11px;
+    font-size:15px; font-family:"Noto Sans TC",sans-serif; resize:vertical; min-height:64px; background:var(--card); color:var(--ink);
+  }
+  .pill-row{display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px}
+  .topbar-actions{margin-left:auto; display:flex; gap:8px}
+  small.note{color:var(--sub); font-size:12px; font-weight:500}
+  .legend{font-family:"Space Mono",monospace; font-size:11.5px; color:var(--sub); display:flex; gap:14px; flex-wrap:wrap; margin-top:10px; line-height:1.9}
+  .empty{color:var(--sub); font-size:14px; text-align:center; padding:24px 0; font-weight:500}
+  @media print{
+    header,.tabs,.no-print{display:none!important}
+    body{background:#fff}
+    .card{break-inside:avoid}
+    main{max-width:100%}
+  }
+  @media (max-width:520px){
+    .metric .val{font-size:19px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>📊 台股 財報健檢 + 月營收追蹤</h1>
+  <div class="sub" id="data-status">個人投資工具 · 資料只存在這台裝置的瀏覽器</div>
+  <div class="tabs">
+    <button class="tab active" data-tab="health">① 財報健檢</button>
+    <button class="tab" data-tab="revenue">② 月營收追蹤</button>
+    <button class="tab" data-tab="journal">③ 決策日誌</button>
+  </div>
+</header>
+
+<main>
+  <!-- ===================== 財報健檢 ===================== -->
+  <section id="tab-health">
+    <div class="card no-print">
+      <h2>輸入財報數字</h2>
+      <p class="hint">填一家公司的數字,下方會自動算比率、亮紅綠燈,並用白話解釋每個數字的涵義。單位用「百萬元」或「元」都可以,比率不受單位影響;股價/淨值/EPS 請用「元」。</p>
+      <div class="row" style="margin-bottom:12px">
+        <label class="field" style="flex:1; min-width:160px">
+          公司(從關注名單選,或自行輸入)
+          <select id="h-pick" class="watch"></select>
+        </label>
+        <label class="field" style="flex:1; min-width:160px">
+          資料期間(自由填,例如 2025Q1)
+          <input id="h-period" placeholder="2025Q1">
+        </label>
+      </div>
+      <div class="grid">
+        <label class="field">營業收入<input type="number" id="f-rev" step="any"></label>
+        <label class="field">營業成本<input type="number" id="f-cogs" step="any"></label>
+        <label class="field">毛利<input type="number" id="f-gross" step="any"></label>
+        <label class="field">營業費用<input type="number" id="f-opex" step="any"></label>
+        <label class="field">營業淨利<input type="number" id="f-op" step="any"></label>
+        <label class="field">業外損益<input type="number" id="f-nonop" step="any"></label>
+        <label class="field">所得稅費用<input type="number" id="f-tax" step="any"></label>
+        <label class="field">稅後淨利<input type="number" id="f-net" step="any"></label>
+        <label class="field">總資產<input type="number" id="f-asset" step="any"></label>
+        <label class="field">總負債<input type="number" id="f-liab" step="any"></label>
+        <label class="field">流動資產<input type="number" id="f-ca" step="any"></label>
+        <label class="field">流動負債<input type="number" id="f-cl" step="any"></label>
+        <label class="field">存貨<input type="number" id="f-inv" step="any"></label>
+        <label class="field">股價(元)<input type="number" id="f-price" step="any"></label>
+        <label class="field">每股淨值(元)<input type="number" id="f-bvps" step="any"></label>
+        <label class="field">EPS(元)<input type="number" id="f-eps" step="any"></label>
+      </div>
+      <div class="row" style="margin-top:14px">
+        <button class="btn primary" onclick="runHealth()">健檢分析</button>
+        <button class="btn ghost" onclick="loadHealth()">讀取此公司上次資料</button>
+        <button class="btn ghost" onclick="fillPriceFromAuto()">帶入自動股價</button>
+        <button class="btn ghost" onclick="fillSample()">填入範例(台積電)</button>
+        <button class="btn ghost" onclick="clearHealth()">清空</button>
+      </div>
+      <small class="note">按「健檢分析」會自動把這家公司的數字存到本機,下次選同一家可直接讀取。</small>
+    </div>
+
+    <div id="health-result"></div>
+  </section>
+
+  <!-- ===================== 月營收追蹤 ===================== -->
+  <section id="tab-revenue" style="display:none">
+    <div id="auto-dashboard"></div>
+    <div class="card no-print">
+      <h2>輸入每月營收</h2>
+      <p class="hint">每檔每月填一筆:當月營收、YoY%(與去年同月比)、MoM%(與上月比)。月份格式 YYYY-MM。累積幾個月後,下方會判讀「加速 / 退燒 / 衰退」並提醒趨勢。有自動抓的資料時,可一鍵帶入最新月。</p>
+      <div class="row" style="margin-bottom:12px">
+        <label class="field" style="flex:1; min-width:160px">
+          公司
+          <select id="r-pick" class="watch"></select>
+        </label>
+        <label class="field"><span>月份</span><input id="r-month" placeholder="2025-05"></label>
+        <label class="field"><span>營收(百萬)</span><input type="number" id="r-rev" step="any"></label>
+        <label class="field"><span>YoY %</span><input type="number" id="r-yoy" step="any"></label>
+        <label class="field"><span>MoM %</span><input type="number" id="r-mom" step="any"></label>
+      </div>
+      <div class="row">
+        <button class="btn primary" onclick="addRevenue()">新增 / 更新此月</button>
+        <button class="btn ghost" onclick="fillRevenueFromAuto()">帶入自動抓的最新月</button>
+        <button class="btn ghost" onclick="renderRevenue()">重新整理</button>
+      </div>
+    </div>
+    <div id="revenue-result"></div>
+  </section>
+
+  <!-- ===================== 決策日誌 ===================== -->
+  <section id="tab-journal" style="display:none">
+    <div class="card no-print">
+      <h2>寫一筆決策日誌</h2>
+      <p class="hint">每檔、每個月寫一行當月判斷 + 理由。重開瀏覽器不會消失。</p>
+      <div class="row" style="margin-bottom:10px">
+        <label class="field" style="flex:1; min-width:160px">公司<select id="j-pick" class="watch"></select></label>
+        <label class="field"><span>月份</span><input id="j-month" placeholder="2025-05"></label>
+        <label class="field" style="min-width:140px">判斷
+          <select id="j-verdict">
+            <option value="加速🟢">加速 🟢</option>
+            <option value="觀察🟡">觀察 🟡</option>
+            <option value="退燒🟡">退燒 🟡</option>
+            <option value="衰退🔴">衰退 🔴</option>
+            <option value="加碼">加碼</option>
+            <option value="續抱">續抱</option>
+            <option value="減碼">減碼</option>
+            <option value="出場">出場</option>
+          </select>
+        </label>
+      </div>
+      <textarea id="j-note" placeholder="例:訊芯 6451 — YoY 連三月放大,先進封裝題材延續,續抱,跌破季線再檢討。"></textarea>
+      <div class="row" style="margin-top:10px">
+        <button class="btn primary" onclick="addJournal()">儲存日誌</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="row no-print" style="margin-bottom:6px">
+        <h2 style="margin:0">日誌記錄</h2>
+        <div class="topbar-actions">
+          <button class="btn ghost" onclick="window.print()">列印</button>
+        </div>
+      </div>
+      <div id="journal-list"></div>
+    </div>
+  </section>
+
+  <div class="card no-print" style="text-align:center; background:none; border:none; box-shadow:none">
+    <button class="btn ghost" onclick="exportData()">匯出備份(JSON)</button>
+    <button class="btn ghost" onclick="document.getElementById('importer').click()">匯入備份</button>
+    <input type="file" id="importer" accept="application/json" style="display:none" onchange="importData(event)">
+    <button class="btn danger" onclick="wipeAll()">清除全部資料</button>
+    <div><small class="note">資料儲存在本機瀏覽器(localStorage)。換裝置或清快取前請先匯出備份。</small></div>
+  </div>
+</main>
+
+<!-- 自動抓取的資料(由 fetch_data.py 產生;沒有此檔也不影響手動功能)-->
+<script src="data.js" onerror="window.STOCK_DATA=null"></script>
+<script>
+/* ============ 關注名單 ============ */
+const WATCH = [
+  {code:"2330", name:"台積電", tag:"溫度計"},
+  {code:"2308", name:"台達電"},
+  {code:"4958", name:"臻鼎"},
+  {code:"8996", name:"高力"},
+  {code:"6451", name:"訊芯"},
+  {code:"3081", name:"聯亞"},
+  {code:"3363", name:"上詮"},
+];
+const KEY="twstock_v1";
+const num = v => { const n=parseFloat(v); return isNaN(n)?null:n; };
+const fmt = (n,d=1) => n==null?"—":n.toLocaleString("zh-TW",{minimumFractionDigits:d,maximumFractionDigits:d});
+const pct = (n,d=1) => n==null?"—":fmt(n,d)+"%";
+
+/* ============ 儲存 ============ */
+function load(){ try{return JSON.parse(localStorage.getItem(KEY))||{};}catch(e){return {};} }
+function save(db){ localStorage.setItem(KEY, JSON.stringify(db)); }
+function db(){ const d=load(); d.health=d.health||{}; d.revenue=d.revenue||{}; d.journal=d.journal||[]; return d; }
+
+/* ============ 分頁 ============ */
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
+  document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+  t.classList.add("active");
+  ["health","revenue","journal"].forEach(id=>{
+    document.getElementById("tab-"+id).style.display = (id===t.dataset.tab)?"":"none";
+  });
+});
+
+/* ============ 填關注名單下拉 ============ */
+function fillPicks(){
+  const opts = WATCH.map(w=>`<option value="${w.code}">${w.code} ${w.name}${w.tag?" ("+w.tag+")":""}</option>`).join("");
+  ["h-pick","r-pick","j-pick"].forEach(id=>{ document.getElementById(id).innerHTML=opts; });
+}
+
+/* ===================================================================
+   功能 A：財報健檢
+=================================================================== */
+function readForm(){
+  return {
+    period:document.getElementById("h-period").value.trim(),
+    rev:num(f("f-rev")), cogs:num(f("f-cogs")), gross:num(f("f-gross")),
+    opex:num(f("f-opex")), op:num(f("f-op")), nonop:num(f("f-nonop")),
+    tax:num(f("f-tax")), net:num(f("f-net")), asset:num(f("f-asset")),
+    liab:num(f("f-liab")), ca:num(f("f-ca")), cl:num(f("f-cl")),
+    inv:num(f("f-inv")), price:num(f("f-price")), bvps:num(f("f-bvps")), eps:num(f("f-eps")),
+  };
+}
+const f = id => document.getElementById(id).value;
+
+function calcRatios(d){
+  const r={};
+  // 毛利:若沒填毛利,用 營收-成本 補
+  let gross = d.gross;
+  if(gross==null && d.rev!=null && d.cogs!=null) gross = d.rev - d.cogs;
+  r.grossMargin = (d.rev) ? (gross/d.rev*100) : null;
+  r.opMargin    = (d.rev && d.op!=null) ? (d.op/d.rev*100) : null;
+  r.netMargin   = (d.rev && d.net!=null) ? (d.net/d.rev*100) : null;
+  r.debtRatio   = (d.asset && d.liab!=null) ? (d.liab/d.asset*100) : null;
+  r.currentRatio= (d.cl) ? (d.ca/d.cl) : null;
+  r.quickRatio  = (d.cl && d.ca!=null) ? ((d.ca-(d.inv||0))/d.cl) : null;
+  r.pe          = (d.price!=null && d.eps) ? (d.price/d.eps) : null;
+  r.pb          = (d.price!=null && d.bvps) ? (d.price/d.bvps) : null;
+  return r;
+}
+
+function metric(name, valText, light, say){
+  const cls={green:"l-green",amber:"l-amber",red:"l-red",gray:"l-gray"}[light];
+  const b={green:"b-green",amber:"b-amber",red:"b-red",gray:"b-gray"}[light];
+  const lab={green:"🟢 健康",amber:"🟡 留意",red:"🔴 警示",gray:"— 資料不足"}[light];
+  return `<div class="metric ${cls}">
+    <div class="top"><span class="name">${name}</span>
+      <span class="badge ${b}">${lab}</span></div>
+    <div class="val">${valText}</div>
+    <div class="say">${say}</div></div>`;
+}
+
+function runHealth(){
+  const code=document.getElementById("h-pick").value;
+  const d=readForm();
+  const r=calcRatios(d);
+  const out=[];
+
+  // 毛利率
+  if(r.grossMargin==null) out.push(metric("毛利率","—","gray","需要『營收』與『毛利(或營業成本)』才能算。"));
+  else{
+    let light,say;
+    if(r.grossMargin>40){light="green"; say="高毛利(>40%)。代表產品有定價權、不容易被殺價,通常是技術或品牌護城河。";}
+    else if(r.grossMargin>=10){light="amber"; say="中等毛利(10–40%)。屬於有競爭但仍能賺加工/設計財,要看能不能守住。";}
+    else{light="red"; say="低毛利(<10%)。走量型生意,賺的是辛苦的規模財,景氣或殺價一來最先受傷。";}
+    out.push(metric("毛利率", pct(r.grossMargin), light, say));
+  }
+
+  // 營益率
+  if(r.opMargin==null) out.push(metric("營益率(營業利益率)","—","gray","需要『營收』與『營業淨利』。"));
+  else{
+    let light = r.opMargin>15?"green":(r.opMargin>=5?"amber":"red");
+    out.push(metric("營益率(營業利益率)", pct(r.opMargin), light,
+      "扣掉營業費用後、靠本業真正賺到的比率。這才是公司『會不會做生意』的核心,越高越穩。"));
+  }
+
+  // 淨利率
+  if(r.netMargin==null) out.push(metric("淨利率","—","gray","需要『營收』與『稅後淨利』。"));
+  else{
+    let light = r.netMargin>10?"green":(r.netMargin>=3?"amber":"red");
+    out.push(metric("淨利率", pct(r.netMargin), light,
+      "最後落袋的比率(含業外、稅後)。每 100 元營收,股東實拿約 "+fmt(r.netMargin)+" 元。"));
+  }
+
+  // 業外雷達
+  if(r.netMargin!=null && r.opMargin!=null && r.netMargin>=r.opMargin){
+    out.push(`<div class="alert">⚠️ <b>業外雷達:</b>淨利率(${pct(r.netMargin)})≥ 營益率(${pct(r.opMargin)}),表示獲利有一大塊來自<b>本業以外</b>(如業外收益、處分資產、匯兌)。要去查是不是<b>一次性</b>的，別把它當成本業實力。</div>`);
+  }
+
+  // 負債比
+  if(r.debtRatio==null) out.push(metric("負債比","—","gray","需要『總資產』與『總負債』。"));
+  else{
+    let light,say;
+    if(r.debtRatio>70){light="red"; say="家當七成以上靠借(>70%),財務槓桿偏高,升息或景氣反轉時壓力大,務必盯趨勢。";}
+    else if(r.debtRatio>60){light="amber"; say="家當六成靠借(>60%),偏高要留意趨勢——是越借越多還是逐季下降?";}
+    else{light="green"; say="負債比在 60% 以內,財務結構相對穩健。(製造業含營運負債通常落在 30–55%)";}
+    out.push(metric("負債比", pct(r.debtRatio), light, say));
+  }
+
+  // 流動比
+  if(r.currentRatio==null) out.push(metric("流動比","—","gray","需要『流動資產』與『流動負債』。"));
+  else{
+    let light,say;
+    if(r.currentRatio>1.5){light="green"; say="流動資產是短期負債的 "+fmt(r.currentRatio,2)+" 倍(>1.5),短期還錢能力充足。";}
+    else if(r.currentRatio>=1){light="amber"; say="流動比 1–1.5,還過得去但緩衝不大,景氣差時要多看現金流。";}
+    else{light="red"; say="流動比 <1,短期償債吃緊——一年內要還的比手上能變現的還多,要特別小心。";}
+    out.push(metric("流動比", fmt(r.currentRatio,2)+" 倍", light, say));
+  }
+
+  // 速動比
+  if(r.quickRatio==null) out.push(metric("速動比","—","gray","需要『流動資產、存貨、流動負債』。"));
+  else{
+    let light = r.quickRatio>1?"green":(r.quickRatio>=0.7?"amber":"red");
+    out.push(metric("速動比", fmt(r.quickRatio,2)+" 倍", light,
+      "把『存貨』剔除後的還錢能力(存貨不一定賣得掉)。>1 表示不靠賣庫存也還得出短期負債。"));
+  }
+
+  // PE
+  if(r.pe==null) out.push(metric("本益比 PE","—","gray","需要『股價』與『正的 EPS』。"));
+  else{
+    let light,say;
+    if(r.pe<0){light="red"; say="EPS 為負、PE 無意義。股價是靠『未來預期』撐著,不是靠目前獲利,風險高。";}
+    else if(r.pe>40){light="red"; say="PE 偏高(>40),市場給了很高的成長期待;一旦成長不如預期，回檔會很兇。";}
+    else if(r.pe>25){light="amber"; say="PE 中高(25–40),已反映不少成長預期,進場要挑時機。";}
+    else{light="green"; say="PE 約 "+fmt(r.pe,1)+" 倍,代表用目前獲利約 "+fmt(r.pe,0)+" 年回本,估值相對不貴。";}
+    out.push(metric("本益比 PE", (r.pe<0?"負值":fmt(r.pe,1)+" 倍"), light, say));
+  }
+
+  // PB
+  if(r.pb==null) out.push(metric("股價淨值比 PB","—","gray","需要『股價』與『每股淨值』。"));
+  else{
+    let light,say;
+    if(r.pb>1){light="amber"; say="PB "+fmt(r.pb,2)+" >1,市場願意為它的『未來』多付錢(付出高於帳面淨值)。成長股常見,但別追過頭。";}
+    else{light="green"; say="PB "+fmt(r.pb,2)+" <1,股價低於帳面淨值,市場看法保守甚至看衰——可能是價值低估，也可能有隱憂，要查原因。";}
+    out.push(metric("股價淨值比 PB", fmt(r.pb,2)+" 倍", light, say));
+  }
+
+  const w=WATCH.find(x=>x.code===code);
+  const title = (w?`${w.code} ${w.name}`:code) + (d.period?` · ${d.period}`:"");
+  document.getElementById("health-result").innerHTML =
+    `<div class="card"><div class="row no-print" style="margin-bottom:8px">
+        <h2 style="margin:0">健檢結果 — ${title}</h2>
+        <div class="topbar-actions"><button class="btn ghost" onclick="window.print()">列印</button></div>
+     </div>${out.join("")}
+     <div class="legend">🟢 健康　🟡 留意（看趨勢）　🔴 警示　— 資料不足</div>
+     </div>`;
+
+  // 存檔
+  const data=db(); data.health[code]=d; save(data);
+  document.getElementById("health-result").scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function loadHealth(){
+  const code=document.getElementById("h-pick").value;
+  const d=db().health[code];
+  if(!d){ alert("這家公司還沒有存過資料。"); return; }
+  const map={"h-period":"period","f-rev":"rev","f-cogs":"cogs","f-gross":"gross","f-opex":"opex",
+    "f-op":"op","f-nonop":"nonop","f-tax":"tax","f-net":"net","f-asset":"asset","f-liab":"liab",
+    "f-ca":"ca","f-cl":"cl","f-inv":"inv","f-price":"price","f-bvps":"bvps","f-eps":"eps"};
+  for(const [id,k] of Object.entries(map)) document.getElementById(id).value = d[k]??"";
+  runHealth();
+}
+function clearHealth(){
+  document.getElementById("h-period").value="";
+  ["f-rev","f-cogs","f-gross","f-opex","f-op","f-nonop","f-tax","f-net","f-asset","f-liab","f-ca","f-cl","f-inv","f-price","f-bvps","f-eps"]
+    .forEach(id=>document.getElementById(id).value="");
+  document.getElementById("health-result").innerHTML="";
+}
+function fillSample(){
+  // 台積電示意數字(僅供操作演練,非最新財報)
+  const s={"h-pick":"2330","h-period":"範例","f-rev":625000,"f-cogs":280000,"f-gross":345000,
+    "f-opex":70000,"f-op":275000,"f-nonop":12000,"f-tax":40000,"f-net":247000,
+    "f-asset":5500000,"f-liab":1900000,"f-ca":2100000,"f-cl":900000,"f-inv":250000,
+    "f-price":1000,"f-bvps":180,"f-eps":45};
+  for(const [id,v] of Object.entries(s)) document.getElementById(id).value=v;
+  runHealth();
+}
+
+/* ===================================================================
+   功能 B：月營收追蹤
+=================================================================== */
+function addRevenue(){
+  const code=document.getElementById("r-pick").value;
+  const month=document.getElementById("r-month").value.trim();
+  if(!/^\d{4}-\d{2}$/.test(month)){ alert("月份請用 YYYY-MM,例如 2025-05"); return; }
+  const rec={month, rev:num(f("r-rev")), yoy:num(f("r-yoy")), mom:num(f("r-mom"))};
+  const data=db();
+  data.revenue[code]=data.revenue[code]||[];
+  const arr=data.revenue[code];
+  const i=arr.findIndex(x=>x.month===month);
+  if(i>=0) arr[i]=rec; else arr.push(rec);
+  arr.sort((a,b)=>a.month.localeCompare(b.month));
+  save(data);
+  document.getElementById("r-rev").value=""; document.getElementById("r-yoy").value=""; document.getElementById("r-mom").value="";
+  renderRevenue();
+}
+
+function trendVerdict(arr){
+  // 取最近 3 筆有 yoy 的
+  const ys=arr.filter(x=>x.yoy!=null);
+  if(ys.length===0) return {light:"gray",txt:"尚無 YoY 資料",say:"先輸入幾個月的 YoY 才能判讀趨勢。"};
+  const last=ys[ys.length-1];
+  if(last.yoy<0) return {light:"red",txt:"衰退 🔴",say:`最新月 YoY 已轉負(${pct(last.yoy)})。營收比去年同期還少，本業動能踩煞車。`};
+  // 看最近三個月 yoy 是否連續放大
+  const n=ys.length;
+  if(n>=3){
+    const a=ys[n-3].yoy,b=ys[n-2].yoy,c=ys[n-1].yoy;
+    if(c>b && b>a) return {light:"green",txt:"加速 🟢",say:`YoY 連續三個月放大(${pct(a)}→${pct(b)}→${pct(c)})，成長動能正在增強，這才算成立的趨勢。`};
+    if(c<b) return {light:"amber",txt:"退燒 🟡",say:`YoY 仍為正但開始縮小(${pct(b)}→${pct(c)})，熱度在退，留意是不是趨勢轉折的第一步。`};
+  }
+  return {light:"amber",txt:"觀察 🟡",say:`最新月 YoY 為正(${pct(last.yoy)})，但還看不出連續加速。記住:一個月是雜訊，連續 3 個月才算趨勢。`};
+}
+
+function renderRevenue(){
+  const code=document.getElementById("r-pick").value;
+  const arr=(db().revenue[code]||[]);
+  const w=WATCH.find(x=>x.code===code);
+  const title=w?`${w.code} ${w.name}`:code;
+  if(arr.length===0){
+    document.getElementById("revenue-result").innerHTML=`<div class="card"><div class="empty">「${title}」還沒有月營收資料,上面新增一筆吧。</div></div>`;
+    return;
+  }
+  const v=trendVerdict(arr);
+  // sparkline 用 yoy
+  const ys=arr.map(x=>x.yoy);
+  const maxAbs=Math.max(1,...ys.map(y=>Math.abs(y||0)));
+  const bars=arr.map(x=>{
+    const y=x.yoy||0; const h=Math.max(2,Math.abs(y)/maxAbs*56);
+    return `<div class="bar ${y<0?'neg':''}" style="height:${h}px" title="${x.month} YoY ${pct(x.yoy)}"></div>`;
+  }).join("");
+  const rows=[...arr].reverse().map(x=>{
+    const yc = x.yoy==null?"":(x.yoy<0?'style="color:var(--red)"':'style="color:var(--green)"');
+    return `<tr><td>${x.month}</td><td>${fmt(x.rev,0)}</td><td ${yc}>${pct(x.yoy)}</td><td>${pct(x.mom)}</td>
+      <td class="no-print"><button class="btn ghost" style="padding:3px 8px;font-size:12px" onclick="delRevenue('${code}','${x.month}')">刪</button></td></tr>`;
+  }).join("");
+
+  document.getElementById("revenue-result").innerHTML=`
+    <div class="card">
+      <div class="row no-print" style="margin-bottom:6px">
+        <h2 style="margin:0">${title} — 月營收趨勢</h2>
+        <div class="topbar-actions"><button class="btn ghost" onclick="window.print()">列印</button></div>
+      </div>
+      <div class="metric l-${v.light}">
+        <div class="top"><span class="name">趨勢判讀</span><span class="badge b-${v.light}">${v.txt}</span></div>
+        <div class="say">${v.say}</div>
+      </div>
+      <div class="say" style="font-size:12px;color:var(--sub)">下圖為各月 YoY%(綠=正成長、紅=衰退)</div>
+      <div class="spark">${bars}</div>
+      <table>
+        <thead><tr><th>月份</th><th>營收(百萬)</th><th>YoY</th><th>MoM</th><th class="no-print"></th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+      <div class="legend">規則:YoY 連續放大=加速🟢　YoY 還正但縮小=退燒🟡　YoY 轉負=衰退🔴　·　提醒:一個月是雜訊，連續 3 個月才算趨勢。</div>
+    </div>`;
+}
+function delRevenue(code,month){
+  if(!confirm(`刪除 ${code} ${month} 這筆?`)) return;
+  const data=db(); data.revenue[code]=(data.revenue[code]||[]).filter(x=>x.month!==month); save(data); renderRevenue();
+}
+
+/* ===================================================================
+   功能 C：決策日誌
+=================================================================== */
+function addJournal(){
+  const code=document.getElementById("j-pick").value;
+  const w=WATCH.find(x=>x.code===code);
+  const rec={
+    id:Date.now(), code, name:w?w.name:"",
+    month:document.getElementById("j-month").value.trim(),
+    verdict:document.getElementById("j-verdict").value,
+    note:document.getElementById("j-note").value.trim(),
+    ts:new Date().toLocaleString("zh-TW")
+  };
+  if(!rec.note){ alert("寫一行理由吧。"); return; }
+  const data=db(); data.journal.unshift(rec); save(data);
+  document.getElementById("j-note").value="";
+  renderJournal();
+}
+function delJournal(id){
+  if(!confirm("刪除這筆日誌?")) return;
+  const data=db(); data.journal=data.journal.filter(x=>x.id!==id); save(data); renderJournal();
+}
+function badgeClass(v){
+  if(v.includes("🟢")||v==="加碼") return "b-green";
+  if(v.includes("🔴")||v==="出場") return "b-red";
+  if(v.includes("🟡")||v==="減碼") return "b-amber";
+  return "b-gray";
+}
+function renderJournal(){
+  const list=db().journal;
+  if(list.length===0){ document.getElementById("journal-list").innerHTML=`<div class="empty">還沒有日誌。</div>`; return; }
+  document.getElementById("journal-list").innerHTML=list.map(j=>`
+    <div class="log-item">
+      <div class="meta">
+        <span><b>${j.code} ${j.name}</b> ${j.month?"· "+j.month:""}
+          <span class="badge ${badgeClass(j.verdict)}">${j.verdict}</span></span>
+        <span class="no-print">${j.ts} <button class="btn ghost" style="padding:2px 8px;font-size:12px" onclick="delJournal(${j.id})">刪</button></span>
+      </div>
+      <div class="body">${j.note.replace(/</g,"&lt;")}</div>
+    </div>`).join("");
+}
+
+/* ===================================================================
+   備份 / 還原 / 清除
+=================================================================== */
+function exportData(){
+  const blob=new Blob([JSON.stringify(db(),null,2)],{type:"application/json"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download="台股健檢備份_"+new Date().toISOString().slice(0,10)+".json";
+  a.click();
+}
+function importData(e){
+  const file=e.target.files[0]; if(!file) return;
+  const r=new FileReader();
+  r.onload=()=>{ try{ const d=JSON.parse(r.result); save(d); alert("匯入成功!"); initRender(); }catch(err){ alert("檔案格式有誤。"); } };
+  r.readAsText(file);
+}
+function wipeAll(){
+  if(!confirm("確定清除這台裝置上的全部資料?建議先匯出備份。")) return;
+  localStorage.removeItem(KEY); initRender(); alert("已清除。");
+}
+
+/* ===================================================================
+   階段二:自動抓取資料(來自 data.js;沒有檔案時所有手動功能照常)
+=================================================================== */
+function autoData(){ return (typeof window.STOCK_DATA==="object" && window.STOCK_DATA) ? window.STOCK_DATA : null; }
+
+function renderDataStatus(){
+  const d=autoData();
+  const el=document.getElementById("data-status");
+  if(!el) return;
+  if(!d){ el.textContent="個人投資工具 · 資料只存在這台裝置的瀏覽器 · (尚無自動資料,執行 fetch_data.py 後即自動帶入)"; return; }
+  el.textContent=`個人投資工具 · 自動資料更新於 ${d.meta.fetched_at} · 來源:官方 TWSE + 櫃買 TPEx`;
+}
+
+// 月營收追蹤上方的「自動資料總覽」儀表板
+function renderAutoDashboard(){
+  const box=document.getElementById("auto-dashboard");
+  const d=autoData();
+  if(!box) return;
+  if(!d){ box.innerHTML=""; return; }
+  const rows=WATCH.map(w=>{
+    const s=d.stocks[w.code]; if(!s) return "";
+    const yoy=s.yoy;
+    const yc = yoy==null?"":(yoy<0?'style="color:var(--red)"':'style="color:var(--green)"');
+    const flag = (s.flags&&s.flags.length)?`<span class="badge b-amber" title="${s.flags.join('；')}">⚠️ 需確認</span>`:`<span class="badge b-green">✓</span>`;
+    const nP=(s.price_history||[]).length, nR=(s.rev_history||[]).length;
+    return `<tr class="auto-row" style="cursor:pointer" onclick="toggleAutoDetail('${s.code}')" title="點我看歷史變化">
+      <td>▸ ${s.code} ${s.name}${s.tag?` <small class="note">(${s.tag})</small>`:""}</td>
+      <td>${s.month||"—"}</td>
+      <td>${s.rev==null?"—":fmt(s.rev,0)}</td>
+      <td ${yc}>${pct(yoy)}</td>
+      <td>${pct(s.mom)}</td>
+      <td>${s.price==null?"—":s.price}</td>
+      <td class="no-print">${flag}</td>
+    </tr>
+    <tr id="autodetail-${s.code}" style="display:none"><td colspan="7" style="padding:0">${autoDetailHTML(s)}</td></tr>`;
+  }).join("");
+  box.innerHTML=`<div class="card">
+    <div class="row" style="margin-bottom:4px">
+      <h2 style="margin:0">自動資料總覽</h2>
+      <div class="topbar-actions no-print"><span class="badge b-gray">更新於 ${d.meta.fetched_at}</span></div>
+    </div>
+    <p class="hint">官方一手資料(上市 TWSE、上櫃 TPEx),經合理性與 YoY 交叉驗證。標「⚠️ 需確認」者請人工核對後再採用。營收單位:百萬元。<b>點任一列可展開該檔的歷史變化。</b></p>
+    <table>
+      <thead><tr><th>公司</th><th>資料月</th><th>當月營收(百萬)</th><th>YoY</th><th>MoM</th><th>最新收盤</th><th class="no-print">檢核</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+    <div class="legend">提醒:一個月是雜訊,連續 3 個月才算趨勢。歷史是每次執行 fetch_data.py 累積的——跑越多次,變化看得越清楚。</div>
+  </div>`;
+}
+
+// 展開某檔的歷史變化(股價逐日 + 月營收逐月)
+function autoDetailHTML(s){
+  const ph=(s.price_history||[]), rh=(s.rev_history||[]);
+  // 股價 sparkline
+  let priceBlock="<div class='empty'>尚無股價歷史(每次執行抓取會逐日累積)。</div>";
+  if(ph.length){
+    const vals=ph.map(x=>x.price), mn=Math.min(...vals), mx=Math.max(...vals), rng=Math.max(1,mx-mn);
+    const bars=ph.map(x=>`<div class="bar" style="height:${Math.max(2,(x.price-mn)/rng*52+4)}px" title="${x.date} ${x.price}"></div>`).join("");
+    const prows=[...ph].reverse().slice(0,12).map(x=>`<tr><td>${x.date}</td><td>${x.price}</td><td>${x.change||""}</td></tr>`).join("");
+    priceBlock=`<div class="spark">${bars}</div>
+      <table><thead><tr><th>交易日</th><th>收盤</th><th>漲跌</th></tr></thead><tbody>${prows}</tbody></table>`;
+  }
+  // 月營收 YoY 趨勢
+  let revBlock="<div class='empty'>尚無月營收歷史。</div>";
+  if(rh.length){
+    const ys=rh.map(x=>x.yoy||0), ma=Math.max(1,...ys.map(Math.abs));
+    const bars=rh.map(x=>{const y=x.yoy||0;return `<div class="bar ${y<0?'neg':''}" style="height:${Math.max(2,Math.abs(y)/ma*52)}px" title="${x.month} YoY ${pct(x.yoy)}"></div>`;}).join("");
+    const rrows=[...rh].reverse().slice(0,12).map(x=>{const yc=x.yoy==null?"":(x.yoy<0?'style="color:var(--red)"':'style="color:var(--green)"');return `<tr><td>${x.month}</td><td>${fmt(x.rev,0)}</td><td ${yc}>${pct(x.yoy)}</td><td>${pct(x.mom)}</td></tr>`;}).join("");
+    revBlock=`<div class="say" style="font-size:12px;color:var(--sub)">各月 YoY%(綠=正、紅=負)</div>
+      <div class="spark">${bars}</div>
+      <table><thead><tr><th>資料月</th><th>營收(百萬)</th><th>YoY</th><th>MoM</th></tr></thead><tbody>${rrows}</tbody></table>`;
+  }
+  return `<div style="background:var(--bg); border-top:1px solid var(--line); padding:14px 16px">
+    <div class="lbl-mini" style="font-family:'Space Mono',monospace;font-size:11.5px;color:var(--brand);letter-spacing:.12em;margin-bottom:4px">股價歷史 · ${s.code} ${s.name}</div>
+    ${priceBlock}
+    <div class="lbl-mini" style="font-family:'Space Mono',monospace;font-size:11.5px;color:var(--brand);letter-spacing:.12em;margin:16px 0 4px">月營收歷史</div>
+    ${revBlock}
+  </div>`;
+}
+function toggleAutoDetail(code){
+  const el=document.getElementById("autodetail-"+code);
+  if(el) el.style.display = (el.style.display==="none")?"":"none";
+}
+
+// 把某檔自動抓到的最新月營收,帶入下方輸入欄
+function fillRevenueFromAuto(){
+  const d=autoData();
+  if(!d){ alert("目前沒有自動資料。請先在電腦執行 fetch_data.py 產生 data.js。"); return; }
+  const code=document.getElementById("r-pick").value;
+  const s=d.stocks[code];
+  if(!s||s.rev==null){ alert("這檔目前沒有自動營收資料。"); return; }
+  if(s.flags&&s.flags.length && !confirm(`注意:此筆有檢核警示\n${s.flags.join('\n')}\n\n仍要帶入嗎?`)) return;
+  document.getElementById("r-month").value=s.month||"";
+  document.getElementById("r-rev").value=s.rev!=null?Math.round(s.rev):"";
+  document.getElementById("r-yoy").value=s.yoy!=null?s.yoy.toFixed(2):"";
+  document.getElementById("r-mom").value=s.mom!=null?s.mom.toFixed(2):"";
+}
+
+// 財報健檢:把自動抓到的最新股價帶入
+function fillPriceFromAuto(){
+  const d=autoData();
+  if(!d){ alert("目前沒有自動資料。請先在電腦執行 fetch_data.py 產生 data.js。"); return; }
+  const code=document.getElementById("h-pick").value;
+  const s=d.stocks[code];
+  if(!s||s.price==null){ alert("這檔目前沒有自動股價。"); return; }
+  document.getElementById("f-price").value=s.price;
+  alert(`已帶入 ${s.code} ${s.name} 收盤價 ${s.price} 元(${s.price_date||""},來源 ${s.price_source||""})。\n每股淨值與 EPS 屬季財報,仍需手動填。`);
+}
+
+/* ============ 初始化 ============ */
+function initRender(){ renderRevenue(); renderJournal(); renderAutoDashboard(); renderDataStatus(); }
+fillPicks();
+initRender();
+</script>
+</body>
+</html>
