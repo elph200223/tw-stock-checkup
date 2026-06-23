@@ -36,5 +36,19 @@ python3 fetch_data.py
 - 財報那 16 格屬季報(MOPS),目前仍手動填,最可靠。自動只負責「月營收 + 股價」。
 - 換裝置或清瀏覽器快取前,用 app 內「匯出備份」保存你的日誌與輸入。
 
-## 階段二 B(待辦)
-用 GitHub Actions 每天排程跑 `fetch_data.py`、自動 commit `data.js`,讓資料免手動更新。需先建立 GitHub repo。
+## 選股評等系統(已完成,階段一~四)
+在月營收工具之上,另一套「抓資料→雙來源交叉核實→框架計算→評等排序」系統:
+
+- `common.py` — 抓取/限流/快取/核實共用工具(每數字帶 {value, source, verify_status, fetch_time})
+- `verify.py` — 雙來源交叉核實(`python3 verify.py 2330`):股價、EPS 各兩來源比對,印誤差與 verified/minor_diff/unverified
+- `analyze.py` + `report.py` — 單檔完整分析(`python3 analyze.py 2330 > 2330.md`):健檢五問題+估值+月營收+黃金配對
+- `score.py` + `report_all.py` — 全名單批次評等排序(`python3 report_all.py`):透明加權(體質40/估值30/動能30)、一票否決,輸出 `report_all.md` 與 `ratings.js/json`
+- webapp「★ 評等排序」分頁讀 `ratings.js`,點任一列看評分理由與核實徽章
+
+最高原則:抓不到/對不上 → 標「存疑、不評等」,絕不硬填、不瞎猜。判讀只講「反映什麼/風險在哪」,不講買賣。
+
+半自動需手動補:營業現金流、存貨(速動比)、業外一次性、附註、PEG。
+
+### 全自動排程
+`.github/workflows/fetch.yml` 每天台灣 08:00 雲端跑 `fetch_data.py` + `report_all.py`,有變動才自動 commit。
+網址(GitHub Pages):https://elph200223.github.io/tw-stock-checkup/ — 手機/電腦開即看最新,無需終端機。
