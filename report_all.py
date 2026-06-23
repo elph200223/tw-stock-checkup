@@ -13,6 +13,7 @@ import json
 from common import now_tpe
 from analyze import analyze, NAME, MARKET
 from score import evaluate, WEIGHTS
+from report import explain
 
 # AI 供應鏈關注名單(角色標註;可擴充)
 WATCHLIST = [
@@ -45,6 +46,7 @@ def main():
         ev["pb"] = R["pb"].get("value")
         ev["rev_yoy"] = R.get("rev_yoy", {}).get("value")
         ev["rev_month"] = R.get("rev_month")
+        ev["explain"] = explain(R)
         results.append(ev)
 
     rated = sorted([r for r in results if r["rated"]], key=lambda x: -x["total"])

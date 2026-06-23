@@ -185,3 +185,74 @@ def three_say(gm, om, nm):
     drop1 = 100 - gm  # 營收→毛利 被成本吃掉
     drop2 = gm - om   # 毛利→營益 被營業費用吃掉
     return f"成本吃掉約 {drop1:.0f} 個百分點、營業費用再吃約 {drop2:.0f} 個百分點。"
+
+
+def om_say(v):
+    if v is None: return "資料不足。"
+    if v > 15: return f"營益率 {v:.1f}%:本業很會賺,扣掉人事、行銷等營業費用後還留下不少,是真功夫。"
+    if v >= 5: return f"營益率 {v:.1f}%:本業有賺,但營業費用吃掉不少,獲利空間中等。"
+    return f"營益率 {v:.1f}%:本業幾乎沒利潤,費用幾乎把毛利吃光,要小心。"
+
+
+def nm_say(v):
+    if v is None: return "資料不足。"
+    if v > 10: return f"淨利率 {v:.1f}%:每賣 100 元,最後股東實拿約 {v:.0f} 元,落袋能力強。"
+    if v >= 3: return f"淨利率 {v:.1f}%:每賣 100 元最後留下約 {v:.0f} 元,普通水準。"
+    return f"淨利率 {v:.1f}%:每 100 元營收最後只剩 {v:.1f} 元,很薄,易受波動影響。"
+
+
+# ── 評等分頁用:像老師講解的整段白話 ──
+def explain(R):
+    """產生白話教學內容:一句話總結 + 各指標解釋 + 要觀察什麼。"""
+    gm, om, nm = R["gross_margin"], R["op_margin"], R["net_margin"]
+    dr, cr = R["debt_ratio"], R["current_ratio"]
+    pe, pb = R["pe"].get("value"), R["pb"].get("value")
+    eps = R["eps"].get("value") or 0
+    yoy = R.get("rev_yoy", {}).get("value")
+    name = R["name"]
+
+    # 體質一句
+    if None not in (gm, om, nm, dr, cr):
+        strong = (gm > 40 and nm > 10 and (dr or 0) < 60)
+        if strong: body = "很會賺錢(毛利、淨利都高)、負債也低,財務體質很健康"
+        elif nm and nm > 3: body = "本業有賺、財務還算穩,但有一兩個指標普通"
+        else: body = "賺錢能力或財務結構有明顯弱點"
+    else:
+        body = "部分體質指標資料不足"
+
+    # 動能一句
+    if yoy is None: mom = "月營收資料不足"
+    elif yoy > 20: mom = f"月營收還在高速成長(最新月年增 {yoy:.0f}%)"
+    elif yoy >= 0: mom = f"月營收溫和成長(年增 {yoy:.0f}%)"
+    else: mom = f"月營收在衰退(年增 {yoy:.0f}%),動能踩煞車"
+
+    # 估值一句
+    if eps > 0 and pe is not None:
+        if pe > 40: val = f"但目前股價偏貴(本益比 {pe:.0f} 倍),等於先付了很多未來的成長;一旦成長不如預期,容易回檔"
+        elif pe > 25: val = f"股價不算便宜(本益比 {pe:.0f} 倍),已反映不少成長期待"
+        else: val = f"而且現在股價不算貴(本益比 {pe:.0f} 倍)"
+    elif pb is not None:
+        val = f"由於獲利不穩,改用股價淨值比看:目前 {pb:.1f} 倍" + ("(高,多在反映未來預期)" if pb > 3 else "")
+    else:
+        val = "估值資料不足"
+
+    summary = f"{name}:{body},{mom},{val}。"
+
+    health = []
+    if gm is not None: health.append({"name": "毛利率", "val": f"{gm:.1f}%", "light": gm_light(gm), "say": gm_say(gm)})
+    if om is not None: health.append({"name": "營益率", "val": f"{om:.1f}%", "light": om_light(om), "say": om_say(om)})
+    if nm is not None: health.append({"name": "淨利率", "val": f"{nm:.1f}%", "light": nm_light(nm), "say": nm_say(nm)})
+    if dr is not None: health.append({"name": "負債比", "val": f"{dr:.1f}%", "light": dr_light(dr), "say": dr_say(dr)})
+    if cr is not None: health.append({"name": "流動比", "val": f"{cr:.2f} 倍", "light": cr_light(cr), "say": cr_say(cr)})
+
+    valuation = (pe_say(pe) if eps > 0 else pb_say(pb))
+    if eps > 0 and yoy is not None and pe is not None and pe > 40 and yoy > 30:
+        valuation += f" 不過它月營收年增 {yoy:.0f}%、成長很快——高成長配高本益比未必真的貴,這要靠 PEG(本益成長比)判斷,目前資料還不夠算,先別只看 PE 就說太貴。"
+
+    watch = ("要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。"
+             "② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。"
+             "③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。")
+
+    return {"summary": summary, "health": health, "valuation": valuation,
+            "momentum_say": mom + "。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。", "watch": watch,
+            "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"}

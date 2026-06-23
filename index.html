@@ -768,18 +768,37 @@ function renderRating(){
 }
 
 function rateDetailHTML(r){
-  const sub=r.subs||{};
-  const lines=["體質","估值","動能"].map(k=>{
-    const s=sub[k]; if(!s) return "";
-    return `<div style="margin:4px 0"><b>${k}分 ${fmtNum(s[0],0)}</b>:${s[1]||""}</div>`;
-  }).join("");
+  const sub=r.subs||{}, ex=r.explain||{};
+  const dot=l=>({green:"🟢",amber:"🟡",red:"🔴",gray:"⚪"}[l]||"⚪");
+  // 體質:每個指標一行白話
+  const health=(ex.health||[]).map(h=>
+    `<tr><td style="white-space:nowrap">${dot(h.light)} ${h.name}</td><td style="white-space:nowrap">${h.val}</td><td>${h.say}</td></tr>`
+  ).join("");
   const ver=Object.entries(r.verify_summary||{}).map(([k,v])=>{
     const b=VBADGE[v]||VBADGE["n/a"]; return `<span class="badge ${b[0]}" style="margin:2px">${k} ${b[1]}</span>`;
   }).join(" ");
-  return `<div style="background:var(--bg);border-top:1px solid var(--line);padding:14px 16px">
-    ${lines}
-    <div style="margin-top:8px">關鍵數字核實:${ver}</div>
-    <div style="margin-top:6px"><small class="note">財報期別 ${r.period||"—"} · 最新月 ${r.rev_month||"—"} · 股價 ${fmtNum(r.price,2)}</small></div>
+  const sc=k=>fmtNum((sub[k]||[])[0],0);
+  return `<div style="background:var(--bg);border-top:1px solid var(--line);padding:16px">
+    <div style="background:var(--brand-soft);border-left:3px solid var(--brand);border-radius:8px;padding:12px 14px;font-size:14.5px;font-weight:500;margin-bottom:14px">
+      📌 ${ex.summary||"—"}
+    </div>
+
+    <div class="lbl-mini" style="font-family:'Space Mono',monospace;font-size:11.5px;color:var(--brand);letter-spacing:.1em;margin:0 0 4px">① 財務體質　體質分 ${sc('體質')}/100</div>
+    <table style="margin-bottom:14px"><tbody>${health||'<tr><td>資料不足</td></tr>'}</tbody></table>
+
+    <div class="lbl-mini" style="font-family:'Space Mono',monospace;font-size:11.5px;color:var(--brand);letter-spacing:.1em;margin:0 0 4px">② 估值(貴不貴)　估值分 ${sc('估值')}/100</div>
+    <div style="font-size:14px;margin-bottom:14px">${ex.valuation||"—"}</div>
+
+    <div class="lbl-mini" style="font-family:'Space Mono',monospace;font-size:11.5px;color:var(--brand);letter-spacing:.1em;margin:0 0 4px">③ 成長動能(月營收)　動能分 ${sc('動能')}/100</div>
+    <div style="font-size:14px;margin-bottom:14px">${ex.momentum_say||"—"}</div>
+
+    <div style="background:var(--amber-bg);border-left:3px solid var(--amber);border-radius:8px;padding:11px 14px;font-size:13.5px;margin-bottom:12px">
+      🔎 ${ex.watch||""}
+    </div>
+
+    <div style="font-size:13px;color:var(--sub);margin-bottom:8px">${ex.score_scale||""}</div>
+    <div style="margin-bottom:6px;font-size:13px">關鍵數字核實:${ver}</div>
+    <div><small class="note">財報期別 ${r.period||"—"} · 最新月 ${r.rev_month||"—"} · 股價 ${fmtNum(r.price,2)}</small></div>
   </div>`;
 }
 function toggleRateDetail(code){
