@@ -26,8 +26,14 @@ def now_tpe():
     return datetime.now(TPE).strftime("%Y-%m-%d %H:%M")
 
 
+_MEM = {}  # 同一次執行的記憶體快取:同一個 URL 只打一次 API(批次防封關鍵)
+
+
 def fetch(url, label="", sleep=2.0, retries=3, cache=True):
-    """抓 JSON;含 request 間 sleep、retry 上限;成功後存 raw/ 快取(API 掛了可回退)。"""
+    """抓 JSON;含 request 間 sleep、retry 上限;成功後存 raw/ 快取(API 掛了可回退)。
+    同一次執行中,相同 URL 直接回傳記憶體快取,不重複打 API。"""
+    if url in _MEM:
+        return _MEM[url]
     fname = None
     if cache:
         os.makedirs(RAW_DIR, exist_ok=True)
@@ -43,6 +49,7 @@ def fetch(url, label="", sleep=2.0, retries=3, cache=True):
             if fname:
                 with open(fname, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False)
+            _MEM[url] = data
             return data
         except Exception as e:
             last = e

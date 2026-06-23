@@ -21,17 +21,20 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: 抓取最新台股資料
+      - name: 抓取最新台股資料(月營收+股價)
         run: python3 fetch_data.py
+
+      - name: 跑評等(健檢+估值+月營收,雙來源核實+排序)
+        run: python3 report_all.py
 
       - name: 有變動才 commit
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add data.json data.js
+          git add data.json data.js ratings.json ratings.js report_all.md
           if git diff --staged --quiet; then
             echo "資料無變動,不 commit。"
           else
-            git commit -m "chore: 自動更新台股資料 $(date -u +%Y-%m-%d)"
+            git commit -m "chore: 自動更新台股資料與評等 $(date -u +%Y-%m-%d)"
             git push
           fi

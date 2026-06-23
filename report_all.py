@@ -50,9 +50,13 @@ def main():
     rated = sorted([r for r in results if r["rated"]], key=lambda x: -x["total"])
     unrated = [r for r in results if not r["rated"]]
 
-    # ── ratings.json(階段四前端用)──
+    # ── ratings.json + ratings.js(階段四前端用;.js 供 file:// 雙擊讀取)──
+    payload = {"updated": now_tpe(), "weights": WEIGHTS,
+               "rated": rated, "unrated": unrated, "results": results}
     with open("ratings.json", "w", encoding="utf-8") as f:
-        json.dump({"updated": now_tpe(), "weights": WEIGHTS, "results": results}, f, ensure_ascii=False, indent=2)
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+    with open("ratings.js", "w", encoding="utf-8") as f:
+        f.write("window.RATINGS = " + json.dumps(payload, ensure_ascii=False, indent=2) + ";\n")
 
     # ── Markdown 總報告 ──
     L = []

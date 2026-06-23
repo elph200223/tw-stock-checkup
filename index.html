@@ -130,15 +130,21 @@
   <h1>📊 台股 財報健檢 + 月營收追蹤</h1>
   <div class="sub" id="data-status">個人投資工具 · 資料只存在這台裝置的瀏覽器</div>
   <div class="tabs">
-    <button class="tab active" data-tab="health">① 財報健檢</button>
+    <button class="tab active" data-tab="rating">★ 評等排序</button>
+    <button class="tab" data-tab="health">① 財報健檢</button>
     <button class="tab" data-tab="revenue">② 月營收追蹤</button>
     <button class="tab" data-tab="journal">③ 決策日誌</button>
   </div>
 </header>
 
 <main>
+  <!-- ===================== 評等排序 ===================== -->
+  <section id="tab-rating">
+    <div id="rating-result"></div>
+  </section>
+
   <!-- ===================== 財報健檢 ===================== -->
-  <section id="tab-health">
+  <section id="tab-health" style="display:none">
     <div class="card no-print">
       <h2>輸入財報數字</h2>
       <p class="hint">填一家公司的數字,下方會自動算比率、亮紅綠燈,並用白話解釋每個數字的涵義。單位用「百萬元」或「元」都可以,比率不受單位影響;股價/淨值/EPS 請用「元」。</p>
@@ -256,6 +262,8 @@
 
 <!-- 自動抓取的資料(由 fetch_data.py 產生;沒有此檔也不影響手動功能)-->
 <script src="data.js" onerror="window.STOCK_DATA=null"></script>
+<!-- 評等資料(由 report_all.py 產生)-->
+<script src="ratings.js" onerror="window.RATINGS=null"></script>
 <script>
 /* ============ 關注名單 ============ */
 const WATCH = [
@@ -281,7 +289,7 @@ function db(){ const d=load(); d.health=d.health||{}; d.revenue=d.revenue||{}; d
 document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
   document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
   t.classList.add("active");
-  ["health","revenue","journal"].forEach(id=>{
+  ["rating","health","revenue","journal"].forEach(id=>{
     document.getElementById("tab-"+id).style.display = (id===t.dataset.tab)?"":"none";
   });
 });
@@ -714,8 +722,73 @@ function fillPriceFromAuto(){
   alert(`已帶入 ${s.code} ${s.name} 收盤價 ${s.price} 元(${s.price_date||""},來源 ${s.price_source||""})。\n每股淨值與 EPS 屬季財報,仍需手動填。`);
 }
 
+/* ===================================================================
+   ★ 評等排序(讀 ratings.js,由 report_all.py 每日自動產生)
+=================================================================== */
+function fmtNum(v,d=1,suf=""){ return (v==null)?"—":Number(v).toLocaleString("zh-TW",{minimumFractionDigits:d,maximumFractionDigits:d})+suf; }
+const VBADGE={verified:["b-green","✅核實"],minor_diff:["b-amber","🟡小差異"],unverified:["b-red","🔴未核實"],official_single:["b-gray","🟦官方單一"],"n/a":["b-gray","⚪無"]};
+
+function renderRating(){
+  const box=document.getElementById("rating-result");
+  const R=(typeof window.RATINGS==="object" && window.RATINGS)?window.RATINGS:null;
+  if(!R){ box.innerHTML=`<div class="card"><div class="empty">尚無評等資料。<br>在電腦執行 <b>python3 report_all.py</b> 產生 ratings.js,或等每日自動排程更新。</div></div>`; return; }
+  const w=R.weights||{};
+  const rows=(R.rated||[]).map((r,i)=>{
+    const sub=r.subs||{};
+    const pe = r.pe!=null?("PE "+fmtNum(r.pe,1)):(r.pb!=null?("PB "+fmtNum(r.pb,2)):"—");
+    return `<tr class="auto-row" style="cursor:pointer" onclick="toggleRateDetail('${r.code}')" title="點看評分理由">
+      <td>${i+1}</td>
+      <td>▸ ${r.code} ${r.name}<br><small class="note">${r.role||""}</small></td>
+      <td><b>${fmtNum(r.total,1)}</b></td>
+      <td>${fmtNum(sub['體質']?.[0],0)}</td>
+      <td>${fmtNum(sub['估值']?.[0],0)}</td>
+      <td>${fmtNum(sub['動能']?.[0],0)}</td>
+      <td>${fmtNum(r.gross_margin,1,'%')}</td>
+      <td>${pe}</td>
+      <td style="color:${(r.rev_yoy||0)<0?'var(--red)':'var(--green)'}">${fmtNum(r.rev_yoy,1,'%')}</td>
+    </tr>
+    <tr id="ratedetail-${r.code}" style="display:none"><td colspan="9" style="padding:0">${rateDetailHTML(r)}</td></tr>`;
+  }).join("");
+
+  const unr=(R.unrated||[]).map(r=>`<div class="alert"><b>🔴 ${r.code} ${r.name}</b>(${r.role||""})—— 資料不全,不評等(一票否決)。未核實:${(r.blockers||[]).join("、")||"指標缺漏"}</div>`).join("");
+
+  box.innerHTML=`<div class="card">
+    <div class="row" style="margin-bottom:4px">
+      <h2 style="margin:0">AI 供應鏈 · 評等排序</h2>
+      <div class="topbar-actions no-print"><button class="btn ghost" onclick="window.print()">列印</button></div>
+    </div>
+    <p class="hint">更新於 ${R.updated} · 權重 體質${Math.round((w['體質']||0)*100)}/估值${Math.round((w['估值']||0)*100)}/動能${Math.round((w['動能']||0)*100)} · 官方雙來源核實 · 一票否決:關鍵數字未核實則不評等。點任一列看評分理由。</p>
+    <table>
+      <thead><tr><th>#</th><th>標的</th><th>綜合</th><th>體質</th><th>估值</th><th>動能</th><th>毛利率</th><th>估值</th><th>月營收YoY</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+    ${unr?('<div style="margin-top:12px">'+unr+'</div>'):''}
+    <div class="legend">評分僅含可自動核實之指標;現金流、業外一次性、附註、PEG 屬需補項(需人工查 MOPS),未納入總分。本工具為判讀輔助,非投資建議。</div>
+  </div>`;
+}
+
+function rateDetailHTML(r){
+  const sub=r.subs||{};
+  const lines=["體質","估值","動能"].map(k=>{
+    const s=sub[k]; if(!s) return "";
+    return `<div style="margin:4px 0"><b>${k}分 ${fmtNum(s[0],0)}</b>:${s[1]||""}</div>`;
+  }).join("");
+  const ver=Object.entries(r.verify_summary||{}).map(([k,v])=>{
+    const b=VBADGE[v]||VBADGE["n/a"]; return `<span class="badge ${b[0]}" style="margin:2px">${k} ${b[1]}</span>`;
+  }).join(" ");
+  return `<div style="background:var(--bg);border-top:1px solid var(--line);padding:14px 16px">
+    ${lines}
+    <div style="margin-top:8px">關鍵數字核實:${ver}</div>
+    <div style="margin-top:6px"><small class="note">財報期別 ${r.period||"—"} · 最新月 ${r.rev_month||"—"} · 股價 ${fmtNum(r.price,2)}</small></div>
+  </div>`;
+}
+function toggleRateDetail(code){
+  const el=document.getElementById("ratedetail-"+code);
+  if(el) el.style.display=(el.style.display==="none")?"":"none";
+}
+
 /* ============ 初始化 ============ */
-function initRender(){ renderRevenue(); renderJournal(); renderAutoDashboard(); renderDataStatus(); }
+function initRender(){ renderRating(); renderRevenue(); renderJournal(); renderAutoDashboard(); renderDataStatus(); }
 fillPicks();
 initRender();
 </script>
