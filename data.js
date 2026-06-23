@@ -1,13 +1,11 @@
 window.STOCK_DATA = {
   "meta": {
-    "fetched_at": "2026-06-23 16:27",
+    "fetched_at": "2026-06-23 23:49",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
     },
-    "errors": [
-      "tpex_rev: IncompleteRead(15994 bytes read, 476291 more expected)"
-    ],
+    "errors": [],
     "note": "資料為官方一手來源,經合理性與交叉驗證;有 flags 者請人工確認。"
   },
   "stocks": {
@@ -201,19 +199,17 @@ window.STOCK_DATA = {
       "name": "聯亞",
       "market": "TPEx",
       "tag": "",
-      "month": null,
-      "rev": null,
-      "rev_last_year": null,
-      "yoy": null,
-      "mom": null,
-      "rev_source": null,
+      "month": "2026-05",
+      "rev": 405.322,
+      "rev_last_year": 185.217,
+      "yoy": 118.83628392642144,
+      "mom": 2.5225813142312234,
+      "rev_source": "上櫃 TPEx",
       "price": 2285.0,
       "price_date": "2026-06-23",
       "price_change": "-90.00",
       "price_source": "上櫃 TPEx",
-      "flags": [
-        "無當月營收"
-      ],
+      "flags": [],
       "price_history": [
         {
           "date": "2026-06-18",
@@ -240,19 +236,17 @@ window.STOCK_DATA = {
       "name": "上詮",
       "market": "TPEx",
       "tag": "",
-      "month": null,
-      "rev": null,
-      "rev_last_year": null,
-      "yoy": null,
-      "mom": null,
-      "rev_source": null,
+      "month": "2026-05",
+      "rev": 143.8,
+      "rev_last_year": 191.237,
+      "yoy": -24.80534624575788,
+      "mom": 12.393800364224694,
+      "rev_source": "上櫃 TPEx",
       "price": 685.0,
       "price_date": "2026-06-23",
       "price_change": "-27.00",
       "price_source": "上櫃 TPEx",
-      "flags": [
-        "無當月營收"
-      ],
+      "flags": [],
       "price_history": [
         {
           "date": "2026-06-18",
