@@ -36,8 +36,8 @@ def load(code, market):
         raw["price_daily"] = pick(fetch("https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL", "每日收盤"), "Code", code)
         raw["rev"] = pick(fetch("https://openapi.twse.com.tw/v1/opendata/t187ap05_L", "月營收"), "公司代號", code)
     else:
-        raw["income"] = pick(fetch("https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap06_O", "綜合損益表"), "SecuritiesCompanyCode", code)
-        raw["balance"] = pick(fetch("https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap07_O", "資產負債表"), "SecuritiesCompanyCode", code)
+        raw["income"] = pick(fetch("https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap06_O_ci", "綜合損益表"), ("公司代號", "SecuritiesCompanyCode"), code)
+        raw["balance"] = pick(fetch("https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap07_O_ci", "資產負債表"), ("公司代號", "SecuritiesCompanyCode"), code)
         raw["bwibbu"] = pick(fetch("https://www.tpex.org.tw/openapi/v1/tpex_mainboard_peratio_analysis", "PE/PB"), "SecuritiesCompanyCode", code)
         raw["basic"] = pick(fetch("https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O", "個股基本"), "SecuritiesCompanyCode", code)
         raw["price_daily"] = pick(fetch("https://www.tpex.org.tw/openapi/v1/tpex_mainboard_quotes", "每日收盤"), "SecuritiesCompanyCode", code)
@@ -50,8 +50,9 @@ def load(code, market):
 def pick(data, key, code):
     if not data:
         return None
+    keys = key if isinstance(key, tuple) else (key,)
     for r in data:
-        if r.get(key) == code:
+        if any(r.get(k) == code for k in keys):
             return r
     return None
 
@@ -75,9 +76,9 @@ def analyze(code):
     inc, bal, bw, basic = raw["income"], raw["balance"], raw["bwibbu"], raw["basic"]
     R = {"code": code, "name": NAME.get(code, code), "market": market, "time": now_tpe()}
 
-    # 期別
+    # 期別(上市用「季別」、上櫃損益表用「Season」)
     yr = (inc or {}).get("年度") or (inc or {}).get("Year")
-    qq = (inc or {}).get("季別")
+    qq = (inc or {}).get("季別") or (inc or {}).get("Season")
     R["period"] = f"{int(yr)+1911} Q{qq}" if yr else "—"
 
     # 股數(實收資本額 ÷ 面額,或上櫃 IssueShares)
@@ -116,7 +117,10 @@ def analyze(code):
     gross = g(inc, "營業毛利（毛損）", "營業毛利（毛損）淨額", "營業毛利")
     op = g(inc, "營業利益（損失）", "營業利益")
     net = g(inc, "本期淨利（淨損）", "本期淨利")
+    # 歸屬母公司淨利(子公司多的公司必用此算 EPS);若公司無此拆分(留空)則退回本期淨利
     net_parent = g(inc, "淨利（淨損）歸屬於母公司業主")
+    if net_parent is None:
+        net_parent = net
     nonop = g(inc, "營業外收入及支出")
     pretax = g(inc, "稅前淨利（淨損）", "稅前淨利")
     eps_rep = g(inc, "基本每股盈餘（元）", "基本每股盈餘")
@@ -137,7 +141,7 @@ def analyze(code):
 
     # ── 每股淨值:官方每股參考淨值 ↔ 歸屬母公司權益÷股數;PB:官方 ↔ price/淨值 ──
     bvps_off = g(bal, "每股參考淨值")
-    eq_parent = g(bal, "歸屬於母公司業主之權益合計")
+    eq_parent = g(bal, "歸屬於母公司業主之權益合計", "權益總計", "權益總額")
     bvps_calc = (eq_parent * 1000 / shares) if (eq_parent is not None and shares) else None
     R["bvps"] = cross(bvps_off, "官方每股參考淨值", bvps_calc, "歸屬母公司權益÷股數", "每股淨值")
     bvps = R["bvps"]["value"]
@@ -153,8 +157,8 @@ def analyze(code):
     R["pe_implied_ttm_eps"] = (price / pe_off) if (price and pe_off) else None
 
     # ── 負債比/流動比(官方資負表;速動比需存貨,彙總表無)──
-    asset = g(bal, "資產總額")
-    liab = g(bal, "負債總額")
+    asset = g(bal, "資產總額", "資產總計")
+    liab = g(bal, "負債總額", "負債總計")
     ca = g(bal, "流動資產")
     cl = g(bal, "流動負債")
     R["debt_ratio"] = pctval(liab, asset)
