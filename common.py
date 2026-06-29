@@ -78,9 +78,11 @@ def to_float(s):
 
 def roc_to_ad(roc):
     s = str(roc).strip()
-    if len(s) == 7:
+    if len(s) == 8:      # 西元 YYYYMMDD(MIS)
+        return f"{s[:4]}-{s[4:6]}-{s[6:8]}"
+    if len(s) == 7:      # 民國 YYYMMDD
         return f"{int(s[:3]) + 1911}-{s[3:5]}-{s[5:7]}"
-    if len(s) == 5:
+    if len(s) == 5:      # 民國 YYYMM
         return f"{int(s[:3]) + 1911}-{s[3:5]}"
     return s
 

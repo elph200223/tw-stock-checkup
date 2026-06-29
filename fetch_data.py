@@ -51,6 +51,28 @@ def fetch(url):
         return json.load(r)
 
 
+def fetch_mis(code, market):
+    """證交所即時報價系統 MIS:取最新成交價(收盤後即為當日收盤),比每日彙總檔即時。
+    回傳 {close, date(YYYY-MM-DD), change};失敗回 None。"""
+    import time
+    ex = "tse" if market == "TWSE" else "otc"
+    try:
+        d = fetch(f"https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch={ex}_{code}.tw&json=1")
+        time.sleep(1.5)  # 限流,避免密集請求
+        arr = d.get("msgArray") or []
+        if not arr:
+            return None
+        k = arr[0]
+        z = to_float(k.get("z"))   # 最近成交價
+        y = to_float(k.get("y"))   # 昨收
+        if z is None:
+            return None
+        return {"close": z, "date": roc_to_ad(k.get("d")),
+                "change": (round(z - y, 4) if (z is not None and y is not None) else None)}
+    except Exception:
+        return None
+
+
 def to_float(s):
     try:
         return float(str(s).replace(",", "").replace("+", "").strip())
@@ -59,11 +81,14 @@ def to_float(s):
 
 
 def roc_to_ad(roc):
-    """民國日期/年月 轉西元。1150618 -> 2026-06-18;11505 -> 2026-05"""
+    """民國日期/年月 或 MIS 西元日期 轉 YYYY-MM-DD。
+    1150618(民國)-> 2026-06-18;11505 -> 2026-05;20260629(西元8碼)-> 2026-06-29"""
     s = str(roc).strip()
-    if len(s) == 7:      # YYYMMDD
+    if len(s) == 8:      # 西元 YYYYMMDD(MIS)
+        return f"{s[:4]}-{s[4:6]}-{s[6:8]}"
+    if len(s) == 7:      # 民國 YYYMMDD
         return f"{int(s[:3]) + 1911}-{s[3:5]}-{s[5:7]}"
-    if len(s) == 5:      # YYYMM
+    if len(s) == 5:      # 民國 YYYMM
         return f"{int(s[:3]) + 1911}-{s[3:5]}"
     return s
 
@@ -144,6 +169,24 @@ def main():
         rev = rev_idx.get(c, {})
         px = price_idx.get(c, {})
 
+        # 每日彙總檔的收盤(會落後一個交易日,留作雙來源核實基準)
+        daily_close = to_float(px.get("close")) if px else None
+        daily_date = roc_to_ad(px.get("date")) if px.get("date") else None
+        # MIS 即時收盤(最新,顯示用)
+        mis = fetch_mis(c, w["market"])
+
+        if mis:
+            price = mis["close"]; price_date = mis["date"]; price_change = mis["change"]
+            price_source = "證交所即時 MIS"
+        else:
+            price = daily_close; price_date = daily_date; price_change = px.get("change")
+            price_source = ("上市 TWSE" if w["market"] == "TWSE" else "上櫃 TPEx") + " 每日收盤"
+        # 同一交易日才做雙來源核實
+        price_verify = None
+        if mis and daily_close is not None and daily_date == mis["date"]:
+            diff = abs(mis["close"] - daily_close) / max(1e-9, (abs(mis["close"]) + abs(daily_close)) / 2) * 100
+            price_verify = "verified" if diff < 1 else ("minor_diff" if diff <= 5 else "unverified")
+
         rec = {
             "code": c,
             "name": w["name"],
@@ -156,11 +199,14 @@ def main():
             "yoy": to_float(rev.get("營業收入-去年同月增減(%)")) if rev else None,
             "mom": to_float(rev.get("營業收入-上月比較增減(%)")) if rev else None,
             "rev_source": ("上市 TWSE" if w["market"] == "TWSE" else "上櫃 TPEx") if rev else None,
-            # 股價
-            "price": to_float(px.get("close")) if px else None,
-            "price_date": roc_to_ad(px.get("date")) if px.get("date") else None,
-            "price_change": px.get("change") if px else None,
-            "price_source": ("上市 TWSE" if w["market"] == "TWSE" else "上櫃 TPEx") if px else None,
+            # 股價(顯示用 MIS 最新收盤;daily_* 留作核實參考)
+            "price": price,
+            "price_date": price_date,
+            "price_change": price_change,
+            "price_source": price_source,
+            "daily_close": daily_close,
+            "daily_date": daily_date,
+            "price_verify": price_verify,
         }
         rec["flags"] = sanity_revenue(rec)
         if rec["price"] is None:

@@ -95,20 +95,29 @@ def analyze(code):
             shares = cap / par if cap else None
     R["shares"] = shares
 
-    # ── 股價:STOCK_DAY/TPEx ↔ MIS,並取最新價 ──
+    # ── 股價:顯示用 MIS 最新收盤(最即時);每日彙總檔(會落後)留作雙來源核實 ──
+    from common import datum, OFFICIAL1
     pd_close = g(raw["price_daily"], "ClosingPrice", "Close")
     pd_date = roc_to_ad((raw["price_daily"] or {}).get("Date"))
     mis = (raw["mis"] or {}).get("msgArray", [{}])
     mis = mis[0] if mis else {}
     mis_z, mis_y = to_float(mis.get("z")), to_float(mis.get("y"))
-    import datetime as _dt
-    today = _dt.datetime.now().strftime("%Y-%m-%d")
-    if pd_date == today:
-        R["price"] = cross(pd_close, f"每日收盤檔({pd_date})", mis_z, "MIS今日", "股價")
-        R["latest_price"] = None
+    mis_date = roc_to_ad(mis.get("d")) if mis.get("d") else None
+
+    if pd_close is not None and mis_z is not None and pd_date == mis_date:
+        pv = cross(mis_z, f"MIS({mis_date})", pd_close, f"每日收盤檔({pd_date})", "股價")
+    elif pd_close is not None and mis_y is not None:
+        # MIS 比每日檔新一天:用 MIS 昨收 對 每日檔當日收盤 核實(顯示價仍用 MIS 今日)
+        pv = cross(pd_close, f"每日收盤檔({pd_date})", mis_y, f"MIS昨收(對齊{pd_date})", "股價")
     else:
-        R["price"] = cross(pd_close, f"每日收盤檔({pd_date})", mis_y, f"MIS昨收(對齊{pd_date})", "股價")
-        R["latest_price"] = {"date": today, "price": mis_z} if mis_z else None
+        pv = datum(mis_z if mis_z is not None else pd_close,
+                   "證交所即時 MIS" if mis_z is not None else "每日收盤檔", OFFICIAL1, "單一來源")
+    headline = mis_z if mis_z is not None else pd_close
+    headline_date = mis_date if mis_z is not None else pd_date
+    R["price"] = {"value": headline, "date": headline_date,
+                  "verify": pv["verify"], "diff_pct": pv.get("diff_pct"),
+                  "source": "證交所即時 MIS" if mis_z is not None else "每日收盤檔", "note": pv.get("note", "")}
+    R["latest_price"] = None
     price = R["price"]["value"]
 
     # ── 三率(官方損益表;以「毛利=營收−成本」內部交叉)──

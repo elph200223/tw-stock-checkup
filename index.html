@@ -644,7 +644,7 @@ function renderAutoDashboard(){
       <td>${s.rev==null?"—":fmt(s.rev,0)}</td>
       <td ${yc}>${pct(yoy)}</td>
       <td>${pct(s.mom)}</td>
-      <td>${s.price==null?"—":s.price}</td>
+      <td>${s.price==null?"—":s.price}${s.price_date?`<br><small class="note">${s.price_date}</small>`:""}</td>
       <td class="no-print">${flag}</td>
     </tr>
     <tr id="autodetail-${s.code}" style="display:none"><td colspan="7" style="padding:0">${autoDetailHTML(s)}</td></tr>`;
@@ -798,7 +798,7 @@ function rateDetailHTML(r){
 
     <div style="font-size:13px;color:var(--sub);margin-bottom:8px">${ex.score_scale||""}</div>
     <div style="margin-bottom:6px;font-size:13px">關鍵數字核實:${ver}</div>
-    <div><small class="note">財報期別 ${r.period||"—"} · 最新月 ${r.rev_month||"—"} · 股價 ${fmtNum(r.price,2)}</small></div>
+    <div><small class="note">財報期別 ${r.period||"—"} · 最新月 ${r.rev_month||"—"} · 股價 ${fmtNum(r.price,2)}${r.price_date?`(收盤 ${r.price_date})`:""}</small></div>
   </div>`;
 }
 function toggleRateDetail(code){
@@ -810,6 +810,25 @@ function toggleRateDetail(code){
 function initRender(){ renderRating(); renderRevenue(); renderJournal(); renderAutoDashboard(); renderDataStatus(); }
 fillPicks();
 initRender();
+
+/* 防舊快取:開頁後主動抓最新 JSON(禁用快取),成功就覆蓋 .js 載入的舊資料並重畫。
+   file:// 不能 fetch → 失敗時保留原本 data.js/ratings.js 的內容,功能不受影響。 */
+async function refreshFromServer(){
+  const bust = "?ts=" + Date.now();
+  const tryGet = async (url) => {
+    try{
+      const r = await fetch(url + bust, {cache:"no-store"});
+      if(!r.ok) return null;
+      return await r.json();
+    }catch(e){ return null; }
+  };
+  const [d, r] = await Promise.all([tryGet("data.json"), tryGet("ratings.json")]);
+  let changed = false;
+  if(d){ window.STOCK_DATA = d; changed = true; }
+  if(r){ window.RATINGS = r; changed = true; }
+  if(changed) initRender();
+}
+refreshFromServer();
 </script>
 </body>
 </html>

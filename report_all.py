@@ -38,6 +38,7 @@ def main():
         ev["role"] = role
         ev["period"] = R["period"]
         ev["price"] = R["price"].get("value")
+        ev["price_date"] = R["price"].get("date")
         ev["gross_margin"] = R["gross_margin"]
         ev["op_margin"] = R["op_margin"]
         ev["net_margin"] = R["net_margin"]
