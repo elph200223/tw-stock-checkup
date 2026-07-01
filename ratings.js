@@ -1,11 +1,91 @@
 window.RATINGS = {
-  "updated": "2026-06-30 18:41",
+  "updated": "2026-07-01 10:06",
   "weights": {
     "體質": 0.4,
     "估值": 0.3,
     "動能": 0.3
   },
   "rated": [
+    {
+      "code": "2330",
+      "name": "台積電",
+      "rated": true,
+      "total": 85.0,
+      "subs": {
+        "體質": [
+          100.0,
+          "毛利率 🟢(100)、營益率 🟢(100)、淨利率 🟢(100)、負債比 🟢(100)、流動比 🟢(100)(未含現金流/速動比,屬需補項)"
+        ],
+        "估值": [
+          65,
+          "PE 25–40 中高,已反映成長預期(PE 32.4);此為估值面,非買賣建議。"
+        ],
+        "動能": [
+          85,
+          "最新月 YoY 30.1%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
+        ]
+      },
+      "blockers": [],
+      "verify_summary": {
+        "price": "verified",
+        "eps": "verified",
+        "bvps": "verified",
+        "pb": "minor_diff",
+        "gross": "verified",
+        "rev_yoy": "verified"
+      },
+      "role": "上游·晶圓代工(溫度計)",
+      "period": "2026 Q1",
+      "price": 2485.0,
+      "price_date": "2026-07-01",
+      "gross_margin": 66.24575805889452,
+      "op_margin": 58.104588942962735,
+      "net_margin": 50.5069717450112,
+      "debt_ratio": 31.504175214475914,
+      "pe": 32.4,
+      "pb": 10.61,
+      "rev_yoy": 30.09498020271696,
+      "rev_month": "2026-05",
+      "explain": {
+        "summary": "台積電:很會賺錢(毛利、淨利都高)、負債也低,財務體質很健康,月營收還在高速成長(最新月年增 30%),股價不算便宜(本益比 32 倍),已反映不少成長期待。",
+        "health": [
+          {
+            "name": "毛利率",
+            "val": "66.2%",
+            "light": "green",
+            "say": "高毛利(>40%),有定價權、不易被殺價,通常具技術或品牌護城河。"
+          },
+          {
+            "name": "營益率",
+            "val": "58.1%",
+            "light": "green",
+            "say": "營益率 58.1%:本業很會賺,扣掉人事、行銷等營業費用後還留下不少,是真功夫。"
+          },
+          {
+            "name": "淨利率",
+            "val": "50.5%",
+            "light": "green",
+            "say": "淨利率 50.5%:每賣 100 元,最後股東實拿約 51 元,落袋能力強。"
+          },
+          {
+            "name": "負債比",
+            "val": "31.5%",
+            "light": "green",
+            "say": "負債比在 60% 內,財務結構相對穩健。"
+          },
+          {
+            "name": "流動比",
+            "val": "2.49 倍",
+            "light": "green",
+            "say": "流動資產是短期負債的 2.49 倍(>1.5),短期償債充足。"
+          }
+        ],
+        "valuation": "PE 32.4 中高(25–40),已反映不少成長預期,進場挑時機。",
+        "momentum_say": "月營收還在高速成長(最新月年增 30%)。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
+        "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
+        "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
+      }
+    },
     {
       "code": "3081",
       "name": "聯亞",
@@ -27,7 +107,7 @@ window.RATINGS = {
       },
       "blockers": [],
       "verify_summary": {
-        "price": "official_single",
+        "price": "verified",
         "eps": "verified",
         "bvps": "verified",
         "pb": "verified",
@@ -87,6 +167,246 @@ window.RATINGS = {
       }
     },
     {
+      "code": "2308",
+      "name": "台達電",
+      "rated": true,
+      "total": 78.8,
+      "subs": {
+        "體質": [
+          92.0,
+          "毛利率 🟡(60)、營益率 🟢(100)、淨利率 🟢(100)、負債比 🟢(100)、流動比 🟢(100)(未含現金流/速動比,屬需補項)"
+        ],
+        "估值": [
+          40,
+          "PE>40 偏高,成長不如預期回檔風險大(PE 71.9);此為估值面,非買賣建議。"
+        ],
+        "動能": [
+          100,
+          "最新月 YoY 43.7%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
+        ]
+      },
+      "blockers": [],
+      "verify_summary": {
+        "price": "verified",
+        "eps": "verified",
+        "bvps": "verified",
+        "pb": "verified",
+        "gross": "verified",
+        "rev_yoy": "verified"
+      },
+      "role": "配套·電源",
+      "period": "2026 Q1",
+      "price": 1950.0,
+      "price_date": "2026-06-30",
+      "gross_margin": 37.00024458959114,
+      "op_margin": 17.832965214786636,
+      "net_margin": 14.957108464062463,
+      "debt_ratio": 47.782403298810074,
+      "pe": 71.9,
+      "pb": 16.91,
+      "rev_yoy": 43.65246228958888,
+      "rev_month": "2026-05",
+      "explain": {
+        "summary": "台達電:本業有賺、財務還算穩,但有一兩個指標普通,月營收還在高速成長(最新月年增 44%),但目前股價偏貴(本益比 72 倍),等於先付了很多未來的成長;一旦成長不如預期,容易回檔。",
+        "health": [
+          {
+            "name": "毛利率",
+            "val": "37.0%",
+            "light": "amber",
+            "say": "中等毛利(10–40%),有競爭但仍賺加工/設計財,看能否守住。"
+          },
+          {
+            "name": "營益率",
+            "val": "17.8%",
+            "light": "green",
+            "say": "營益率 17.8%:本業很會賺,扣掉人事、行銷等營業費用後還留下不少,是真功夫。"
+          },
+          {
+            "name": "淨利率",
+            "val": "15.0%",
+            "light": "green",
+            "say": "淨利率 15.0%:每賣 100 元,最後股東實拿約 15 元,落袋能力強。"
+          },
+          {
+            "name": "負債比",
+            "val": "47.8%",
+            "light": "green",
+            "say": "負債比在 60% 內,財務結構相對穩健。"
+          },
+          {
+            "name": "流動比",
+            "val": "1.95 倍",
+            "light": "green",
+            "say": "流動資產是短期負債的 1.95 倍(>1.5),短期償債充足。"
+          }
+        ],
+        "valuation": "PE 71.9 偏高(>40),市場給很高成長期待;成長不如預期回檔會兇。 不過它月營收年增 44%、成長很快——高成長配高本益比未必真的貴,這要靠 PEG(本益成長比)判斷,目前資料還不夠算,先別只看 PE 就說太貴。",
+        "momentum_say": "月營收還在高速成長(最新月年增 44%)。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
+        "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
+        "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
+      }
+    },
+    {
+      "code": "8996",
+      "name": "高力",
+      "rated": true,
+      "total": 78.8,
+      "subs": {
+        "體質": [
+          92.0,
+          "毛利率 🟡(60)、營益率 🟢(100)、淨利率 🟢(100)、負債比 🟢(100)、流動比 🟢(100)(未含現金流/速動比,屬需補項)"
+        ],
+        "估值": [
+          40,
+          "PE>40 偏高,成長不如預期回檔風險大(PE 110.6);此為估值面,非買賣建議。"
+        ],
+        "動能": [
+          100,
+          "最新月 YoY 40.0%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
+        ]
+      },
+      "blockers": [],
+      "verify_summary": {
+        "price": "verified",
+        "eps": "verified",
+        "bvps": "verified",
+        "pb": "verified",
+        "gross": "verified",
+        "rev_yoy": "verified"
+      },
+      "role": "配套·散熱",
+      "period": "2026 Q1",
+      "price": 1565.0,
+      "price_date": "2026-07-01",
+      "gross_margin": 29.02148455245458,
+      "op_margin": 20.709786907338685,
+      "net_margin": 17.69421943685763,
+      "debt_ratio": 47.80821083704307,
+      "pe": 110.56,
+      "pb": 31.04,
+      "rev_yoy": 40.025403665576036,
+      "rev_month": "2026-05",
+      "explain": {
+        "summary": "高力:本業有賺、財務還算穩,但有一兩個指標普通,月營收還在高速成長(最新月年增 40%),但目前股價偏貴(本益比 111 倍),等於先付了很多未來的成長;一旦成長不如預期,容易回檔。",
+        "health": [
+          {
+            "name": "毛利率",
+            "val": "29.0%",
+            "light": "amber",
+            "say": "中等毛利(10–40%),有競爭但仍賺加工/設計財,看能否守住。"
+          },
+          {
+            "name": "營益率",
+            "val": "20.7%",
+            "light": "green",
+            "say": "營益率 20.7%:本業很會賺,扣掉人事、行銷等營業費用後還留下不少,是真功夫。"
+          },
+          {
+            "name": "淨利率",
+            "val": "17.7%",
+            "light": "green",
+            "say": "淨利率 17.7%:每賣 100 元,最後股東實拿約 18 元,落袋能力強。"
+          },
+          {
+            "name": "負債比",
+            "val": "47.8%",
+            "light": "green",
+            "say": "負債比在 60% 內,財務結構相對穩健。"
+          },
+          {
+            "name": "流動比",
+            "val": "1.61 倍",
+            "light": "green",
+            "say": "流動資產是短期負債的 1.61 倍(>1.5),短期償債充足。"
+          }
+        ],
+        "valuation": "PE 110.6 偏高(>40),市場給很高成長期待;成長不如預期回檔會兇。 不過它月營收年增 40%、成長很快——高成長配高本益比未必真的貴,這要靠 PEG(本益成長比)判斷,目前資料還不夠算,先別只看 PE 就說太貴。",
+        "momentum_say": "月營收還在高速成長(最新月年增 40%)。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
+        "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
+        "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
+      }
+    },
+    {
+      "code": "4958",
+      "name": "臻鼎",
+      "rated": true,
+      "total": 67.9,
+      "subs": {
+        "體質": [
+          76.0,
+          "毛利率 🟡(60)、營益率 🟡(60)、淨利率 🟡(60)、負債比 🟢(100)、流動比 🟢(100)(未含現金流/速動比,屬需補項)"
+        ],
+        "估值": [
+          40,
+          "PE>40 偏高,成長不如預期回檔風險大(PE 88.9);此為估值面,非買賣建議。"
+        ],
+        "動能": [
+          85,
+          "最新月 YoY 37.4%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
+        ]
+      },
+      "blockers": [],
+      "verify_summary": {
+        "price": "verified",
+        "eps": "verified",
+        "bvps": "verified",
+        "pb": "verified",
+        "gross": "verified",
+        "rev_yoy": "verified"
+      },
+      "role": "零組件·載板",
+      "period": "2026 Q1",
+      "price": 630.0,
+      "price_date": "2026-06-30",
+      "gross_margin": 21.635351007285227,
+      "op_margin": 6.1465492226931,
+      "net_margin": 5.027076334801653,
+      "debt_ratio": 41.44655779212438,
+      "pe": 88.86,
+      "pb": 5.36,
+      "rev_yoy": 37.39933169500997,
+      "rev_month": "2026-05",
+      "explain": {
+        "summary": "臻鼎:本業有賺、財務還算穩,但有一兩個指標普通,月營收還在高速成長(最新月年增 37%),但目前股價偏貴(本益比 89 倍),等於先付了很多未來的成長;一旦成長不如預期,容易回檔。",
+        "health": [
+          {
+            "name": "毛利率",
+            "val": "21.6%",
+            "light": "amber",
+            "say": "中等毛利(10–40%),有競爭但仍賺加工/設計財,看能否守住。"
+          },
+          {
+            "name": "營益率",
+            "val": "6.1%",
+            "light": "amber",
+            "say": "營益率 6.1%:本業有賺,但營業費用吃掉不少,獲利空間中等。"
+          },
+          {
+            "name": "淨利率",
+            "val": "5.0%",
+            "light": "amber",
+            "say": "淨利率 5.0%:每賣 100 元最後留下約 5 元,普通水準。"
+          },
+          {
+            "name": "負債比",
+            "val": "41.4%",
+            "light": "green",
+            "say": "負債比在 60% 內,財務結構相對穩健。"
+          },
+          {
+            "name": "流動比",
+            "val": "1.59 倍",
+            "light": "green",
+            "say": "流動資產是短期負債的 1.59 倍(>1.5),短期償債充足。"
+          }
+        ],
+        "valuation": "PE 88.9 偏高(>40),市場給很高成長期待;成長不如預期回檔會兇。 不過它月營收年增 37%、成長很快——高成長配高本益比未必真的貴,這要靠 PEG(本益成長比)判斷,目前資料還不夠算,先別只看 PE 就說太貴。",
+        "momentum_say": "月營收還在高速成長(最新月年增 37%)。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
+        "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
+        "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
+      }
+    },
+    {
       "code": "3363",
       "name": "上詮",
       "rated": true,
@@ -107,7 +427,7 @@ window.RATINGS = {
       },
       "blockers": [],
       "verify_summary": {
-        "price": "official_single",
+        "price": "verified",
         "eps": "minor_diff",
         "bvps": "verified",
         "pb": "verified",
@@ -169,271 +489,84 @@ window.RATINGS = {
   ],
   "unrated": [
     {
-      "code": "2330",
-      "name": "台積電",
-      "rated": false,
-      "total": null,
-      "subs": {
-        "體質": [
-          null,
-          "資料不足"
-        ],
-        "估值": [
-          null,
-          "估值資料不足"
-        ],
-        "動能": [
-          null,
-          "月營收 YoY 缺"
-        ]
-      },
-      "blockers": [
-        "eps()",
-        "bvps()",
-        "pb()",
-        "gross()"
-      ],
-      "verify_summary": {
-        "price": "n/a",
-        "eps": "unverified",
-        "bvps": "unverified",
-        "pb": "unverified",
-        "gross": "unverified",
-        "rev_yoy": null
-      },
-      "role": "上游·晶圓代工(溫度計)",
-      "period": "—",
-      "price": null,
-      "price_date": "None",
-      "gross_margin": null,
-      "op_margin": null,
-      "net_margin": null,
-      "debt_ratio": null,
-      "pe": null,
-      "pb": null,
-      "rev_yoy": null,
-      "rev_month": null,
-      "explain": {
-        "summary": "台積電:部分體質指標資料不足,月營收資料不足,估值資料不足。",
-        "health": [],
-        "valuation": "PB 無法取得。",
-        "momentum_say": "月營收資料不足。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
-        "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
-        "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
-      }
-    },
-    {
-      "code": "2308",
-      "name": "台達電",
-      "rated": false,
-      "total": null,
-      "subs": {
-        "體質": [
-          null,
-          "資料不足"
-        ],
-        "估值": [
-          null,
-          "估值資料不足"
-        ],
-        "動能": [
-          null,
-          "月營收 YoY 缺"
-        ]
-      },
-      "blockers": [
-        "eps()",
-        "bvps()",
-        "pb()",
-        "gross()"
-      ],
-      "verify_summary": {
-        "price": "n/a",
-        "eps": "unverified",
-        "bvps": "unverified",
-        "pb": "unverified",
-        "gross": "unverified",
-        "rev_yoy": null
-      },
-      "role": "配套·電源",
-      "period": "—",
-      "price": null,
-      "price_date": "None",
-      "gross_margin": null,
-      "op_margin": null,
-      "net_margin": null,
-      "debt_ratio": null,
-      "pe": null,
-      "pb": null,
-      "rev_yoy": null,
-      "rev_month": null,
-      "explain": {
-        "summary": "台達電:部分體質指標資料不足,月營收資料不足,估值資料不足。",
-        "health": [],
-        "valuation": "PB 無法取得。",
-        "momentum_say": "月營收資料不足。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
-        "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
-        "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
-      }
-    },
-    {
-      "code": "4958",
-      "name": "臻鼎",
-      "rated": false,
-      "total": null,
-      "subs": {
-        "體質": [
-          null,
-          "資料不足"
-        ],
-        "估值": [
-          null,
-          "估值資料不足"
-        ],
-        "動能": [
-          null,
-          "月營收 YoY 缺"
-        ]
-      },
-      "blockers": [
-        "eps()",
-        "bvps()",
-        "pb()",
-        "gross()"
-      ],
-      "verify_summary": {
-        "price": "n/a",
-        "eps": "unverified",
-        "bvps": "unverified",
-        "pb": "unverified",
-        "gross": "unverified",
-        "rev_yoy": null
-      },
-      "role": "零組件·載板",
-      "period": "—",
-      "price": null,
-      "price_date": "None",
-      "gross_margin": null,
-      "op_margin": null,
-      "net_margin": null,
-      "debt_ratio": null,
-      "pe": null,
-      "pb": null,
-      "rev_yoy": null,
-      "rev_month": null,
-      "explain": {
-        "summary": "臻鼎:部分體質指標資料不足,月營收資料不足,估值資料不足。",
-        "health": [],
-        "valuation": "PB 無法取得。",
-        "momentum_say": "月營收資料不足。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
-        "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
-        "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
-      }
-    },
-    {
-      "code": "8996",
-      "name": "高力",
-      "rated": false,
-      "total": null,
-      "subs": {
-        "體質": [
-          null,
-          "資料不足"
-        ],
-        "估值": [
-          null,
-          "估值資料不足"
-        ],
-        "動能": [
-          null,
-          "月營收 YoY 缺"
-        ]
-      },
-      "blockers": [
-        "eps()",
-        "bvps()",
-        "pb()",
-        "gross()"
-      ],
-      "verify_summary": {
-        "price": "n/a",
-        "eps": "unverified",
-        "bvps": "unverified",
-        "pb": "unverified",
-        "gross": "unverified",
-        "rev_yoy": null
-      },
-      "role": "配套·散熱",
-      "period": "—",
-      "price": null,
-      "price_date": "None",
-      "gross_margin": null,
-      "op_margin": null,
-      "net_margin": null,
-      "debt_ratio": null,
-      "pe": null,
-      "pb": null,
-      "rev_yoy": null,
-      "rev_month": null,
-      "explain": {
-        "summary": "高力:部分體質指標資料不足,月營收資料不足,估值資料不足。",
-        "health": [],
-        "valuation": "PB 無法取得。",
-        "momentum_say": "月營收資料不足。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
-        "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
-        "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
-      }
-    },
-    {
       "code": "6451",
       "name": "訊芯",
       "rated": false,
       "total": null,
       "subs": {
         "體質": [
-          null,
-          "資料不足"
+          60.0,
+          "毛利率 🟡(60)、營益率 🔴(20)、淨利率 🔴(20)、負債比 🟢(100)、流動比 🟢(100)(未含現金流/速動比,屬需補項)"
         ],
         "估值": [
-          null,
-          "估值資料不足"
+          35,
+          "虧損/獲利不穩,改看 PB:PB>6 很高,多為未來預期(PB 8.60)。"
         ],
         "動能": [
-          null,
-          "月營收 YoY 缺"
+          55,
+          "最新月 YoY 4.9%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
         ]
       },
       "blockers": [
-        "eps()",
-        "bvps()",
-        "pb()",
-        "gross()"
+        "eps(來源A 官方申報基本EPS=-1.45 / 來源B 歸屬母公司淨利÷股數=-1.)",
+        "bvps(來源A 官方每股參考淨值=66.03 / 來源B 歸屬母公司權益÷股數=62.5)"
       ],
       "verify_summary": {
-        "price": "n/a",
+        "price": "verified",
         "eps": "unverified",
         "bvps": "unverified",
-        "pb": "unverified",
-        "gross": "unverified",
-        "rev_yoy": null
+        "pb": "verified",
+        "gross": "verified",
+        "rev_yoy": "verified"
       },
       "role": "配套·光通訊",
-      "period": "—",
-      "price": null,
-      "price_date": "None",
-      "gross_margin": null,
-      "op_margin": null,
-      "net_margin": null,
-      "debt_ratio": null,
+      "period": "2026 Q1",
+      "price": 568.0,
+      "price_date": "2026-06-30",
+      "gross_margin": 11.9591394513001,
+      "op_margin": -5.177029975260416,
+      "net_margin": -9.476876567950812,
+      "debt_ratio": 59.66817995597701,
       "pe": null,
-      "pb": null,
-      "rev_yoy": null,
-      "rev_month": null,
+      "pb": 8.6,
+      "rev_yoy": 4.891403908887854,
+      "rev_month": "2026-05",
       "explain": {
-        "summary": "訊芯:部分體質指標資料不足,月營收資料不足,估值資料不足。",
-        "health": [],
-        "valuation": "PB 無法取得。",
-        "momentum_say": "月營收資料不足。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
+        "summary": "訊芯:賺錢能力或財務結構有明顯弱點,月營收溫和成長(年增 5%),由於獲利不穩,改用股價淨值比看:目前 8.6 倍(高,多在反映未來預期)。",
+        "health": [
+          {
+            "name": "毛利率",
+            "val": "12.0%",
+            "light": "amber",
+            "say": "中等毛利(10–40%),有競爭但仍賺加工/設計財,看能否守住。"
+          },
+          {
+            "name": "營益率",
+            "val": "-5.2%",
+            "light": "red",
+            "say": "營益率 -5.2%:本業幾乎沒利潤,費用幾乎把毛利吃光,要小心。"
+          },
+          {
+            "name": "淨利率",
+            "val": "-9.5%",
+            "light": "red",
+            "say": "淨利率 -9.5%:每 100 元營收最後只剩 -9.5 元,很薄,易受波動影響。"
+          },
+          {
+            "name": "負債比",
+            "val": "59.7%",
+            "light": "green",
+            "say": "負債比在 60% 內,財務結構相對穩健。"
+          },
+          {
+            "name": "流動比",
+            "val": "1.67 倍",
+            "light": "green",
+            "say": "流動資產是短期負債的 1.67 倍(>1.5),短期償債充足。"
+          }
+        ],
+        "valuation": "PB 8.60 >1,市場願為它的未來多付錢(高於帳面淨值),成長股常見,別追過頭。",
+        "momentum_say": "月營收溫和成長(年增 5%)。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
         "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
         "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
       }
@@ -443,53 +576,79 @@ window.RATINGS = {
     {
       "code": "2330",
       "name": "台積電",
-      "rated": false,
-      "total": null,
+      "rated": true,
+      "total": 85.0,
       "subs": {
         "體質": [
-          null,
-          "資料不足"
+          100.0,
+          "毛利率 🟢(100)、營益率 🟢(100)、淨利率 🟢(100)、負債比 🟢(100)、流動比 🟢(100)(未含現金流/速動比,屬需補項)"
         ],
         "估值": [
-          null,
-          "估值資料不足"
+          65,
+          "PE 25–40 中高,已反映成長預期(PE 32.4);此為估值面,非買賣建議。"
         ],
         "動能": [
-          null,
-          "月營收 YoY 缺"
+          85,
+          "最新月 YoY 30.1%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
         ]
       },
-      "blockers": [
-        "eps()",
-        "bvps()",
-        "pb()",
-        "gross()"
-      ],
+      "blockers": [],
       "verify_summary": {
-        "price": "n/a",
-        "eps": "unverified",
-        "bvps": "unverified",
-        "pb": "unverified",
-        "gross": "unverified",
-        "rev_yoy": null
+        "price": "verified",
+        "eps": "verified",
+        "bvps": "verified",
+        "pb": "minor_diff",
+        "gross": "verified",
+        "rev_yoy": "verified"
       },
       "role": "上游·晶圓代工(溫度計)",
-      "period": "—",
-      "price": null,
-      "price_date": "None",
-      "gross_margin": null,
-      "op_margin": null,
-      "net_margin": null,
-      "debt_ratio": null,
-      "pe": null,
-      "pb": null,
-      "rev_yoy": null,
-      "rev_month": null,
+      "period": "2026 Q1",
+      "price": 2485.0,
+      "price_date": "2026-07-01",
+      "gross_margin": 66.24575805889452,
+      "op_margin": 58.104588942962735,
+      "net_margin": 50.5069717450112,
+      "debt_ratio": 31.504175214475914,
+      "pe": 32.4,
+      "pb": 10.61,
+      "rev_yoy": 30.09498020271696,
+      "rev_month": "2026-05",
       "explain": {
-        "summary": "台積電:部分體質指標資料不足,月營收資料不足,估值資料不足。",
-        "health": [],
-        "valuation": "PB 無法取得。",
-        "momentum_say": "月營收資料不足。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
+        "summary": "台積電:很會賺錢(毛利、淨利都高)、負債也低,財務體質很健康,月營收還在高速成長(最新月年增 30%),股價不算便宜(本益比 32 倍),已反映不少成長期待。",
+        "health": [
+          {
+            "name": "毛利率",
+            "val": "66.2%",
+            "light": "green",
+            "say": "高毛利(>40%),有定價權、不易被殺價,通常具技術或品牌護城河。"
+          },
+          {
+            "name": "營益率",
+            "val": "58.1%",
+            "light": "green",
+            "say": "營益率 58.1%:本業很會賺,扣掉人事、行銷等營業費用後還留下不少,是真功夫。"
+          },
+          {
+            "name": "淨利率",
+            "val": "50.5%",
+            "light": "green",
+            "say": "淨利率 50.5%:每賣 100 元,最後股東實拿約 51 元,落袋能力強。"
+          },
+          {
+            "name": "負債比",
+            "val": "31.5%",
+            "light": "green",
+            "say": "負債比在 60% 內,財務結構相對穩健。"
+          },
+          {
+            "name": "流動比",
+            "val": "2.49 倍",
+            "light": "green",
+            "say": "流動資產是短期負債的 2.49 倍(>1.5),短期償債充足。"
+          }
+        ],
+        "valuation": "PE 32.4 中高(25–40),已反映不少成長預期,進場挑時機。",
+        "momentum_say": "月營收還在高速成長(最新月年增 30%)。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
         "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
         "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
       }
@@ -497,53 +656,79 @@ window.RATINGS = {
     {
       "code": "2308",
       "name": "台達電",
-      "rated": false,
-      "total": null,
+      "rated": true,
+      "total": 78.8,
       "subs": {
         "體質": [
-          null,
-          "資料不足"
+          92.0,
+          "毛利率 🟡(60)、營益率 🟢(100)、淨利率 🟢(100)、負債比 🟢(100)、流動比 🟢(100)(未含現金流/速動比,屬需補項)"
         ],
         "估值": [
-          null,
-          "估值資料不足"
+          40,
+          "PE>40 偏高,成長不如預期回檔風險大(PE 71.9);此為估值面,非買賣建議。"
         ],
         "動能": [
-          null,
-          "月營收 YoY 缺"
+          100,
+          "最新月 YoY 43.7%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
         ]
       },
-      "blockers": [
-        "eps()",
-        "bvps()",
-        "pb()",
-        "gross()"
-      ],
+      "blockers": [],
       "verify_summary": {
-        "price": "n/a",
-        "eps": "unverified",
-        "bvps": "unverified",
-        "pb": "unverified",
-        "gross": "unverified",
-        "rev_yoy": null
+        "price": "verified",
+        "eps": "verified",
+        "bvps": "verified",
+        "pb": "verified",
+        "gross": "verified",
+        "rev_yoy": "verified"
       },
       "role": "配套·電源",
-      "period": "—",
-      "price": null,
-      "price_date": "None",
-      "gross_margin": null,
-      "op_margin": null,
-      "net_margin": null,
-      "debt_ratio": null,
-      "pe": null,
-      "pb": null,
-      "rev_yoy": null,
-      "rev_month": null,
+      "period": "2026 Q1",
+      "price": 1950.0,
+      "price_date": "2026-06-30",
+      "gross_margin": 37.00024458959114,
+      "op_margin": 17.832965214786636,
+      "net_margin": 14.957108464062463,
+      "debt_ratio": 47.782403298810074,
+      "pe": 71.9,
+      "pb": 16.91,
+      "rev_yoy": 43.65246228958888,
+      "rev_month": "2026-05",
       "explain": {
-        "summary": "台達電:部分體質指標資料不足,月營收資料不足,估值資料不足。",
-        "health": [],
-        "valuation": "PB 無法取得。",
-        "momentum_say": "月營收資料不足。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
+        "summary": "台達電:本業有賺、財務還算穩,但有一兩個指標普通,月營收還在高速成長(最新月年增 44%),但目前股價偏貴(本益比 72 倍),等於先付了很多未來的成長;一旦成長不如預期,容易回檔。",
+        "health": [
+          {
+            "name": "毛利率",
+            "val": "37.0%",
+            "light": "amber",
+            "say": "中等毛利(10–40%),有競爭但仍賺加工/設計財,看能否守住。"
+          },
+          {
+            "name": "營益率",
+            "val": "17.8%",
+            "light": "green",
+            "say": "營益率 17.8%:本業很會賺,扣掉人事、行銷等營業費用後還留下不少,是真功夫。"
+          },
+          {
+            "name": "淨利率",
+            "val": "15.0%",
+            "light": "green",
+            "say": "淨利率 15.0%:每賣 100 元,最後股東實拿約 15 元,落袋能力強。"
+          },
+          {
+            "name": "負債比",
+            "val": "47.8%",
+            "light": "green",
+            "say": "負債比在 60% 內,財務結構相對穩健。"
+          },
+          {
+            "name": "流動比",
+            "val": "1.95 倍",
+            "light": "green",
+            "say": "流動資產是短期負債的 1.95 倍(>1.5),短期償債充足。"
+          }
+        ],
+        "valuation": "PE 71.9 偏高(>40),市場給很高成長期待;成長不如預期回檔會兇。 不過它月營收年增 44%、成長很快——高成長配高本益比未必真的貴,這要靠 PEG(本益成長比)判斷,目前資料還不夠算,先別只看 PE 就說太貴。",
+        "momentum_say": "月營收還在高速成長(最新月年增 44%)。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
         "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
         "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
       }
@@ -551,53 +736,79 @@ window.RATINGS = {
     {
       "code": "4958",
       "name": "臻鼎",
-      "rated": false,
-      "total": null,
+      "rated": true,
+      "total": 67.9,
       "subs": {
         "體質": [
-          null,
-          "資料不足"
+          76.0,
+          "毛利率 🟡(60)、營益率 🟡(60)、淨利率 🟡(60)、負債比 🟢(100)、流動比 🟢(100)(未含現金流/速動比,屬需補項)"
         ],
         "估值": [
-          null,
-          "估值資料不足"
+          40,
+          "PE>40 偏高,成長不如預期回檔風險大(PE 88.9);此為估值面,非買賣建議。"
         ],
         "動能": [
-          null,
-          "月營收 YoY 缺"
+          85,
+          "最新月 YoY 37.4%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
         ]
       },
-      "blockers": [
-        "eps()",
-        "bvps()",
-        "pb()",
-        "gross()"
-      ],
+      "blockers": [],
       "verify_summary": {
-        "price": "n/a",
-        "eps": "unverified",
-        "bvps": "unverified",
-        "pb": "unverified",
-        "gross": "unverified",
-        "rev_yoy": null
+        "price": "verified",
+        "eps": "verified",
+        "bvps": "verified",
+        "pb": "verified",
+        "gross": "verified",
+        "rev_yoy": "verified"
       },
       "role": "零組件·載板",
-      "period": "—",
-      "price": null,
-      "price_date": "None",
-      "gross_margin": null,
-      "op_margin": null,
-      "net_margin": null,
-      "debt_ratio": null,
-      "pe": null,
-      "pb": null,
-      "rev_yoy": null,
-      "rev_month": null,
+      "period": "2026 Q1",
+      "price": 630.0,
+      "price_date": "2026-06-30",
+      "gross_margin": 21.635351007285227,
+      "op_margin": 6.1465492226931,
+      "net_margin": 5.027076334801653,
+      "debt_ratio": 41.44655779212438,
+      "pe": 88.86,
+      "pb": 5.36,
+      "rev_yoy": 37.39933169500997,
+      "rev_month": "2026-05",
       "explain": {
-        "summary": "臻鼎:部分體質指標資料不足,月營收資料不足,估值資料不足。",
-        "health": [],
-        "valuation": "PB 無法取得。",
-        "momentum_say": "月營收資料不足。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
+        "summary": "臻鼎:本業有賺、財務還算穩,但有一兩個指標普通,月營收還在高速成長(最新月年增 37%),但目前股價偏貴(本益比 89 倍),等於先付了很多未來的成長;一旦成長不如預期,容易回檔。",
+        "health": [
+          {
+            "name": "毛利率",
+            "val": "21.6%",
+            "light": "amber",
+            "say": "中等毛利(10–40%),有競爭但仍賺加工/設計財,看能否守住。"
+          },
+          {
+            "name": "營益率",
+            "val": "6.1%",
+            "light": "amber",
+            "say": "營益率 6.1%:本業有賺,但營業費用吃掉不少,獲利空間中等。"
+          },
+          {
+            "name": "淨利率",
+            "val": "5.0%",
+            "light": "amber",
+            "say": "淨利率 5.0%:每賣 100 元最後留下約 5 元,普通水準。"
+          },
+          {
+            "name": "負債比",
+            "val": "41.4%",
+            "light": "green",
+            "say": "負債比在 60% 內,財務結構相對穩健。"
+          },
+          {
+            "name": "流動比",
+            "val": "1.59 倍",
+            "light": "green",
+            "say": "流動資產是短期負債的 1.59 倍(>1.5),短期償債充足。"
+          }
+        ],
+        "valuation": "PE 88.9 偏高(>40),市場給很高成長期待;成長不如預期回檔會兇。 不過它月營收年增 37%、成長很快——高成長配高本益比未必真的貴,這要靠 PEG(本益成長比)判斷,目前資料還不夠算,先別只看 PE 就說太貴。",
+        "momentum_say": "月營收還在高速成長(最新月年增 37%)。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
         "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
         "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
       }
@@ -605,53 +816,79 @@ window.RATINGS = {
     {
       "code": "8996",
       "name": "高力",
-      "rated": false,
-      "total": null,
+      "rated": true,
+      "total": 78.8,
       "subs": {
         "體質": [
-          null,
-          "資料不足"
+          92.0,
+          "毛利率 🟡(60)、營益率 🟢(100)、淨利率 🟢(100)、負債比 🟢(100)、流動比 🟢(100)(未含現金流/速動比,屬需補項)"
         ],
         "估值": [
-          null,
-          "估值資料不足"
+          40,
+          "PE>40 偏高,成長不如預期回檔風險大(PE 110.6);此為估值面,非買賣建議。"
         ],
         "動能": [
-          null,
-          "月營收 YoY 缺"
+          100,
+          "最新月 YoY 40.0%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
         ]
       },
-      "blockers": [
-        "eps()",
-        "bvps()",
-        "pb()",
-        "gross()"
-      ],
+      "blockers": [],
       "verify_summary": {
-        "price": "n/a",
-        "eps": "unverified",
-        "bvps": "unverified",
-        "pb": "unverified",
-        "gross": "unverified",
-        "rev_yoy": null
+        "price": "verified",
+        "eps": "verified",
+        "bvps": "verified",
+        "pb": "verified",
+        "gross": "verified",
+        "rev_yoy": "verified"
       },
       "role": "配套·散熱",
-      "period": "—",
-      "price": null,
-      "price_date": "None",
-      "gross_margin": null,
-      "op_margin": null,
-      "net_margin": null,
-      "debt_ratio": null,
-      "pe": null,
-      "pb": null,
-      "rev_yoy": null,
-      "rev_month": null,
+      "period": "2026 Q1",
+      "price": 1565.0,
+      "price_date": "2026-07-01",
+      "gross_margin": 29.02148455245458,
+      "op_margin": 20.709786907338685,
+      "net_margin": 17.69421943685763,
+      "debt_ratio": 47.80821083704307,
+      "pe": 110.56,
+      "pb": 31.04,
+      "rev_yoy": 40.025403665576036,
+      "rev_month": "2026-05",
       "explain": {
-        "summary": "高力:部分體質指標資料不足,月營收資料不足,估值資料不足。",
-        "health": [],
-        "valuation": "PB 無法取得。",
-        "momentum_say": "月營收資料不足。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
+        "summary": "高力:本業有賺、財務還算穩,但有一兩個指標普通,月營收還在高速成長(最新月年增 40%),但目前股價偏貴(本益比 111 倍),等於先付了很多未來的成長;一旦成長不如預期,容易回檔。",
+        "health": [
+          {
+            "name": "毛利率",
+            "val": "29.0%",
+            "light": "amber",
+            "say": "中等毛利(10–40%),有競爭但仍賺加工/設計財,看能否守住。"
+          },
+          {
+            "name": "營益率",
+            "val": "20.7%",
+            "light": "green",
+            "say": "營益率 20.7%:本業很會賺,扣掉人事、行銷等營業費用後還留下不少,是真功夫。"
+          },
+          {
+            "name": "淨利率",
+            "val": "17.7%",
+            "light": "green",
+            "say": "淨利率 17.7%:每賣 100 元,最後股東實拿約 18 元,落袋能力強。"
+          },
+          {
+            "name": "負債比",
+            "val": "47.8%",
+            "light": "green",
+            "say": "負債比在 60% 內,財務結構相對穩健。"
+          },
+          {
+            "name": "流動比",
+            "val": "1.61 倍",
+            "light": "green",
+            "say": "流動資產是短期負債的 1.61 倍(>1.5),短期償債充足。"
+          }
+        ],
+        "valuation": "PE 110.6 偏高(>40),市場給很高成長期待;成長不如預期回檔會兇。 不過它月營收年增 40%、成長很快——高成長配高本益比未必真的貴,這要靠 PEG(本益成長比)判斷,目前資料還不夠算,先別只看 PE 就說太貴。",
+        "momentum_say": "月營收還在高速成長(最新月年增 40%)。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
         "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
         "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
       }
@@ -663,49 +900,78 @@ window.RATINGS = {
       "total": null,
       "subs": {
         "體質": [
-          null,
-          "資料不足"
+          60.0,
+          "毛利率 🟡(60)、營益率 🔴(20)、淨利率 🔴(20)、負債比 🟢(100)、流動比 🟢(100)(未含現金流/速動比,屬需補項)"
         ],
         "估值": [
-          null,
-          "估值資料不足"
+          35,
+          "虧損/獲利不穩,改看 PB:PB>6 很高,多為未來預期(PB 8.60)。"
         ],
         "動能": [
-          null,
-          "月營收 YoY 缺"
+          55,
+          "最新月 YoY 4.9%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
         ]
       },
       "blockers": [
-        "eps()",
-        "bvps()",
-        "pb()",
-        "gross()"
+        "eps(來源A 官方申報基本EPS=-1.45 / 來源B 歸屬母公司淨利÷股數=-1.)",
+        "bvps(來源A 官方每股參考淨值=66.03 / 來源B 歸屬母公司權益÷股數=62.5)"
       ],
       "verify_summary": {
-        "price": "n/a",
+        "price": "verified",
         "eps": "unverified",
         "bvps": "unverified",
-        "pb": "unverified",
-        "gross": "unverified",
-        "rev_yoy": null
+        "pb": "verified",
+        "gross": "verified",
+        "rev_yoy": "verified"
       },
       "role": "配套·光通訊",
-      "period": "—",
-      "price": null,
-      "price_date": "None",
-      "gross_margin": null,
-      "op_margin": null,
-      "net_margin": null,
-      "debt_ratio": null,
+      "period": "2026 Q1",
+      "price": 568.0,
+      "price_date": "2026-06-30",
+      "gross_margin": 11.9591394513001,
+      "op_margin": -5.177029975260416,
+      "net_margin": -9.476876567950812,
+      "debt_ratio": 59.66817995597701,
       "pe": null,
-      "pb": null,
-      "rev_yoy": null,
-      "rev_month": null,
+      "pb": 8.6,
+      "rev_yoy": 4.891403908887854,
+      "rev_month": "2026-05",
       "explain": {
-        "summary": "訊芯:部分體質指標資料不足,月營收資料不足,估值資料不足。",
-        "health": [],
-        "valuation": "PB 無法取得。",
-        "momentum_say": "月營收資料不足。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
+        "summary": "訊芯:賺錢能力或財務結構有明顯弱點,月營收溫和成長(年增 5%),由於獲利不穩,改用股價淨值比看:目前 8.6 倍(高,多在反映未來預期)。",
+        "health": [
+          {
+            "name": "毛利率",
+            "val": "12.0%",
+            "light": "amber",
+            "say": "中等毛利(10–40%),有競爭但仍賺加工/設計財,看能否守住。"
+          },
+          {
+            "name": "營益率",
+            "val": "-5.2%",
+            "light": "red",
+            "say": "營益率 -5.2%:本業幾乎沒利潤,費用幾乎把毛利吃光,要小心。"
+          },
+          {
+            "name": "淨利率",
+            "val": "-9.5%",
+            "light": "red",
+            "say": "淨利率 -9.5%:每 100 元營收最後只剩 -9.5 元,很薄,易受波動影響。"
+          },
+          {
+            "name": "負債比",
+            "val": "59.7%",
+            "light": "green",
+            "say": "負債比在 60% 內,財務結構相對穩健。"
+          },
+          {
+            "name": "流動比",
+            "val": "1.67 倍",
+            "light": "green",
+            "say": "流動資產是短期負債的 1.67 倍(>1.5),短期償債充足。"
+          }
+        ],
+        "valuation": "PB 8.60 >1,市場願為它的未來多付錢(高於帳面淨值),成長股常見,別追過頭。",
+        "momentum_say": "月營收溫和成長(年增 5%)。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
         "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
         "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
       }
@@ -731,7 +997,7 @@ window.RATINGS = {
       },
       "blockers": [],
       "verify_summary": {
-        "price": "official_single",
+        "price": "verified",
         "eps": "verified",
         "bvps": "verified",
         "pb": "verified",
@@ -811,7 +1077,7 @@ window.RATINGS = {
       },
       "blockers": [],
       "verify_summary": {
-        "price": "official_single",
+        "price": "verified",
         "eps": "minor_diff",
         "bvps": "verified",
         "pb": "verified",
