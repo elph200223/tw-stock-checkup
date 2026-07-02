@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-07-01 18:38",
+    "fetched_at": "2026-07-02 09:55",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
@@ -22,10 +22,10 @@
       "rev_source": "上市 TWSE",
       "price": 2505.0,
       "price_date": "2026-07-01",
-      "price_change": 95.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 2410.0,
-      "daily_date": "2026-06-30",
+      "price_change": "95.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 2505.0,
+      "daily_date": "2026-07-01",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -52,7 +52,7 @@
         {
           "date": "2026-07-01",
           "price": 2505.0,
-          "change": 95.0
+          "change": "95.0000"
         }
       ],
       "rev_history": [
@@ -77,10 +77,10 @@
       "rev_source": "上市 TWSE",
       "price": 1990.0,
       "price_date": "2026-07-01",
-      "price_change": 40.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 1950.0,
-      "daily_date": "2026-06-30",
+      "price_change": "40.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 1990.0,
+      "daily_date": "2026-07-01",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -107,7 +107,7 @@
         {
           "date": "2026-07-01",
           "price": 1990.0,
-          "change": 40.0
+          "change": "40.0000"
         }
       ],
       "rev_history": [
@@ -130,12 +130,12 @@
       "yoy": 37.39933169500997,
       "mom": 6.613060936502736,
       "rev_source": "上市 TWSE",
-      "price": 603.0,
-      "price_date": "2026-07-01",
-      "price_change": -27.0,
+      "price": 599.0,
+      "price_date": "2026-07-02",
+      "price_change": -4.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 630.0,
-      "daily_date": "2026-06-30",
+      "daily_close": 603.0,
+      "daily_date": "2026-07-01",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -163,6 +163,11 @@
           "date": "2026-07-01",
           "price": 603.0,
           "change": -27.0
+        },
+        {
+          "date": "2026-07-02",
+          "price": 599.0,
+          "change": -4.0
         }
       ],
       "rev_history": [
@@ -187,10 +192,10 @@
       "rev_source": "上市 TWSE",
       "price": 1555.0,
       "price_date": "2026-07-01",
-      "price_change": 5.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 1550.0,
-      "daily_date": "2026-06-30",
+      "price_change": "5.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 1555.0,
+      "daily_date": "2026-07-01",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -217,7 +222,7 @@
         {
           "date": "2026-07-01",
           "price": 1555.0,
-          "change": 5.0
+          "change": "5.0000"
         }
       ],
       "rev_history": [
@@ -242,10 +247,10 @@
       "rev_source": "上市 TWSE",
       "price": 524.0,
       "price_date": "2026-07-01",
-      "price_change": -44.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 568.0,
-      "daily_date": "2026-06-30",
+      "price_change": "-44.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 524.0,
+      "daily_date": "2026-07-01",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -272,7 +277,7 @@
         {
           "date": "2026-07-01",
           "price": 524.0,
-          "change": -44.0
+          "change": "-44.0000"
         }
       ],
       "rev_history": [
@@ -297,11 +302,11 @@
       "rev_source": "上櫃 TPEx",
       "price": 1980.0,
       "price_date": "2026-07-01",
-      "price_change": -40.0,
-      "price_source": "證交所即時 MIS",
+      "price_change": "-40.00",
+      "price_source": "上櫃 TPEx 每日收盤",
       "daily_close": 1980.0,
       "daily_date": "2026-07-01",
-      "price_verify": "verified",
+      "price_verify": null,
       "flags": [],
       "price_history": [
         {
@@ -327,7 +332,7 @@
         {
           "date": "2026-07-01",
           "price": 1980.0,
-          "change": -40.0
+          "change": "-40.00"
         }
       ],
       "rev_history": [
@@ -352,11 +357,11 @@
       "rev_source": "上櫃 TPEx",
       "price": 537.0,
       "price_date": "2026-07-01",
-      "price_change": -41.0,
-      "price_source": "證交所即時 MIS",
+      "price_change": "-41.00",
+      "price_source": "上櫃 TPEx 每日收盤",
       "daily_close": 537.0,
       "daily_date": "2026-07-01",
-      "price_verify": "verified",
+      "price_verify": null,
       "flags": [],
       "price_history": [
         {
@@ -382,7 +387,7 @@
         {
           "date": "2026-07-01",
           "price": 537.0,
-          "change": -41.0
+          "change": "-41.00"
         }
       ],
       "rev_history": [
