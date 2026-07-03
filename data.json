@@ -1,11 +1,14 @@
 {
   "meta": {
-    "fetched_at": "2026-07-02 17:55",
+    "fetched_at": "2026-07-03 09:25",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
     },
-    "errors": [],
+    "errors": [
+      "twse_rev: Expecting value: line 1 column 1 (char 0)",
+      "twse_price: Expecting value: line 1 column 1 (char 0)"
+    ],
     "note": "資料為官方一手來源,經合理性與交叉驗證;有 flags 者請人工確認。"
   },
   "stocks": {
@@ -14,20 +17,23 @@
       "name": "台積電",
       "market": "TWSE",
       "tag": "溫度計",
-      "month": "2026-05",
-      "rev": 416975.163,
-      "rev_last_year": 320515.951,
-      "yoy": 30.09498020271696,
-      "mom": 1.5217099529812539,
-      "rev_source": "上市 TWSE",
-      "price": 2465.0,
-      "price_date": "2026-07-02",
-      "price_change": -40.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 2505.0,
-      "daily_date": "2026-07-01",
+      "month": null,
+      "rev": null,
+      "rev_last_year": null,
+      "yoy": null,
+      "mom": null,
+      "rev_source": null,
+      "price": null,
+      "price_date": null,
+      "price_change": null,
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": null,
+      "daily_date": null,
       "price_verify": null,
-      "flags": [],
+      "flags": [
+        "無當月營收",
+        "無收盤價"
+      ],
       "price_history": [
         {
           "date": "2026-06-18",
@@ -74,20 +80,23 @@
       "name": "台達電",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-05",
-      "rev": 58961.817,
-      "rev_last_year": 41044.766,
-      "yoy": 43.65246228958888,
-      "mom": 0.46031248191821217,
-      "rev_source": "上市 TWSE",
-      "price": 1970.0,
-      "price_date": "2026-07-02",
-      "price_change": -20.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 1990.0,
-      "daily_date": "2026-07-01",
+      "month": null,
+      "rev": null,
+      "rev_last_year": null,
+      "yoy": null,
+      "mom": null,
+      "rev_source": null,
+      "price": null,
+      "price_date": null,
+      "price_change": null,
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": null,
+      "daily_date": null,
       "price_verify": null,
-      "flags": [],
+      "flags": [
+        "無當月營收",
+        "無收盤價"
+      ],
       "price_history": [
         {
           "date": "2026-06-18",
@@ -134,20 +143,23 @@
       "name": "臻鼎",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-05",
-      "rev": 16201.199,
-      "rev_last_year": 11791.323,
-      "yoy": 37.39933169500997,
-      "mom": 6.613060936502736,
-      "rev_source": "上市 TWSE",
-      "price": 598.0,
-      "price_date": "2026-07-02",
-      "price_change": -5.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 603.0,
-      "daily_date": "2026-07-01",
+      "month": null,
+      "rev": null,
+      "rev_last_year": null,
+      "yoy": null,
+      "mom": null,
+      "rev_source": null,
+      "price": null,
+      "price_date": null,
+      "price_change": null,
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": null,
+      "daily_date": null,
       "price_verify": null,
-      "flags": [],
+      "flags": [
+        "無當月營收",
+        "無收盤價"
+      ],
       "price_history": [
         {
           "date": "2026-06-18",
@@ -194,20 +206,23 @@
       "name": "高力",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-05",
-      "rev": 631.677,
-      "rev_last_year": 451.116,
-      "yoy": 40.025403665576036,
-      "mom": -33.422745650240095,
-      "rev_source": "上市 TWSE",
-      "price": 1415.0,
-      "price_date": "2026-07-02",
-      "price_change": -140.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 1555.0,
-      "daily_date": "2026-07-01",
+      "month": null,
+      "rev": null,
+      "rev_last_year": null,
+      "yoy": null,
+      "mom": null,
+      "rev_source": null,
+      "price": null,
+      "price_date": null,
+      "price_change": null,
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": null,
+      "daily_date": null,
       "price_verify": null,
-      "flags": [],
+      "flags": [
+        "無當月營收",
+        "無收盤價"
+      ],
       "price_history": [
         {
           "date": "2026-06-18",
@@ -254,20 +269,23 @@
       "name": "訊芯",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-05",
-      "rev": 624.107,
-      "rev_last_year": 595.003,
-      "yoy": 4.891403908887854,
-      "mom": -2.6533337076793977,
-      "rev_source": "上市 TWSE",
-      "price": 522.0,
-      "price_date": "2026-07-02",
-      "price_change": -2.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 524.0,
-      "daily_date": "2026-07-01",
+      "month": null,
+      "rev": null,
+      "rev_last_year": null,
+      "yoy": null,
+      "mom": null,
+      "rev_source": null,
+      "price": null,
+      "price_date": null,
+      "price_change": null,
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": null,
+      "daily_date": null,
       "price_verify": null,
-      "flags": [],
+      "flags": [
+        "無當月營收",
+        "無收盤價"
+      ],
       "price_history": [
         {
           "date": "2026-06-18",
@@ -322,11 +340,11 @@
       "rev_source": "上櫃 TPEx",
       "price": 1940.0,
       "price_date": "2026-07-02",
-      "price_change": -40.0,
-      "price_source": "證交所即時 MIS",
+      "price_change": "-40.00",
+      "price_source": "上櫃 TPEx 每日收盤",
       "daily_close": 1940.0,
       "daily_date": "2026-07-02",
-      "price_verify": "verified",
+      "price_verify": null,
       "flags": [],
       "price_history": [
         {
@@ -357,7 +375,7 @@
         {
           "date": "2026-07-02",
           "price": 1940.0,
-          "change": -40.0
+          "change": "-40.00"
         }
       ],
       "rev_history": [
@@ -382,11 +400,11 @@
       "rev_source": "上櫃 TPEx",
       "price": 529.0,
       "price_date": "2026-07-02",
-      "price_change": -8.0,
-      "price_source": "證交所即時 MIS",
+      "price_change": "-8.00",
+      "price_source": "上櫃 TPEx 每日收盤",
       "daily_close": 529.0,
       "daily_date": "2026-07-02",
-      "price_verify": "verified",
+      "price_verify": null,
       "flags": [],
       "price_history": [
         {
@@ -417,7 +435,7 @@
         {
           "date": "2026-07-02",
           "price": 529.0,
-          "change": -8.0
+          "change": "-8.00"
         }
       ],
       "rev_history": [
