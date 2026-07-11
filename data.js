@@ -1,6 +1,6 @@
 window.STOCK_DATA = {
   "meta": {
-    "fetched_at": "2026-07-11 09:15",
+    "fetched_at": "2026-07-11 16:43",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
@@ -439,11 +439,11 @@ window.STOCK_DATA = {
       "name": "聯亞",
       "market": "TPEx",
       "tag": "",
-      "month": "2026-05",
-      "rev": 405.322,
-      "rev_last_year": 185.217,
-      "yoy": 118.83628392642144,
-      "mom": 2.5225813142312234,
+      "month": "2026-06",
+      "rev": 420.507,
+      "rev_last_year": 184.322,
+      "yoy": 128.13717299074446,
+      "mom": 3.74640409353551,
       "rev_source": "上櫃 TPEx",
       "price": 2005.0,
       "price_date": "2026-07-09",
@@ -516,6 +516,12 @@ window.STOCK_DATA = {
           "rev": 405.322,
           "yoy": 118.83628392642144,
           "mom": 2.5225813142312234
+        },
+        {
+          "month": "2026-06",
+          "rev": 420.507,
+          "yoy": 128.13717299074446,
+          "mom": 3.74640409353551
         }
       ]
     },
@@ -524,11 +530,11 @@ window.STOCK_DATA = {
       "name": "上詮",
       "market": "TPEx",
       "tag": "",
-      "month": "2026-05",
-      "rev": 143.8,
-      "rev_last_year": 191.237,
-      "yoy": -24.80534624575788,
-      "mom": 12.393800364224694,
+      "month": "2026-06",
+      "rev": 157.445,
+      "rev_last_year": 186.77,
+      "yoy": -15.701129731755636,
+      "mom": 9.488873435326843,
       "rev_source": "上櫃 TPEx",
       "price": 608.0,
       "price_date": "2026-07-09",
@@ -601,6 +607,12 @@ window.STOCK_DATA = {
           "rev": 143.8,
           "yoy": -24.80534624575788,
           "mom": 12.393800364224694
+        },
+        {
+          "month": "2026-06",
+          "rev": 157.445,
+          "yoy": -15.701129731755636,
+          "mom": 9.488873435326843
         }
       ]
     }
