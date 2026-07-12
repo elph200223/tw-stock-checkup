@@ -1,6 +1,6 @@
 window.STOCK_DATA = {
   "meta": {
-    "fetched_at": "2026-07-11 16:43",
+    "fetched_at": "2026-07-12 09:16",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
@@ -14,12 +14,12 @@ window.STOCK_DATA = {
       "name": "台積電",
       "market": "TWSE",
       "tag": "溫度計",
-      "month": "2026-05",
-      "rev": 416975.163,
-      "rev_last_year": 320515.951,
-      "yoy": 30.09498020271696,
-      "mom": 1.5217099529812539,
-      "rev_source": "上市 TWSE",
+      "month": null,
+      "rev": null,
+      "rev_last_year": null,
+      "yoy": null,
+      "mom": null,
+      "rev_source": null,
       "price": 2415.0,
       "price_date": "2026-07-09",
       "price_change": -50.0,
@@ -27,7 +27,9 @@ window.STOCK_DATA = {
       "daily_close": 2415.0,
       "daily_date": "2026-07-09",
       "price_verify": "verified",
-      "flags": [],
+      "flags": [
+        "無當月營收"
+      ],
       "price_history": [
         {
           "date": "2026-06-18",
@@ -99,11 +101,11 @@ window.STOCK_DATA = {
       "name": "台達電",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-05",
-      "rev": 58961.817,
-      "rev_last_year": 41044.766,
-      "yoy": 43.65246228958888,
-      "mom": 0.46031248191821217,
+      "month": "2026-06",
+      "rev": 65602.611,
+      "rev_last_year": 42208.156,
+      "yoy": 55.42638489110967,
+      "mom": 11.262872038017417,
       "rev_source": "上市 TWSE",
       "price": 1880.0,
       "price_date": "2026-07-09",
@@ -176,6 +178,12 @@ window.STOCK_DATA = {
           "rev": 58961.817,
           "yoy": 43.65246228958888,
           "mom": 0.46031248191821217
+        },
+        {
+          "month": "2026-06",
+          "rev": 65602.611,
+          "yoy": 55.42638489110967,
+          "mom": 11.262872038017417
         }
       ]
     },
@@ -184,11 +192,11 @@ window.STOCK_DATA = {
       "name": "臻鼎",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-05",
-      "rev": 16201.199,
-      "rev_last_year": 11791.323,
-      "yoy": 37.39933169500997,
-      "mom": 6.613060936502736,
+      "month": "2026-06",
+      "rev": 17033.197,
+      "rev_last_year": 12823.095,
+      "yoy": 32.83218287004814,
+      "mom": 5.135410039713728,
       "rev_source": "上市 TWSE",
       "price": 588.0,
       "price_date": "2026-07-09",
@@ -261,6 +269,12 @@ window.STOCK_DATA = {
           "rev": 16201.199,
           "yoy": 37.39933169500997,
           "mom": 6.613060936502736
+        },
+        {
+          "month": "2026-06",
+          "rev": 17033.197,
+          "yoy": 32.83218287004814,
+          "mom": 5.135410039713728
         }
       ]
     },
@@ -269,11 +283,11 @@ window.STOCK_DATA = {
       "name": "高力",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-05",
-      "rev": 631.677,
-      "rev_last_year": 451.116,
-      "yoy": 40.025403665576036,
-      "mom": -33.422745650240095,
+      "month": "2026-06",
+      "rev": 724.767,
+      "rev_last_year": 526.875,
+      "yoy": 37.559572953736655,
+      "mom": 14.73696208663605,
       "rev_source": "上市 TWSE",
       "price": 1230.0,
       "price_date": "2026-07-09",
@@ -346,6 +360,12 @@ window.STOCK_DATA = {
           "rev": 631.677,
           "yoy": 40.025403665576036,
           "mom": -33.422745650240095
+        },
+        {
+          "month": "2026-06",
+          "rev": 724.767,
+          "yoy": 37.559572953736655,
+          "mom": 14.73696208663605
         }
       ]
     },
@@ -354,11 +374,11 @@ window.STOCK_DATA = {
       "name": "訊芯",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-05",
-      "rev": 624.107,
-      "rev_last_year": 595.003,
-      "yoy": 4.891403908887854,
-      "mom": -2.6533337076793977,
+      "month": "2026-06",
+      "rev": 750.026,
+      "rev_last_year": 533.619,
+      "yoy": 40.55459044749156,
+      "mom": 20.175867279168475,
       "rev_source": "上市 TWSE",
       "price": 518.0,
       "price_date": "2026-07-09",
@@ -431,6 +451,12 @@ window.STOCK_DATA = {
           "rev": 624.107,
           "yoy": 4.891403908887854,
           "mom": -2.6533337076793977
+        },
+        {
+          "month": "2026-06",
+          "rev": 750.026,
+          "yoy": 40.55459044749156,
+          "mom": 20.175867279168475
         }
       ]
     },
