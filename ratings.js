@@ -1,5 +1,5 @@
 window.RATINGS = {
-  "updated": "2026-07-14 09:11",
+  "updated": "2026-07-14 17:06",
   "weights": {
     "體質": 0.4,
     "估值": 0.3,
@@ -30,14 +30,14 @@ window.RATINGS = {
         "price": "verified",
         "eps": "verified",
         "bvps": "verified",
-        "pb": "verified",
+        "pb": "minor_diff",
         "gross": "verified",
         "rev_yoy": "verified"
       },
       "role": "零組件·光通訊磊晶",
       "period": "2026 Q1",
-      "price": 1990.0,
-      "price_date": "2026-07-13",
+      "price": 1925.0,
+      "price_date": "2026-07-14",
       "gross_margin": 54.75884823897681,
       "op_margin": 41.26874608160869,
       "net_margin": 35.10823329341688,
@@ -110,14 +110,14 @@ window.RATINGS = {
         "price": "verified",
         "eps": "verified",
         "bvps": "verified",
-        "pb": "verified",
+        "pb": "minor_diff",
         "gross": "verified",
         "rev_yoy": "verified"
       },
       "role": "配套·電源",
       "period": "2026 Q1",
-      "price": 1890.0,
-      "price_date": "2026-07-13",
+      "price": 1855.0,
+      "price_date": "2026-07-14",
       "gross_margin": 37.00024458959114,
       "op_margin": 17.832965214786636,
       "net_margin": 14.957108464062463,
@@ -167,86 +167,6 @@ window.RATINGS = {
       }
     },
     {
-      "code": "8996",
-      "name": "高力",
-      "rated": true,
-      "total": 74.3,
-      "subs": {
-        "體質": [
-          92.0,
-          "毛利率 🟡(60)、營益率 🟢(100)、淨利率 🟢(100)、負債比 🟢(100)、流動比 🟢(100)(未含現金流/速動比,屬需補項)"
-        ],
-        "估值": [
-          40,
-          "PE>40 偏高,成長不如預期回檔風險大(PE 88.5);此為估值面,非買賣建議。"
-        ],
-        "動能": [
-          85,
-          "最新月 YoY 37.6%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
-        ]
-      },
-      "blockers": [],
-      "verify_summary": {
-        "price": "verified",
-        "eps": "verified",
-        "bvps": "verified",
-        "pb": "minor_diff",
-        "gross": "verified",
-        "rev_yoy": "verified"
-      },
-      "role": "配套·散熱",
-      "period": "2026 Q1",
-      "price": 1200.0,
-      "price_date": "2026-07-14",
-      "gross_margin": 29.02148455245458,
-      "op_margin": 20.709786907338685,
-      "net_margin": 17.69421943685763,
-      "debt_ratio": 47.80821083704307,
-      "pe": 88.45,
-      "pb": 24.83,
-      "rev_yoy": 37.559572953736655,
-      "rev_month": "2026-06",
-      "explain": {
-        "summary": "高力:本業有賺、財務還算穩,但有一兩個指標普通,月營收還在高速成長(最新月年增 38%),但目前股價偏貴(本益比 88 倍),等於先付了很多未來的成長;一旦成長不如預期,容易回檔。",
-        "health": [
-          {
-            "name": "毛利率",
-            "val": "29.0%",
-            "light": "amber",
-            "say": "中等毛利(10–40%),有競爭但仍賺加工/設計財,看能否守住。"
-          },
-          {
-            "name": "營益率",
-            "val": "20.7%",
-            "light": "green",
-            "say": "營益率 20.7%:本業很會賺,扣掉人事、行銷等營業費用後還留下不少,是真功夫。"
-          },
-          {
-            "name": "淨利率",
-            "val": "17.7%",
-            "light": "green",
-            "say": "淨利率 17.7%:每賣 100 元,最後股東實拿約 18 元,落袋能力強。"
-          },
-          {
-            "name": "負債比",
-            "val": "47.8%",
-            "light": "green",
-            "say": "負債比在 60% 內,財務結構相對穩健。"
-          },
-          {
-            "name": "流動比",
-            "val": "1.61 倍",
-            "light": "green",
-            "say": "流動資產是短期負債的 1.61 倍(>1.5),短期償債充足。"
-          }
-        ],
-        "valuation": "PE 88.5 偏高(>40),市場給很高成長期待;成長不如預期回檔會兇。 不過它月營收年增 38%、成長很快——高成長配高本益比未必真的貴,這要靠 PEG(本益成長比)判斷,目前資料還不夠算,先別只看 PE 就說太貴。",
-        "momentum_say": "月營收還在高速成長(最新月年增 38%)。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
-        "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
-        "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
-      }
-    },
-    {
       "code": "4958",
       "name": "臻鼎",
       "rated": true,
@@ -270,14 +190,14 @@ window.RATINGS = {
         "price": "verified",
         "eps": "minor_diff",
         "bvps": "minor_diff",
-        "pb": "verified",
+        "pb": "minor_diff",
         "gross": "verified",
         "rev_yoy": "verified"
       },
       "role": "零組件·載板",
       "period": "2026 Q1",
-      "price": 646.0,
-      "price_date": "2026-07-13",
+      "price": 629.0,
+      "price_date": "2026-07-14",
       "gross_margin": 21.635351007285227,
       "op_margin": 6.1465492226931,
       "net_margin": 5.027076334801653,
@@ -350,14 +270,14 @@ window.RATINGS = {
         "price": "verified",
         "eps": "minor_diff",
         "bvps": "verified",
-        "pb": "verified",
+        "pb": "minor_diff",
         "gross": "verified",
         "rev_yoy": "verified"
       },
       "role": "配套·光通訊",
       "period": "2026 Q1",
-      "price": 601.0,
-      "price_date": "2026-07-13",
+      "price": 579.0,
+      "price_date": "2026-07-14",
       "gross_margin": 1.8841843186227156,
       "op_margin": -40.86116936191157,
       "net_margin": -28.022169338349446,
@@ -438,8 +358,8 @@ window.RATINGS = {
       },
       "role": "上游·晶圓代工(溫度計)",
       "period": "2026 Q1",
-      "price": 2440.0,
-      "price_date": "2026-07-13",
+      "price": 2420.0,
+      "price_date": "2026-07-14",
       "gross_margin": 66.24575805889452,
       "op_margin": 58.104588942962735,
       "net_margin": 50.5069717450112,
@@ -489,6 +409,88 @@ window.RATINGS = {
       }
     },
     {
+      "code": "8996",
+      "name": "高力",
+      "rated": false,
+      "total": null,
+      "subs": {
+        "體質": [
+          92.0,
+          "毛利率 🟡(60)、營益率 🟢(100)、淨利率 🟢(100)、負債比 🟢(100)、流動比 🟢(100)(未含現金流/速動比,屬需補項)"
+        ],
+        "估值": [
+          40,
+          "PE>40 偏高,成長不如預期回檔風險大(PE 88.5);此為估值面,非買賣建議。"
+        ],
+        "動能": [
+          85,
+          "最新月 YoY 37.6%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
+        ]
+      },
+      "blockers": [
+        "pb(來源A 官方PB(BWIBBU)=24.83 / 來源B 股價÷每股淨值=23.)"
+      ],
+      "verify_summary": {
+        "price": "verified",
+        "eps": "verified",
+        "bvps": "verified",
+        "pb": "unverified",
+        "gross": "verified",
+        "rev_yoy": "verified"
+      },
+      "role": "配套·散熱",
+      "period": "2026 Q1",
+      "price": 1175.0,
+      "price_date": "2026-07-14",
+      "gross_margin": 29.02148455245458,
+      "op_margin": 20.709786907338685,
+      "net_margin": 17.69421943685763,
+      "debt_ratio": 47.80821083704307,
+      "pe": 88.45,
+      "pb": 24.83,
+      "rev_yoy": 37.559572953736655,
+      "rev_month": "2026-06",
+      "explain": {
+        "summary": "高力:本業有賺、財務還算穩,但有一兩個指標普通,月營收還在高速成長(最新月年增 38%),但目前股價偏貴(本益比 88 倍),等於先付了很多未來的成長;一旦成長不如預期,容易回檔。",
+        "health": [
+          {
+            "name": "毛利率",
+            "val": "29.0%",
+            "light": "amber",
+            "say": "中等毛利(10–40%),有競爭但仍賺加工/設計財,看能否守住。"
+          },
+          {
+            "name": "營益率",
+            "val": "20.7%",
+            "light": "green",
+            "say": "營益率 20.7%:本業很會賺,扣掉人事、行銷等營業費用後還留下不少,是真功夫。"
+          },
+          {
+            "name": "淨利率",
+            "val": "17.7%",
+            "light": "green",
+            "say": "淨利率 17.7%:每賣 100 元,最後股東實拿約 18 元,落袋能力強。"
+          },
+          {
+            "name": "負債比",
+            "val": "47.8%",
+            "light": "green",
+            "say": "負債比在 60% 內,財務結構相對穩健。"
+          },
+          {
+            "name": "流動比",
+            "val": "1.61 倍",
+            "light": "green",
+            "say": "流動資產是短期負債的 1.61 倍(>1.5),短期償債充足。"
+          }
+        ],
+        "valuation": "PE 88.5 偏高(>40),市場給很高成長期待;成長不如預期回檔會兇。 不過它月營收年增 38%、成長很快——高成長配高本益比未必真的貴,這要靠 PEG(本益成長比)判斷,目前資料還不夠算,先別只看 PE 就說太貴。",
+        "momentum_say": "月營收還在高速成長(最新月年增 38%)。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
+        "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
+        "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
+      }
+    },
+    {
       "code": "6451",
       "name": "訊芯",
       "rated": false,
@@ -509,20 +511,21 @@ window.RATINGS = {
       },
       "blockers": [
         "eps(來源A 官方申報基本EPS=-1.45 / 來源B 歸屬母公司淨利÷股數=-1.)",
-        "bvps(來源A 官方每股參考淨值=66.03 / 來源B 歸屬母公司權益÷股數=61.7)"
+        "bvps(來源A 官方每股參考淨值=66.03 / 來源B 歸屬母公司權益÷股數=61.7)",
+        "pb(來源A 官方PB(BWIBBU)=7.42 / 來源B 股價÷每股淨值=6.76)"
       ],
       "verify_summary": {
         "price": "verified",
         "eps": "unverified",
         "bvps": "unverified",
-        "pb": "verified",
+        "pb": "unverified",
         "gross": "verified",
         "rev_yoy": "verified"
       },
       "role": "配套·光通訊",
       "period": "2026 Q1",
-      "price": 490.0,
-      "price_date": "2026-07-13",
+      "price": 446.5,
+      "price_date": "2026-07-14",
       "gross_margin": 11.9591394513001,
       "op_margin": -5.177029975260416,
       "net_margin": -9.476876567950812,
@@ -603,8 +606,8 @@ window.RATINGS = {
       },
       "role": "上游·晶圓代工(溫度計)",
       "period": "2026 Q1",
-      "price": 2440.0,
-      "price_date": "2026-07-13",
+      "price": 2420.0,
+      "price_date": "2026-07-14",
       "gross_margin": 66.24575805889452,
       "op_margin": 58.104588942962735,
       "net_margin": 50.5069717450112,
@@ -677,14 +680,14 @@ window.RATINGS = {
         "price": "verified",
         "eps": "verified",
         "bvps": "verified",
-        "pb": "verified",
+        "pb": "minor_diff",
         "gross": "verified",
         "rev_yoy": "verified"
       },
       "role": "配套·電源",
       "period": "2026 Q1",
-      "price": 1890.0,
-      "price_date": "2026-07-13",
+      "price": 1855.0,
+      "price_date": "2026-07-14",
       "gross_margin": 37.00024458959114,
       "op_margin": 17.832965214786636,
       "net_margin": 14.957108464062463,
@@ -757,14 +760,14 @@ window.RATINGS = {
         "price": "verified",
         "eps": "minor_diff",
         "bvps": "minor_diff",
-        "pb": "verified",
+        "pb": "minor_diff",
         "gross": "verified",
         "rev_yoy": "verified"
       },
       "role": "零組件·載板",
       "period": "2026 Q1",
-      "price": 646.0,
-      "price_date": "2026-07-13",
+      "price": 629.0,
+      "price_date": "2026-07-14",
       "gross_margin": 21.635351007285227,
       "op_margin": 6.1465492226931,
       "net_margin": 5.027076334801653,
@@ -816,8 +819,8 @@ window.RATINGS = {
     {
       "code": "8996",
       "name": "高力",
-      "rated": true,
-      "total": 74.3,
+      "rated": false,
+      "total": null,
       "subs": {
         "體質": [
           92.0,
@@ -832,18 +835,20 @@ window.RATINGS = {
           "最新月 YoY 37.6%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
         ]
       },
-      "blockers": [],
+      "blockers": [
+        "pb(來源A 官方PB(BWIBBU)=24.83 / 來源B 股價÷每股淨值=23.)"
+      ],
       "verify_summary": {
         "price": "verified",
         "eps": "verified",
         "bvps": "verified",
-        "pb": "minor_diff",
+        "pb": "unverified",
         "gross": "verified",
         "rev_yoy": "verified"
       },
       "role": "配套·散熱",
       "period": "2026 Q1",
-      "price": 1200.0,
+      "price": 1175.0,
       "price_date": "2026-07-14",
       "gross_margin": 29.02148455245458,
       "op_margin": 20.709786907338685,
@@ -914,20 +919,21 @@ window.RATINGS = {
       },
       "blockers": [
         "eps(來源A 官方申報基本EPS=-1.45 / 來源B 歸屬母公司淨利÷股數=-1.)",
-        "bvps(來源A 官方每股參考淨值=66.03 / 來源B 歸屬母公司權益÷股數=61.7)"
+        "bvps(來源A 官方每股參考淨值=66.03 / 來源B 歸屬母公司權益÷股數=61.7)",
+        "pb(來源A 官方PB(BWIBBU)=7.42 / 來源B 股價÷每股淨值=6.76)"
       ],
       "verify_summary": {
         "price": "verified",
         "eps": "unverified",
         "bvps": "unverified",
-        "pb": "verified",
+        "pb": "unverified",
         "gross": "verified",
         "rev_yoy": "verified"
       },
       "role": "配套·光通訊",
       "period": "2026 Q1",
-      "price": 490.0,
-      "price_date": "2026-07-13",
+      "price": 446.5,
+      "price_date": "2026-07-14",
       "gross_margin": 11.9591394513001,
       "op_margin": -5.177029975260416,
       "net_margin": -9.476876567950812,
@@ -1000,14 +1006,14 @@ window.RATINGS = {
         "price": "verified",
         "eps": "verified",
         "bvps": "verified",
-        "pb": "verified",
+        "pb": "minor_diff",
         "gross": "verified",
         "rev_yoy": "verified"
       },
       "role": "零組件·光通訊磊晶",
       "period": "2026 Q1",
-      "price": 1990.0,
-      "price_date": "2026-07-13",
+      "price": 1925.0,
+      "price_date": "2026-07-14",
       "gross_margin": 54.75884823897681,
       "op_margin": 41.26874608160869,
       "net_margin": 35.10823329341688,
@@ -1080,14 +1086,14 @@ window.RATINGS = {
         "price": "verified",
         "eps": "minor_diff",
         "bvps": "verified",
-        "pb": "verified",
+        "pb": "minor_diff",
         "gross": "verified",
         "rev_yoy": "verified"
       },
       "role": "配套·光通訊",
       "period": "2026 Q1",
-      "price": 601.0,
-      "price_date": "2026-07-13",
+      "price": 579.0,
+      "price_date": "2026-07-14",
       "gross_margin": 1.8841843186227156,
       "op_margin": -40.86116936191157,
       "net_margin": -28.022169338349446,
