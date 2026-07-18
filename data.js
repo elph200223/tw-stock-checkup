@@ -1,6 +1,6 @@
 window.STOCK_DATA = {
   "meta": {
-    "fetched_at": "2026-07-17 17:04",
+    "fetched_at": "2026-07-18 09:10",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
@@ -24,9 +24,9 @@ window.STOCK_DATA = {
       "price_date": "2026-07-17",
       "price_change": -180.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 2470.0,
-      "daily_date": "2026-07-16",
-      "price_verify": null,
+      "daily_close": 2290.0,
+      "daily_date": "2026-07-17",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -140,9 +140,9 @@ window.STOCK_DATA = {
       "price_date": "2026-07-17",
       "price_change": -165.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 1905.0,
-      "daily_date": "2026-07-16",
-      "price_verify": null,
+      "daily_close": 1740.0,
+      "daily_date": "2026-07-17",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -256,9 +256,9 @@ window.STOCK_DATA = {
       "price_date": "2026-07-17",
       "price_change": -57.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 578.0,
-      "daily_date": "2026-07-16",
-      "price_verify": null,
+      "daily_close": 521.0,
+      "daily_date": "2026-07-17",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -372,9 +372,9 @@ window.STOCK_DATA = {
       "price_date": "2026-07-17",
       "price_change": -110.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 1125.0,
-      "daily_date": "2026-07-16",
-      "price_verify": null,
+      "daily_close": 1015.0,
+      "daily_date": "2026-07-17",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -488,9 +488,9 @@ window.STOCK_DATA = {
       "price_date": "2026-07-17",
       "price_change": -47.5,
       "price_source": "證交所即時 MIS",
-      "daily_close": 477.0,
-      "daily_date": "2026-07-16",
-      "price_verify": null,
+      "daily_close": 429.5,
+      "daily_date": "2026-07-17",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
