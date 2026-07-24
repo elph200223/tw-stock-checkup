@@ -1,6 +1,6 @@
 window.STOCK_DATA = {
   "meta": {
-    "fetched_at": "2026-07-23 17:21",
+    "fetched_at": "2026-07-24 09:16",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
@@ -22,10 +22,10 @@ window.STOCK_DATA = {
       "rev_source": "上市 TWSE",
       "price": 2405.0,
       "price_date": "2026-07-23",
-      "price_change": 5.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 2400.0,
-      "daily_date": "2026-07-22",
+      "price_change": "5.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 2405.0,
+      "daily_date": "2026-07-23",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -127,7 +127,7 @@ window.STOCK_DATA = {
         {
           "date": "2026-07-23",
           "price": 2405.0,
-          "change": 5.0
+          "change": "5.0000"
         }
       ],
       "rev_history": [
@@ -158,10 +158,10 @@ window.STOCK_DATA = {
       "rev_source": "上市 TWSE",
       "price": 1880.0,
       "price_date": "2026-07-23",
-      "price_change": 0.0,
-      "price_source": "證交所即時 MIS",
+      "price_change": "0.0000",
+      "price_source": "上市 TWSE 每日收盤",
       "daily_close": 1880.0,
-      "daily_date": "2026-07-22",
+      "daily_date": "2026-07-23",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -263,7 +263,7 @@ window.STOCK_DATA = {
         {
           "date": "2026-07-23",
           "price": 1880.0,
-          "change": 0.0
+          "change": "0.0000"
         }
       ],
       "rev_history": [
@@ -294,10 +294,10 @@ window.STOCK_DATA = {
       "rev_source": "上市 TWSE",
       "price": 506.0,
       "price_date": "2026-07-23",
-      "price_change": -53.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 559.0,
-      "daily_date": "2026-07-22",
+      "price_change": "-53.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 506.0,
+      "daily_date": "2026-07-23",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -399,7 +399,7 @@ window.STOCK_DATA = {
         {
           "date": "2026-07-23",
           "price": 506.0,
-          "change": -53.0
+          "change": "-53.0000"
         }
       ],
       "rev_history": [
@@ -430,10 +430,10 @@ window.STOCK_DATA = {
       "rev_source": "上市 TWSE",
       "price": 1075.0,
       "price_date": "2026-07-23",
-      "price_change": -5.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 1080.0,
-      "daily_date": "2026-07-22",
+      "price_change": "-5.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 1075.0,
+      "daily_date": "2026-07-23",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -535,7 +535,7 @@ window.STOCK_DATA = {
         {
           "date": "2026-07-23",
           "price": 1075.0,
-          "change": -5.0
+          "change": "-5.0000"
         }
       ],
       "rev_history": [
@@ -566,10 +566,10 @@ window.STOCK_DATA = {
       "rev_source": "上市 TWSE",
       "price": 445.5,
       "price_date": "2026-07-23",
-      "price_change": 1.5,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 444.0,
-      "daily_date": "2026-07-22",
+      "price_change": "1.5000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 445.5,
+      "daily_date": "2026-07-23",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -671,7 +671,7 @@ window.STOCK_DATA = {
         {
           "date": "2026-07-23",
           "price": 445.5,
-          "change": 1.5
+          "change": "1.5000"
         }
       ],
       "rev_history": [
@@ -838,11 +838,11 @@ window.STOCK_DATA = {
       "rev_source": "上櫃 TPEx",
       "price": 589.0,
       "price_date": "2026-07-23",
-      "price_change": 23.0,
-      "price_source": "證交所即時 MIS",
+      "price_change": "+23.00",
+      "price_source": "上櫃 TPEx 每日收盤",
       "daily_close": 589.0,
       "daily_date": "2026-07-23",
-      "price_verify": "verified",
+      "price_verify": null,
       "flags": [],
       "price_history": [
         {
@@ -943,7 +943,7 @@ window.STOCK_DATA = {
         {
           "date": "2026-07-23",
           "price": 589.0,
-          "change": 23.0
+          "change": "+23.00"
         }
       ],
       "rev_history": [
