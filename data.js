@@ -1,11 +1,14 @@
 window.STOCK_DATA = {
   "meta": {
-    "fetched_at": "2026-07-31 17:38",
+    "fetched_at": "2026-08-01 09:22",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
     },
-    "errors": [],
+    "errors": [
+      "twse_rev: Expecting value: line 1 column 1 (char 0)",
+      "twse_price: Expecting value: line 1 column 1 (char 0)"
+    ],
     "note": "資料為官方一手來源,經合理性與交叉驗證;有 flags 者請人工確認。"
   },
   "stocks": {
@@ -14,20 +17,23 @@ window.STOCK_DATA = {
       "name": "台積電",
       "market": "TWSE",
       "tag": "溫度計",
-      "month": "2026-06",
-      "rev": 442679.969,
-      "rev_last_year": 263708.978,
-      "yoy": 67.86685548491262,
-      "mom": 6.164589232380731,
-      "rev_source": "上市 TWSE",
-      "price": 2425.0,
-      "price_date": "2026-07-31",
-      "price_change": 220.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 2205.0,
-      "daily_date": "2026-07-30",
+      "month": null,
+      "rev": null,
+      "rev_last_year": null,
+      "yoy": null,
+      "mom": null,
+      "rev_source": null,
+      "price": null,
+      "price_date": null,
+      "price_change": null,
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": null,
+      "daily_date": null,
       "price_verify": null,
-      "flags": [],
+      "flags": [
+        "無當月營收",
+        "無收盤價"
+      ],
       "price_history": [
         {
           "date": "2026-06-18",
@@ -180,20 +186,23 @@ window.STOCK_DATA = {
       "name": "台達電",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-06",
-      "rev": 65602.611,
-      "rev_last_year": 42208.156,
-      "yoy": 55.42638489110967,
-      "mom": 11.262872038017417,
-      "rev_source": "上市 TWSE",
-      "price": 1640.0,
-      "price_date": "2026-07-31",
-      "price_change": 110.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 1530.0,
-      "daily_date": "2026-07-30",
+      "month": null,
+      "rev": null,
+      "rev_last_year": null,
+      "yoy": null,
+      "mom": null,
+      "rev_source": null,
+      "price": null,
+      "price_date": null,
+      "price_change": null,
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": null,
+      "daily_date": null,
       "price_verify": null,
-      "flags": [],
+      "flags": [
+        "無當月營收",
+        "無收盤價"
+      ],
       "price_history": [
         {
           "date": "2026-06-18",
@@ -346,20 +355,23 @@ window.STOCK_DATA = {
       "name": "臻鼎",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-06",
-      "rev": 17033.197,
-      "rev_last_year": 12823.095,
-      "yoy": 32.83218287004814,
-      "mom": 5.135410039713728,
-      "rev_source": "上市 TWSE",
-      "price": 413.5,
-      "price_date": "2026-07-31",
-      "price_change": 37.5,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 376.0,
-      "daily_date": "2026-07-30",
+      "month": null,
+      "rev": null,
+      "rev_last_year": null,
+      "yoy": null,
+      "mom": null,
+      "rev_source": null,
+      "price": null,
+      "price_date": null,
+      "price_change": null,
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": null,
+      "daily_date": null,
       "price_verify": null,
-      "flags": [],
+      "flags": [
+        "無當月營收",
+        "無收盤價"
+      ],
       "price_history": [
         {
           "date": "2026-06-18",
@@ -512,20 +524,23 @@ window.STOCK_DATA = {
       "name": "高力",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-06",
-      "rev": 724.767,
-      "rev_last_year": 526.875,
-      "yoy": 37.559572953736655,
-      "mom": 14.73696208663605,
-      "rev_source": "上市 TWSE",
-      "price": 855.0,
-      "price_date": "2026-07-31",
-      "price_change": 77.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 778.0,
-      "daily_date": "2026-07-30",
+      "month": null,
+      "rev": null,
+      "rev_last_year": null,
+      "yoy": null,
+      "mom": null,
+      "rev_source": null,
+      "price": null,
+      "price_date": null,
+      "price_change": null,
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": null,
+      "daily_date": null,
       "price_verify": null,
-      "flags": [],
+      "flags": [
+        "無當月營收",
+        "無收盤價"
+      ],
       "price_history": [
         {
           "date": "2026-06-18",
@@ -678,20 +693,23 @@ window.STOCK_DATA = {
       "name": "訊芯",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-06",
-      "rev": 750.026,
-      "rev_last_year": 533.619,
-      "yoy": 40.55459044749156,
-      "mom": 20.175867279168475,
-      "rev_source": "上市 TWSE",
-      "price": 341.0,
-      "price_date": "2026-07-31",
-      "price_change": 19.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 322.0,
-      "daily_date": "2026-07-30",
+      "month": null,
+      "rev": null,
+      "rev_last_year": null,
+      "yoy": null,
+      "mom": null,
+      "rev_source": null,
+      "price": null,
+      "price_date": null,
+      "price_change": null,
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": null,
+      "daily_date": null,
       "price_verify": null,
-      "flags": [],
+      "flags": [
+        "無當月營收",
+        "無收盤價"
+      ],
       "price_history": [
         {
           "date": "2026-06-18",
@@ -852,11 +870,11 @@ window.STOCK_DATA = {
       "rev_source": "上櫃 TPEx",
       "price": 1630.0,
       "price_date": "2026-07-31",
-      "price_change": 145.0,
-      "price_source": "證交所即時 MIS",
+      "price_change": "+145.00",
+      "price_source": "上櫃 TPEx 每日收盤",
       "daily_close": 1630.0,
       "daily_date": "2026-07-31",
-      "price_verify": "verified",
+      "price_verify": null,
       "flags": [],
       "price_history": [
         {
@@ -987,7 +1005,7 @@ window.STOCK_DATA = {
         {
           "date": "2026-07-31",
           "price": 1630.0,
-          "change": 145.0
+          "change": "+145.00"
         }
       ],
       "rev_history": [
@@ -1018,11 +1036,11 @@ window.STOCK_DATA = {
       "rev_source": "上櫃 TPEx",
       "price": 480.5,
       "price_date": "2026-07-31",
-      "price_change": 43.5,
-      "price_source": "證交所即時 MIS",
+      "price_change": "+43.50",
+      "price_source": "上櫃 TPEx 每日收盤",
       "daily_close": 480.5,
       "daily_date": "2026-07-31",
-      "price_verify": "verified",
+      "price_verify": null,
       "flags": [],
       "price_history": [
         {
@@ -1153,7 +1171,7 @@ window.STOCK_DATA = {
         {
           "date": "2026-07-31",
           "price": 480.5,
-          "change": 43.5
+          "change": "+43.50"
         }
       ],
       "rev_history": [
