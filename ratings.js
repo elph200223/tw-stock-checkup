@@ -1,5 +1,5 @@
 window.RATINGS = {
-  "updated": "2026-08-03 09:23",
+  "updated": "2026-08-03 18:36",
   "weights": {
     "體質": 0.4,
     "估值": 0.3,
@@ -30,14 +30,14 @@ window.RATINGS = {
         "price": "verified",
         "eps": "verified",
         "bvps": "verified",
-        "pb": "verified",
+        "pb": "minor_diff",
         "gross": "verified",
         "rev_yoy": "verified"
       },
       "role": "配套·電源",
       "period": "2026 Q2",
-      "price": 1640.0,
-      "price_date": "2026-07-31",
+      "price": 1580.0,
+      "price_date": "2026-08-03",
       "gross_margin": 36.27135253517123,
       "op_margin": 17.217116637879503,
       "net_margin": 14.886835984086943,
@@ -123,8 +123,8 @@ window.RATINGS = {
       },
       "role": "上游·晶圓代工(溫度計)",
       "period": "—",
-      "price": 2425.0,
-      "price_date": "2026-07-31",
+      "price": 2370.0,
+      "price_date": "2026-08-03",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -177,8 +177,8 @@ window.RATINGS = {
       },
       "role": "零組件·載板",
       "period": "—",
-      "price": 413.5,
-      "price_date": "2026-07-31",
+      "price": 421.5,
+      "price_date": "2026-08-03",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -285,8 +285,8 @@ window.RATINGS = {
       },
       "role": "配套·光通訊",
       "period": "—",
-      "price": 341.0,
-      "price_date": "2026-07-31",
+      "price": 374.5,
+      "price_date": "2026-08-03",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -316,7 +316,7 @@ window.RATINGS = {
         ],
         "估值": [
           35,
-          "虧損/獲利不穩,改看 PB:PB>6 很高,多為未來預期(PB 35.57)。"
+          "虧損/獲利不穩,改看 PB:PB>6 很高,多為未來預期(PB 39.07)。"
         ],
         "動能": [
           100,
@@ -326,7 +326,7 @@ window.RATINGS = {
       "blockers": [
         "eps()",
         "bvps()",
-        "pb(僅 官方PB(BWIBBU)=35.57(缺第二來源))",
+        "pb(僅 官方PB(BWIBBU)=39.07(缺第二來源))",
         "gross()"
       ],
       "verify_summary": {
@@ -339,20 +339,20 @@ window.RATINGS = {
       },
       "role": "零組件·光通訊磊晶",
       "period": "—",
-      "price": 1630.0,
-      "price_date": "2026-07-31",
+      "price": 1790.0,
+      "price_date": "2026-08-03",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
       "debt_ratio": null,
-      "pe": 214.19,
-      "pb": 35.57,
+      "pe": 235.22,
+      "pb": 39.07,
       "rev_yoy": 128.13717299074446,
       "rev_month": "2026-06",
       "explain": {
-        "summary": "聯亞:部分體質指標資料不足,月營收還在高速成長(最新月年增 128%),由於獲利不穩,改用股價淨值比看:目前 35.6 倍(高,多在反映未來預期)。",
+        "summary": "聯亞:部分體質指標資料不足,月營收還在高速成長(最新月年增 128%),由於獲利不穩,改用股價淨值比看:目前 39.1 倍(高,多在反映未來預期)。",
         "health": [],
-        "valuation": "PB 35.57 >1,市場願為它的未來多付錢(高於帳面淨值),成長股常見,別追過頭。",
+        "valuation": "PB 39.07 >1,市場願為它的未來多付錢(高於帳面淨值),成長股常見,別追過頭。",
         "momentum_say": "月營收還在高速成長(最新月年增 128%)。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
         "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
         "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
@@ -370,7 +370,7 @@ window.RATINGS = {
         ],
         "估值": [
           35,
-          "虧損/獲利不穩,改看 PB:PB>6 很高,多為未來預期(PB 9.52)。"
+          "虧損/獲利不穩,改看 PB:PB>6 很高,多為未來預期(PB 10.40)。"
         ],
         "動能": [
           25,
@@ -380,7 +380,7 @@ window.RATINGS = {
       "blockers": [
         "eps()",
         "bvps()",
-        "pb(僅 官方PB(BWIBBU)=9.52(缺第二來源))",
+        "pb(僅 官方PB(BWIBBU)=10.4(缺第二來源))",
         "gross()"
       ],
       "verify_summary": {
@@ -393,20 +393,20 @@ window.RATINGS = {
       },
       "role": "配套·光通訊",
       "period": "—",
-      "price": 521.0,
+      "price": 525.0,
       "price_date": "2026-08-03",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
       "debt_ratio": null,
       "pe": null,
-      "pb": 9.52,
+      "pb": 10.4,
       "rev_yoy": -15.701129731755636,
       "rev_month": "2026-06",
       "explain": {
-        "summary": "上詮:部分體質指標資料不足,月營收在衰退(年增 -16%),動能踩煞車,由於獲利不穩,改用股價淨值比看:目前 9.5 倍(高,多在反映未來預期)。",
+        "summary": "上詮:部分體質指標資料不足,月營收在衰退(年增 -16%),動能踩煞車,由於獲利不穩,改用股價淨值比看:目前 10.4 倍(高,多在反映未來預期)。",
         "health": [],
-        "valuation": "PB 9.52 >1,市場願為它的未來多付錢(高於帳面淨值),成長股常見,別追過頭。",
+        "valuation": "PB 10.40 >1,市場願為它的未來多付錢(高於帳面淨值),成長股常見,別追過頭。",
         "momentum_say": "月營收在衰退(年增 -16%),動能踩煞車。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
         "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
         "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
@@ -449,8 +449,8 @@ window.RATINGS = {
       },
       "role": "上游·晶圓代工(溫度計)",
       "period": "—",
-      "price": 2425.0,
-      "price_date": "2026-07-31",
+      "price": 2370.0,
+      "price_date": "2026-08-03",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -492,14 +492,14 @@ window.RATINGS = {
         "price": "verified",
         "eps": "verified",
         "bvps": "verified",
-        "pb": "verified",
+        "pb": "minor_diff",
         "gross": "verified",
         "rev_yoy": "verified"
       },
       "role": "配套·電源",
       "period": "2026 Q2",
-      "price": 1640.0,
-      "price_date": "2026-07-31",
+      "price": 1580.0,
+      "price_date": "2026-08-03",
       "gross_margin": 36.27135253517123,
       "op_margin": 17.217116637879503,
       "net_margin": 14.886835984086943,
@@ -583,8 +583,8 @@ window.RATINGS = {
       },
       "role": "零組件·載板",
       "period": "—",
-      "price": 413.5,
-      "price_date": "2026-07-31",
+      "price": 421.5,
+      "price_date": "2026-08-03",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -691,8 +691,8 @@ window.RATINGS = {
       },
       "role": "配套·光通訊",
       "period": "—",
-      "price": 341.0,
-      "price_date": "2026-07-31",
+      "price": 374.5,
+      "price_date": "2026-08-03",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -722,7 +722,7 @@ window.RATINGS = {
         ],
         "估值": [
           35,
-          "虧損/獲利不穩,改看 PB:PB>6 很高,多為未來預期(PB 35.57)。"
+          "虧損/獲利不穩,改看 PB:PB>6 很高,多為未來預期(PB 39.07)。"
         ],
         "動能": [
           100,
@@ -732,7 +732,7 @@ window.RATINGS = {
       "blockers": [
         "eps()",
         "bvps()",
-        "pb(僅 官方PB(BWIBBU)=35.57(缺第二來源))",
+        "pb(僅 官方PB(BWIBBU)=39.07(缺第二來源))",
         "gross()"
       ],
       "verify_summary": {
@@ -745,20 +745,20 @@ window.RATINGS = {
       },
       "role": "零組件·光通訊磊晶",
       "period": "—",
-      "price": 1630.0,
-      "price_date": "2026-07-31",
+      "price": 1790.0,
+      "price_date": "2026-08-03",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
       "debt_ratio": null,
-      "pe": 214.19,
-      "pb": 35.57,
+      "pe": 235.22,
+      "pb": 39.07,
       "rev_yoy": 128.13717299074446,
       "rev_month": "2026-06",
       "explain": {
-        "summary": "聯亞:部分體質指標資料不足,月營收還在高速成長(最新月年增 128%),由於獲利不穩,改用股價淨值比看:目前 35.6 倍(高,多在反映未來預期)。",
+        "summary": "聯亞:部分體質指標資料不足,月營收還在高速成長(最新月年增 128%),由於獲利不穩,改用股價淨值比看:目前 39.1 倍(高,多在反映未來預期)。",
         "health": [],
-        "valuation": "PB 35.57 >1,市場願為它的未來多付錢(高於帳面淨值),成長股常見,別追過頭。",
+        "valuation": "PB 39.07 >1,市場願為它的未來多付錢(高於帳面淨值),成長股常見,別追過頭。",
         "momentum_say": "月營收還在高速成長(最新月年增 128%)。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
         "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
         "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
@@ -776,7 +776,7 @@ window.RATINGS = {
         ],
         "估值": [
           35,
-          "虧損/獲利不穩,改看 PB:PB>6 很高,多為未來預期(PB 9.52)。"
+          "虧損/獲利不穩,改看 PB:PB>6 很高,多為未來預期(PB 10.40)。"
         ],
         "動能": [
           25,
@@ -786,7 +786,7 @@ window.RATINGS = {
       "blockers": [
         "eps()",
         "bvps()",
-        "pb(僅 官方PB(BWIBBU)=9.52(缺第二來源))",
+        "pb(僅 官方PB(BWIBBU)=10.4(缺第二來源))",
         "gross()"
       ],
       "verify_summary": {
@@ -799,20 +799,20 @@ window.RATINGS = {
       },
       "role": "配套·光通訊",
       "period": "—",
-      "price": 521.0,
+      "price": 525.0,
       "price_date": "2026-08-03",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
       "debt_ratio": null,
       "pe": null,
-      "pb": 9.52,
+      "pb": 10.4,
       "rev_yoy": -15.701129731755636,
       "rev_month": "2026-06",
       "explain": {
-        "summary": "上詮:部分體質指標資料不足,月營收在衰退(年增 -16%),動能踩煞車,由於獲利不穩,改用股價淨值比看:目前 9.5 倍(高,多在反映未來預期)。",
+        "summary": "上詮:部分體質指標資料不足,月營收在衰退(年增 -16%),動能踩煞車,由於獲利不穩,改用股價淨值比看:目前 10.4 倍(高,多在反映未來預期)。",
         "health": [],
-        "valuation": "PB 9.52 >1,市場願為它的未來多付錢(高於帳面淨值),成長股常見,別追過頭。",
+        "valuation": "PB 10.40 >1,市場願為它的未來多付錢(高於帳面淨值),成長股常見,別追過頭。",
         "momentum_say": "月營收在衰退(年增 -16%),動能踩煞車。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
         "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
         "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
