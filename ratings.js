@@ -1,16 +1,71 @@
 window.RATINGS = {
-  "updated": "2026-08-10 08:42",
+  "updated": "2026-08-10 16:28",
   "weights": {
     "體質": 0.4,
     "估值": 0.3,
     "動能": 0.3
   },
-  "rated": [
+  "rated": [],
+  "unrated": [
+    {
+      "code": "2330",
+      "name": "台積電",
+      "rated": false,
+      "total": null,
+      "subs": {
+        "體質": [
+          null,
+          "資料不足"
+        ],
+        "估值": [
+          35,
+          "虧損/獲利不穩,改看 PB:PB>6 很高,多為未來預期(PB 10.43)。"
+        ],
+        "動能": [
+          100,
+          "最新月 YoY 67.9%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
+        ]
+      },
+      "blockers": [
+        "eps()",
+        "bvps()",
+        "pb(僅 官方PB(BWIBBU)=10.43(缺第二來源))",
+        "gross()"
+      ],
+      "verify_summary": {
+        "price": "verified",
+        "eps": "unverified",
+        "bvps": "unverified",
+        "pb": "unverified",
+        "gross": "unverified",
+        "rev_yoy": "verified"
+      },
+      "role": "上游·晶圓代工(溫度計)",
+      "period": "—",
+      "price": 2380.0,
+      "price_date": "2026-08-10",
+      "gross_margin": null,
+      "op_margin": null,
+      "net_margin": null,
+      "debt_ratio": null,
+      "pe": 31.86,
+      "pb": 10.43,
+      "rev_yoy": 67.86685548491262,
+      "rev_month": "2026-06",
+      "explain": {
+        "summary": "台積電:部分體質指標資料不足,月營收還在高速成長(最新月年增 68%),由於獲利不穩,改用股價淨值比看:目前 10.4 倍(高,多在反映未來預期)。",
+        "health": [],
+        "valuation": "PB 10.43 >1,市場願為它的未來多付錢(高於帳面淨值),成長股常見,別追過頭。",
+        "momentum_say": "月營收還在高速成長(最新月年增 68%)。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
+        "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
+        "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
+      }
+    },
     {
       "code": "2308",
       "name": "台達電",
-      "rated": true,
-      "total": 78.8,
+      "rated": false,
+      "total": null,
       "subs": {
         "體質": [
           92.0,
@@ -25,19 +80,21 @@ window.RATINGS = {
           "最新月 YoY 55.4%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
         ]
       },
-      "blockers": [],
+      "blockers": [
+        "pb(來源A 官方PB(BWIBBU)=14.59 / 來源B 股價÷每股淨值=16.)"
+      ],
       "verify_summary": {
         "price": "verified",
         "eps": "verified",
         "bvps": "verified",
-        "pb": "verified",
+        "pb": "unverified",
         "gross": "verified",
         "rev_yoy": "verified"
       },
       "role": "配套·電源",
       "period": "2026 Q2",
-      "price": 1650.0,
-      "price_date": "2026-08-07",
+      "price": 1815.0,
+      "price_date": "2026-08-10",
       "gross_margin": 36.27135253517123,
       "op_margin": 17.217116637879503,
       "net_margin": 14.886835984086943,
@@ -85,62 +142,6 @@ window.RATINGS = {
         "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
         "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
       }
-    }
-  ],
-  "unrated": [
-    {
-      "code": "2330",
-      "name": "台積電",
-      "rated": false,
-      "total": null,
-      "subs": {
-        "體質": [
-          null,
-          "資料不足"
-        ],
-        "估值": [
-          35,
-          "虧損/獲利不穩,改看 PB:PB>6 很高,多為未來預期(PB 10.43)。"
-        ],
-        "動能": [
-          100,
-          "最新月 YoY 67.9%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
-        ]
-      },
-      "blockers": [
-        "eps()",
-        "bvps()",
-        "pb(僅 官方PB(BWIBBU)=10.43(缺第二來源))",
-        "gross()"
-      ],
-      "verify_summary": {
-        "price": "verified",
-        "eps": "unverified",
-        "bvps": "unverified",
-        "pb": "unverified",
-        "gross": "unverified",
-        "rev_yoy": "verified"
-      },
-      "role": "上游·晶圓代工(溫度計)",
-      "period": "—",
-      "price": 2370.0,
-      "price_date": "2026-08-07",
-      "gross_margin": null,
-      "op_margin": null,
-      "net_margin": null,
-      "debt_ratio": null,
-      "pe": 31.86,
-      "pb": 10.43,
-      "rev_yoy": 67.86685548491262,
-      "rev_month": "2026-06",
-      "explain": {
-        "summary": "台積電:部分體質指標資料不足,月營收還在高速成長(最新月年增 68%),由於獲利不穩,改用股價淨值比看:目前 10.4 倍(高,多在反映未來預期)。",
-        "health": [],
-        "valuation": "PB 10.43 >1,市場願為它的未來多付錢(高於帳面淨值),成長股常見,別追過頭。",
-        "momentum_say": "月營收還在高速成長(最新月年增 68%)。單月可能只是雜訊,要連 3 個月同方向才算真趨勢。",
-        "watch": "要觀察的重點:① 高成長能不能延續(看月營收是否連續 3 個月維持)。② 賺的是不是真錢(需補『營業現金流』,到公開資訊觀測站查)。③ 有沒有暗箭(客戶集中度、訴訟等,需查附註)。",
-        "score_scale": "綜合分滿分 100:越高代表「體質好 + 成長強 + 估值不貴」三者兼具;但這是排序參考,不是買賣訊號。"
-      }
     },
     {
       "code": "4958",
@@ -177,8 +178,8 @@ window.RATINGS = {
       },
       "role": "零組件·載板",
       "period": "—",
-      "price": 473.0,
-      "price_date": "2026-08-07",
+      "price": 470.5,
+      "price_date": "2026-08-10",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -231,8 +232,8 @@ window.RATINGS = {
       },
       "role": "配套·散熱",
       "period": "—",
-      "price": 1045.0,
-      "price_date": "2026-08-07",
+      "price": 1075.0,
+      "price_date": "2026-08-10",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -285,8 +286,8 @@ window.RATINGS = {
       },
       "role": "配套·光通訊",
       "period": "—",
-      "price": 421.0,
-      "price_date": "2026-08-07",
+      "price": 456.0,
+      "price_date": "2026-08-10",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -339,8 +340,8 @@ window.RATINGS = {
       },
       "role": "零組件·光通訊磊晶",
       "period": "—",
-      "price": 2305.0,
-      "price_date": "2026-08-07",
+      "price": 2535.0,
+      "price_date": "2026-08-10",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -393,8 +394,8 @@ window.RATINGS = {
       },
       "role": "配套·光通訊",
       "period": "—",
-      "price": 582.0,
-      "price_date": "2026-08-07",
+      "price": 640.0,
+      "price_date": "2026-08-10",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -449,8 +450,8 @@ window.RATINGS = {
       },
       "role": "上游·晶圓代工(溫度計)",
       "period": "—",
-      "price": 2370.0,
-      "price_date": "2026-08-07",
+      "price": 2380.0,
+      "price_date": "2026-08-10",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -471,8 +472,8 @@ window.RATINGS = {
     {
       "code": "2308",
       "name": "台達電",
-      "rated": true,
-      "total": 78.8,
+      "rated": false,
+      "total": null,
       "subs": {
         "體質": [
           92.0,
@@ -487,19 +488,21 @@ window.RATINGS = {
           "最新月 YoY 55.4%(單月為雜訊,連 3 月才算趨勢;趨勢需累積)。"
         ]
       },
-      "blockers": [],
+      "blockers": [
+        "pb(來源A 官方PB(BWIBBU)=14.59 / 來源B 股價÷每股淨值=16.)"
+      ],
       "verify_summary": {
         "price": "verified",
         "eps": "verified",
         "bvps": "verified",
-        "pb": "verified",
+        "pb": "unverified",
         "gross": "verified",
         "rev_yoy": "verified"
       },
       "role": "配套·電源",
       "period": "2026 Q2",
-      "price": 1650.0,
-      "price_date": "2026-08-07",
+      "price": 1815.0,
+      "price_date": "2026-08-10",
       "gross_margin": 36.27135253517123,
       "op_margin": 17.217116637879503,
       "net_margin": 14.886835984086943,
@@ -583,8 +586,8 @@ window.RATINGS = {
       },
       "role": "零組件·載板",
       "period": "—",
-      "price": 473.0,
-      "price_date": "2026-08-07",
+      "price": 470.5,
+      "price_date": "2026-08-10",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -637,8 +640,8 @@ window.RATINGS = {
       },
       "role": "配套·散熱",
       "period": "—",
-      "price": 1045.0,
-      "price_date": "2026-08-07",
+      "price": 1075.0,
+      "price_date": "2026-08-10",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -691,8 +694,8 @@ window.RATINGS = {
       },
       "role": "配套·光通訊",
       "period": "—",
-      "price": 421.0,
-      "price_date": "2026-08-07",
+      "price": 456.0,
+      "price_date": "2026-08-10",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -745,8 +748,8 @@ window.RATINGS = {
       },
       "role": "零組件·光通訊磊晶",
       "period": "—",
-      "price": 2305.0,
-      "price_date": "2026-08-07",
+      "price": 2535.0,
+      "price_date": "2026-08-10",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -799,8 +802,8 @@ window.RATINGS = {
       },
       "role": "配套·光通訊",
       "period": "—",
-      "price": 582.0,
-      "price_date": "2026-08-07",
+      "price": 640.0,
+      "price_date": "2026-08-10",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
