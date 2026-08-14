@@ -1,13 +1,11 @@
 window.STOCK_DATA = {
   "meta": {
-    "fetched_at": "2026-08-14 08:47",
+    "fetched_at": "2026-08-14 16:08",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
     },
-    "errors": [
-      "tpex_price: HTTP Error 520: <none>"
-    ],
+    "errors": [],
     "note": "資料為官方一手來源,經合理性與交叉驗證;有 flags 者請人工確認。"
   },
   "stocks": {
@@ -22,10 +20,10 @@ window.STOCK_DATA = {
       "yoy": 44.68755126916978,
       "mom": 5.624961765550318,
       "rev_source": "上市 TWSE",
-      "price": 2435.0,
-      "price_date": "2026-08-13",
-      "price_change": "20.0000",
-      "price_source": "上市 TWSE 每日收盤",
+      "price": 2395.0,
+      "price_date": "2026-08-14",
+      "price_change": -40.0,
+      "price_source": "證交所即時 MIS",
       "daily_close": 2435.0,
       "daily_date": "2026-08-13",
       "price_verify": null,
@@ -205,6 +203,11 @@ window.STOCK_DATA = {
           "date": "2026-08-13",
           "price": 2435.0,
           "change": "20.0000"
+        },
+        {
+          "date": "2026-08-14",
+          "price": 2395.0,
+          "change": -40.0
         }
       ],
       "rev_history": [
@@ -240,9 +243,9 @@ window.STOCK_DATA = {
       "mom": 2.241650107493435,
       "rev_source": "上市 TWSE",
       "price": 1885.0,
-      "price_date": "2026-08-13",
-      "price_change": "95.0000",
-      "price_source": "上市 TWSE 每日收盤",
+      "price_date": "2026-08-14",
+      "price_change": 0.0,
+      "price_source": "證交所即時 MIS",
       "daily_close": 1885.0,
       "daily_date": "2026-08-13",
       "price_verify": null,
@@ -422,6 +425,11 @@ window.STOCK_DATA = {
           "date": "2026-08-13",
           "price": 1885.0,
           "change": "95.0000"
+        },
+        {
+          "date": "2026-08-14",
+          "price": 1885.0,
+          "change": 0.0
         }
       ],
       "rev_history": [
@@ -456,10 +464,10 @@ window.STOCK_DATA = {
       "yoy": 31.81571715860863,
       "mom": 3.3308427067449524,
       "rev_source": "上市 TWSE",
-      "price": 477.5,
-      "price_date": "2026-08-13",
-      "price_change": "6.0000",
-      "price_source": "上市 TWSE 每日收盤",
+      "price": 489.5,
+      "price_date": "2026-08-14",
+      "price_change": 12.0,
+      "price_source": "證交所即時 MIS",
       "daily_close": 477.5,
       "daily_date": "2026-08-13",
       "price_verify": null,
@@ -639,6 +647,11 @@ window.STOCK_DATA = {
           "date": "2026-08-13",
           "price": 477.5,
           "change": "6.0000"
+        },
+        {
+          "date": "2026-08-14",
+          "price": 489.5,
+          "change": 12.0
         }
       ],
       "rev_history": [
@@ -673,10 +686,10 @@ window.STOCK_DATA = {
       "yoy": 57.6339177410041,
       "mom": 27.305189115950366,
       "rev_source": "上市 TWSE",
-      "price": 1285.0,
-      "price_date": "2026-08-13",
-      "price_change": "115.0000",
-      "price_source": "上市 TWSE 每日收盤",
+      "price": 1280.0,
+      "price_date": "2026-08-14",
+      "price_change": -5.0,
+      "price_source": "證交所即時 MIS",
       "daily_close": 1285.0,
       "daily_date": "2026-08-13",
       "price_verify": null,
@@ -856,6 +869,11 @@ window.STOCK_DATA = {
           "date": "2026-08-13",
           "price": 1285.0,
           "change": "115.0000"
+        },
+        {
+          "date": "2026-08-14",
+          "price": 1280.0,
+          "change": -5.0
         }
       ],
       "rev_history": [
@@ -890,10 +908,10 @@ window.STOCK_DATA = {
       "yoy": 7.420252433169901,
       "mom": 3.6124081031857562,
       "rev_source": "上市 TWSE",
-      "price": 436.0,
-      "price_date": "2026-08-13",
-      "price_change": "-15.0000",
-      "price_source": "上市 TWSE 每日收盤",
+      "price": 425.5,
+      "price_date": "2026-08-14",
+      "price_change": -10.5,
+      "price_source": "證交所即時 MIS",
       "daily_close": 436.0,
       "daily_date": "2026-08-13",
       "price_verify": null,
@@ -1073,6 +1091,11 @@ window.STOCK_DATA = {
           "date": "2026-08-13",
           "price": 436.0,
           "change": "-15.0000"
+        },
+        {
+          "date": "2026-08-14",
+          "price": 425.5,
+          "change": -10.5
         }
       ],
       "rev_history": [
@@ -1107,16 +1130,14 @@ window.STOCK_DATA = {
       "yoy": 176.53575803052206,
       "mom": 19.191832716221132,
       "rev_source": "上櫃 TPEx",
-      "price": null,
-      "price_date": null,
-      "price_change": null,
-      "price_source": "上櫃 TPEx 每日收盤",
-      "daily_close": null,
-      "daily_date": null,
-      "price_verify": null,
-      "flags": [
-        "無收盤價"
-      ],
+      "price": 2540.0,
+      "price_date": "2026-08-14",
+      "price_change": -125.0,
+      "price_source": "證交所即時 MIS",
+      "daily_close": 2540.0,
+      "daily_date": "2026-08-14",
+      "price_verify": "verified",
+      "flags": [],
       "price_history": [
         {
           "date": "2026-06-18",
@@ -1292,6 +1313,11 @@ window.STOCK_DATA = {
           "date": "2026-08-13",
           "price": 2665.0,
           "change": -60.0
+        },
+        {
+          "date": "2026-08-14",
+          "price": 2540.0,
+          "change": -125.0
         }
       ],
       "rev_history": [
@@ -1326,16 +1352,14 @@ window.STOCK_DATA = {
       "yoy": 12.093615290234958,
       "mom": 8.509638286385721,
       "rev_source": "上櫃 TPEx",
-      "price": null,
-      "price_date": null,
-      "price_change": null,
-      "price_source": "上櫃 TPEx 每日收盤",
-      "daily_close": null,
-      "daily_date": null,
-      "price_verify": null,
-      "flags": [
-        "無收盤價"
-      ],
+      "price": 586.0,
+      "price_date": "2026-08-14",
+      "price_change": -14.0,
+      "price_source": "證交所即時 MIS",
+      "daily_close": 586.0,
+      "daily_date": "2026-08-14",
+      "price_verify": "verified",
+      "flags": [],
       "price_history": [
         {
           "date": "2026-06-18",
@@ -1511,6 +1535,11 @@ window.STOCK_DATA = {
           "date": "2026-08-13",
           "price": 600.0,
           "change": -30.0
+        },
+        {
+          "date": "2026-08-14",
+          "price": 586.0,
+          "change": -14.0
         }
       ],
       "rev_history": [
