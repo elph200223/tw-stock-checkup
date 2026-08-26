@@ -1,13 +1,11 @@
 {
   "meta": {
-    "fetched_at": "2026-08-25 15:37",
+    "fetched_at": "2026-08-26 08:28",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
     },
-    "errors": [
-      "tpex_rev: IncompleteRead(196218 bytes read, 298508 more expected)"
-    ],
+    "errors": [],
     "note": "資料為官方一手來源,經合理性與交叉驗證;有 flags 者請人工確認。"
   },
   "stocks": {
@@ -24,10 +22,10 @@
       "rev_source": "上市 TWSE",
       "price": 2400.0,
       "price_date": "2026-08-25",
-      "price_change": 25.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 2375.0,
-      "daily_date": "2026-08-24",
+      "price_change": "25.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 2400.0,
+      "daily_date": "2026-08-25",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -244,7 +242,7 @@
         {
           "date": "2026-08-25",
           "price": 2400.0,
-          "change": 25.0
+          "change": "25.0000"
         }
       ],
       "rev_history": [
@@ -281,10 +279,10 @@
       "rev_source": "上市 TWSE",
       "price": 1710.0,
       "price_date": "2026-08-25",
-      "price_change": -25.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 1735.0,
-      "daily_date": "2026-08-24",
+      "price_change": "-25.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 1710.0,
+      "daily_date": "2026-08-25",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -501,7 +499,7 @@
         {
           "date": "2026-08-25",
           "price": 1710.0,
-          "change": -25.0
+          "change": "-25.0000"
         }
       ],
       "rev_history": [
@@ -538,10 +536,10 @@
       "rev_source": "上市 TWSE",
       "price": 444.0,
       "price_date": "2026-08-25",
-      "price_change": 8.5,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 435.5,
-      "daily_date": "2026-08-24",
+      "price_change": "8.5000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 444.0,
+      "daily_date": "2026-08-25",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -758,7 +756,7 @@
         {
           "date": "2026-08-25",
           "price": 444.0,
-          "change": 8.5
+          "change": "8.5000"
         }
       ],
       "rev_history": [
@@ -795,10 +793,10 @@
       "rev_source": "上市 TWSE",
       "price": 1215.0,
       "price_date": "2026-08-25",
-      "price_change": 70.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 1145.0,
-      "daily_date": "2026-08-24",
+      "price_change": "70.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 1215.0,
+      "daily_date": "2026-08-25",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -1015,7 +1013,7 @@
         {
           "date": "2026-08-25",
           "price": 1215.0,
-          "change": 70.0
+          "change": "70.0000"
         }
       ],
       "rev_history": [
@@ -1052,10 +1050,10 @@
       "rev_source": "上市 TWSE",
       "price": 423.0,
       "price_date": "2026-08-25",
-      "price_change": 23.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 400.0,
-      "daily_date": "2026-08-24",
+      "price_change": "23.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 423.0,
+      "daily_date": "2026-08-25",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -1272,7 +1270,7 @@
         {
           "date": "2026-08-25",
           "price": 423.0,
-          "change": 23.0
+          "change": "23.0000"
         }
       ],
       "rev_history": [
@@ -1301,22 +1299,20 @@
       "name": "聯亞",
       "market": "TPEx",
       "tag": "",
-      "month": null,
-      "rev": null,
-      "rev_last_year": null,
-      "yoy": null,
-      "mom": null,
-      "rev_source": null,
+      "month": "2026-07",
+      "rev": 501.21,
+      "rev_last_year": 181.246,
+      "yoy": 176.53575803052206,
+      "mom": 19.191832716221132,
+      "rev_source": "上櫃 TPEx",
       "price": 2960.0,
       "price_date": "2026-08-25",
-      "price_change": 195.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 2765.0,
-      "daily_date": "2026-08-24",
+      "price_change": "+195.00",
+      "price_source": "上櫃 TPEx 每日收盤",
+      "daily_close": 2960.0,
+      "daily_date": "2026-08-25",
       "price_verify": null,
-      "flags": [
-        "無當月營收"
-      ],
+      "flags": [],
       "price_history": [
         {
           "date": "2026-06-18",
@@ -1531,7 +1527,7 @@
         {
           "date": "2026-08-25",
           "price": 2960.0,
-          "change": 195.0
+          "change": "+195.00"
         }
       ],
       "rev_history": [
@@ -1560,22 +1556,20 @@
       "name": "上詮",
       "market": "TPEx",
       "tag": "",
-      "month": null,
-      "rev": null,
-      "rev_last_year": null,
-      "yoy": null,
-      "mom": null,
-      "rev_source": null,
+      "month": "2026-07",
+      "rev": 170.843,
+      "rev_last_year": 152.411,
+      "yoy": 12.093615290234958,
+      "mom": 8.509638286385721,
+      "rev_source": "上櫃 TPEx",
       "price": 623.0,
       "price_date": "2026-08-25",
-      "price_change": 56.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 567.0,
-      "daily_date": "2026-08-24",
+      "price_change": "+56.00",
+      "price_source": "上櫃 TPEx 每日收盤",
+      "daily_close": 623.0,
+      "daily_date": "2026-08-25",
       "price_verify": null,
-      "flags": [
-        "無當月營收"
-      ],
+      "flags": [],
       "price_history": [
         {
           "date": "2026-06-18",
@@ -1790,7 +1784,7 @@
         {
           "date": "2026-08-25",
           "price": 623.0,
-          "change": 56.0
+          "change": "+56.00"
         }
       ],
       "rev_history": [
