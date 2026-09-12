@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-09-11 19:57",
+    "fetched_at": "2026-09-12 09:40",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
@@ -14,19 +14,19 @@
       "name": "台積電",
       "market": "TWSE",
       "tag": "溫度計",
-      "month": "2026-07",
-      "rev": 467580.548,
-      "rev_last_year": 323165.707,
-      "yoy": 44.68755126916978,
-      "mom": 5.624961765550318,
+      "month": "2026-08",
+      "rev": 514805.337,
+      "rev_last_year": 335771.691,
+      "yoy": 53.320053714712955,
+      "mom": 10.099818994181083,
       "rev_source": "上市 TWSE",
       "price": 2410.0,
       "price_date": "2026-09-11",
       "price_change": -40.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 2450.0,
-      "daily_date": "2026-09-10",
-      "price_verify": null,
+      "daily_close": 2410.0,
+      "daily_date": "2026-09-11",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -328,6 +328,12 @@
           "rev": 467580.548,
           "yoy": 44.68755126916978,
           "mom": 5.624961765550318
+        },
+        {
+          "month": "2026-08",
+          "rev": 514805.337,
+          "yoy": 53.320053714712955,
+          "mom": 10.099818994181083
         }
       ]
     },
@@ -336,19 +342,19 @@
       "name": "台達電",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-07",
-      "rev": 67073.192,
-      "rev_last_year": 45397.038,
-      "yoy": 47.74794778461097,
-      "mom": 2.241650107493435,
+      "month": "2026-08",
+      "rev": 64586.049,
+      "rev_last_year": 47859.758,
+      "yoy": 34.94854905033159,
+      "mom": -3.708102933285179,
       "rev_source": "上市 TWSE",
       "price": 1620.0,
       "price_date": "2026-09-11",
       "price_change": -55.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 1675.0,
-      "daily_date": "2026-09-10",
-      "price_verify": null,
+      "daily_close": 1620.0,
+      "daily_date": "2026-09-11",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -650,6 +656,12 @@
           "rev": 67073.192,
           "yoy": 47.74794778461097,
           "mom": 2.241650107493435
+        },
+        {
+          "month": "2026-08",
+          "rev": 64586.049,
+          "yoy": 34.94854905033159,
+          "mom": -3.708102933285179
         }
       ]
     },
@@ -658,19 +670,19 @@
       "name": "臻鼎",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-07",
-      "rev": 17600.546,
-      "rev_last_year": 13352.388,
-      "yoy": 31.81571715860863,
-      "mom": 3.3308427067449524,
+      "month": "2026-08",
+      "rev": 20666.117,
+      "rev_last_year": 14651.388,
+      "yoy": 41.05228119001421,
+      "mom": 17.41747670782486,
       "rev_source": "上市 TWSE",
       "price": 495.0,
       "price_date": "2026-09-11",
       "price_change": 0.5,
       "price_source": "證交所即時 MIS",
-      "daily_close": 494.5,
-      "daily_date": "2026-09-10",
-      "price_verify": null,
+      "daily_close": 495.0,
+      "daily_date": "2026-09-11",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -972,6 +984,12 @@
           "rev": 17600.546,
           "yoy": 31.81571715860863,
           "mom": 3.3308427067449524
+        },
+        {
+          "month": "2026-08",
+          "rev": 20666.117,
+          "yoy": 41.05228119001421,
+          "mom": 17.41747670782486
         }
       ]
     },
@@ -980,19 +998,19 @@
       "name": "高力",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-07",
-      "rev": 922.666,
-      "rev_last_year": 585.322,
-      "yoy": 57.6339177410041,
-      "mom": 27.305189115950366,
+      "month": "2026-08",
+      "rev": 1203.933,
+      "rev_last_year": 565.664,
+      "yoy": 112.8353580924365,
+      "mom": 30.48416219953916,
       "rev_source": "上市 TWSE",
       "price": 1330.0,
       "price_date": "2026-09-11",
       "price_change": 30.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 1300.0,
-      "daily_date": "2026-09-10",
-      "price_verify": null,
+      "daily_close": 1330.0,
+      "daily_date": "2026-09-11",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -1294,6 +1312,12 @@
           "rev": 922.666,
           "yoy": 57.6339177410041,
           "mom": 27.305189115950366
+        },
+        {
+          "month": "2026-08",
+          "rev": 1203.933,
+          "yoy": 112.8353580924365,
+          "mom": 30.48416219953916
         }
       ]
     },
@@ -1302,19 +1326,19 @@
       "name": "訊芯",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-07",
-      "rev": 777.12,
-      "rev_last_year": 723.439,
-      "yoy": 7.420252433169901,
-      "mom": 3.6124081031857562,
+      "month": "2026-08",
+      "rev": 691.843,
+      "rev_last_year": 461.819,
+      "yoy": 49.80825821371576,
+      "mom": -10.973466131356805,
       "rev_source": "上市 TWSE",
       "price": 409.5,
       "price_date": "2026-09-11",
       "price_change": -15.5,
       "price_source": "證交所即時 MIS",
-      "daily_close": 425.0,
-      "daily_date": "2026-09-10",
-      "price_verify": null,
+      "daily_close": 409.5,
+      "daily_date": "2026-09-11",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -1616,6 +1640,12 @@
           "rev": 777.12,
           "yoy": 7.420252433169901,
           "mom": 3.6124081031857562
+        },
+        {
+          "month": "2026-08",
+          "rev": 691.843,
+          "yoy": 49.80825821371576,
+          "mom": -10.973466131356805
         }
       ]
     },
