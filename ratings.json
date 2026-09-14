@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13 20:31",
+  "updated": "2026-09-14 09:54",
   "weights": {
     "體質": 0.4,
     "估值": 0.3,
@@ -360,8 +360,8 @@
       },
       "role": "配套·光通訊",
       "period": "2026 Q2",
-      "price": 409.5,
-      "price_date": "2026-09-11",
+      "price": 405.5,
+      "price_date": "2026-09-14",
       "gross_margin": 14.707352681561273,
       "op_margin": -0.7904153694835273,
       "net_margin": -2.0106875747836006,
@@ -436,7 +436,7 @@
         "gross()"
       ],
       "verify_summary": {
-        "price": "official_single",
+        "price": "n/a",
         "eps": "unverified",
         "bvps": "unverified",
         "pb": "unverified",
@@ -445,8 +445,8 @@
       },
       "role": "零組件·光通訊磊晶",
       "period": "—",
-      "price": 2810.0,
-      "price_date": "2026-09-11",
+      "price": null,
+      "price_date": "None",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -490,7 +490,7 @@
         "gross()"
       ],
       "verify_summary": {
-        "price": "official_single",
+        "price": "n/a",
         "eps": "unverified",
         "bvps": "unverified",
         "pb": "unverified",
@@ -499,8 +499,8 @@
       },
       "role": "配套·光通訊",
       "period": "—",
-      "price": 681.0,
-      "price_date": "2026-09-11",
+      "price": null,
+      "price_date": "None",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -872,8 +872,8 @@
       },
       "role": "配套·光通訊",
       "period": "2026 Q2",
-      "price": 409.5,
-      "price_date": "2026-09-11",
+      "price": 405.5,
+      "price_date": "2026-09-14",
       "gross_margin": 14.707352681561273,
       "op_margin": -0.7904153694835273,
       "net_margin": -2.0106875747836006,
@@ -948,7 +948,7 @@
         "gross()"
       ],
       "verify_summary": {
-        "price": "official_single",
+        "price": "n/a",
         "eps": "unverified",
         "bvps": "unverified",
         "pb": "unverified",
@@ -957,8 +957,8 @@
       },
       "role": "零組件·光通訊磊晶",
       "period": "—",
-      "price": 2810.0,
-      "price_date": "2026-09-11",
+      "price": null,
+      "price_date": "None",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
@@ -1002,7 +1002,7 @@
         "gross()"
       ],
       "verify_summary": {
-        "price": "official_single",
+        "price": "n/a",
         "eps": "unverified",
         "bvps": "unverified",
         "pb": "unverified",
@@ -1011,8 +1011,8 @@
       },
       "role": "配套·光通訊",
       "period": "—",
-      "price": 681.0,
-      "price_date": "2026-09-11",
+      "price": null,
+      "price_date": "None",
       "gross_margin": null,
       "op_margin": null,
       "net_margin": null,
