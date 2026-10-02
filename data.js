@@ -1,6 +1,6 @@
 window.STOCK_DATA = {
   "meta": {
-    "fetched_at": "2026-10-01 22:04",
+    "fetched_at": "2026-10-02 10:39",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
@@ -22,10 +22,10 @@ window.STOCK_DATA = {
       "rev_source": "上市 TWSE",
       "price": 2510.0,
       "price_date": "2026-10-01",
-      "price_change": 30.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 2480.0,
-      "daily_date": "2026-09-30",
+      "price_change": "30.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 2510.0,
+      "daily_date": "2026-10-01",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -327,7 +327,7 @@ window.STOCK_DATA = {
         {
           "date": "2026-10-01",
           "price": 2510.0,
-          "change": 30.0
+          "change": "30.0000"
         }
       ],
       "rev_history": [
@@ -370,10 +370,10 @@ window.STOCK_DATA = {
       "rev_source": "上市 TWSE",
       "price": 1905.0,
       "price_date": "2026-10-01",
-      "price_change": 15.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 1890.0,
-      "daily_date": "2026-09-30",
+      "price_change": "15.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 1905.0,
+      "daily_date": "2026-10-01",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -675,7 +675,7 @@ window.STOCK_DATA = {
         {
           "date": "2026-10-01",
           "price": 1905.0,
-          "change": 15.0
+          "change": "15.0000"
         }
       ],
       "rev_history": [
@@ -718,10 +718,10 @@ window.STOCK_DATA = {
       "rev_source": "上市 TWSE",
       "price": 510.0,
       "price_date": "2026-10-01",
-      "price_change": 3.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 507.0,
-      "daily_date": "2026-09-30",
+      "price_change": "3.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 510.0,
+      "daily_date": "2026-10-01",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -1023,7 +1023,7 @@ window.STOCK_DATA = {
         {
           "date": "2026-10-01",
           "price": 510.0,
-          "change": 3.0
+          "change": "3.0000"
         }
       ],
       "rev_history": [
@@ -1066,10 +1066,10 @@ window.STOCK_DATA = {
       "rev_source": "上市 TWSE",
       "price": 1565.0,
       "price_date": "2026-10-01",
-      "price_change": -40.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 1605.0,
-      "daily_date": "2026-09-30",
+      "price_change": "-40.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 1565.0,
+      "daily_date": "2026-10-01",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -1371,7 +1371,7 @@ window.STOCK_DATA = {
         {
           "date": "2026-10-01",
           "price": 1565.0,
-          "change": -40.0
+          "change": "-40.0000"
         }
       ],
       "rev_history": [
@@ -1414,10 +1414,10 @@ window.STOCK_DATA = {
       "rev_source": "上市 TWSE",
       "price": 413.0,
       "price_date": "2026-10-01",
-      "price_change": -7.5,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 420.5,
-      "daily_date": "2026-09-30",
+      "price_change": "-7.5000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 413.0,
+      "daily_date": "2026-10-01",
       "price_verify": null,
       "flags": [],
       "price_history": [
@@ -1719,7 +1719,7 @@ window.STOCK_DATA = {
         {
           "date": "2026-10-01",
           "price": 413.0,
-          "change": -7.5
+          "change": "-7.5000"
         }
       ],
       "rev_history": [
@@ -1760,20 +1760,15 @@ window.STOCK_DATA = {
       "yoy": 180.9018539007475,
       "mom": 3.8425011472237185,
       "rev_source": "上櫃 TPEx",
-      "price": 2660.0,
-      "price_date": "2026-10-01",
-      "price_change": -35.0,
+      "price": 2925.0,
+      "price_date": "2026-10-02",
+      "price_change": 265.0,
       "price_source": "證交所即時 MIS",
       "daily_close": 2660.0,
       "daily_date": "2026-10-01",
-      "price_verify": "verified",
+      "price_verify": null,
       "flags": [],
       "price_history": [
-        {
-          "date": "2026-07-07",
-          "price": 1905.0,
-          "change": "-95.00"
-        },
         {
           "date": "2026-07-08",
           "price": 2095.0,
@@ -2068,6 +2063,11 @@ window.STOCK_DATA = {
           "date": "2026-10-01",
           "price": 2660.0,
           "change": -35.0
+        },
+        {
+          "date": "2026-10-02",
+          "price": 2925.0,
+          "change": 265.0
         }
       ],
       "rev_history": [
@@ -2110,11 +2110,11 @@ window.STOCK_DATA = {
       "rev_source": "上櫃 TPEx",
       "price": 641.0,
       "price_date": "2026-10-01",
-      "price_change": -8.0,
-      "price_source": "證交所即時 MIS",
+      "price_change": "-8.00",
+      "price_source": "上櫃 TPEx 每日收盤",
       "daily_close": 641.0,
       "daily_date": "2026-10-01",
-      "price_verify": "verified",
+      "price_verify": null,
       "flags": [],
       "price_history": [
         {
@@ -2415,7 +2415,7 @@ window.STOCK_DATA = {
         {
           "date": "2026-10-01",
           "price": 641.0,
-          "change": -8.0
+          "change": "-8.00"
         }
       ],
       "rev_history": [
