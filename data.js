@@ -1,14 +1,11 @@
 window.STOCK_DATA = {
   "meta": {
-    "fetched_at": "2026-10-03 10:26",
+    "fetched_at": "2026-10-03 20:09",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
     },
-    "errors": [
-      "tpex_rev: IncompleteRead(15483 bytes read, 481064 more expected)",
-      "tpex_price: IncompleteRead(15480 bytes read, 342275 more expected)"
-    ],
+    "errors": [],
     "note": "資料為官方一手來源,經合理性與交叉驗證;有 flags 者請人工確認。"
   },
   "stocks": {
@@ -1757,22 +1754,20 @@ window.STOCK_DATA = {
       "name": "聯亞",
       "market": "TPEx",
       "tag": "",
-      "month": null,
-      "rev": null,
-      "rev_last_year": null,
-      "yoy": null,
-      "mom": null,
-      "rev_source": null,
+      "month": "2026-08",
+      "rev": 520.469,
+      "rev_last_year": 185.285,
+      "yoy": 180.9018539007475,
+      "mom": 3.8425011472237185,
+      "rev_source": "上櫃 TPEx",
       "price": 2925.0,
       "price_date": "2026-10-02",
       "price_change": 265.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": null,
-      "daily_date": null,
-      "price_verify": null,
-      "flags": [
-        "無當月營收"
-      ],
+      "daily_close": 2925.0,
+      "daily_date": "2026-10-02",
+      "price_verify": "verified",
+      "flags": [],
       "price_history": [
         {
           "date": "2026-07-08",
@@ -2107,22 +2102,20 @@ window.STOCK_DATA = {
       "name": "上詮",
       "market": "TPEx",
       "tag": "",
-      "month": null,
-      "rev": null,
-      "rev_last_year": null,
-      "yoy": null,
-      "mom": null,
-      "rev_source": null,
+      "month": "2026-08",
+      "rev": 204.482,
+      "rev_last_year": 180.642,
+      "yoy": 13.197373811184553,
+      "mom": 19.690007784925342,
+      "rev_source": "上櫃 TPEx",
       "price": 671.0,
       "price_date": "2026-10-02",
       "price_change": 30.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": null,
-      "daily_date": null,
-      "price_verify": null,
-      "flags": [
-        "無當月營收"
-      ],
+      "daily_close": 671.0,
+      "daily_date": "2026-10-02",
+      "price_verify": "verified",
+      "flags": [],
       "price_history": [
         {
           "date": "2026-07-08",
