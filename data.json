@@ -1,13 +1,13 @@
 {
   "meta": {
-    "fetched_at": "2026-10-02 21:24",
+    "fetched_at": "2026-10-03 10:26",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
     },
     "errors": [
-      "tpex_rev: IncompleteRead(81530 bytes read, 415017 more expected)",
-      "tpex_price: HTTP Error 525: <none>"
+      "tpex_rev: IncompleteRead(15483 bytes read, 481064 more expected)",
+      "tpex_price: IncompleteRead(15480 bytes read, 342275 more expected)"
     ],
     "note": "資料為官方一手來源,經合理性與交叉驗證;有 flags 者請人工確認。"
   },
@@ -27,9 +27,9 @@
       "price_date": "2026-10-02",
       "price_change": -10.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 2510.0,
-      "daily_date": "2026-10-01",
-      "price_verify": null,
+      "daily_close": 2500.0,
+      "daily_date": "2026-10-02",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -375,9 +375,9 @@
       "price_date": "2026-10-02",
       "price_change": -20.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 1905.0,
-      "daily_date": "2026-10-01",
-      "price_verify": null,
+      "daily_close": 1885.0,
+      "daily_date": "2026-10-02",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -723,9 +723,9 @@
       "price_date": "2026-10-02",
       "price_change": 51.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 510.0,
-      "daily_date": "2026-10-01",
-      "price_verify": null,
+      "daily_close": 561.0,
+      "daily_date": "2026-10-02",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -1071,9 +1071,9 @@
       "price_date": "2026-10-02",
       "price_change": -55.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 1565.0,
-      "daily_date": "2026-10-01",
-      "price_verify": null,
+      "daily_close": 1510.0,
+      "daily_date": "2026-10-02",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -1419,9 +1419,9 @@
       "price_date": "2026-10-02",
       "price_change": 16.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 413.0,
-      "daily_date": "2026-10-01",
-      "price_verify": null,
+      "daily_close": 429.0,
+      "daily_date": "2026-10-02",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
