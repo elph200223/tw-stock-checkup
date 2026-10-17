@@ -1,13 +1,11 @@
 window.STOCK_DATA = {
   "meta": {
-    "fetched_at": "2026-10-17 09:41",
+    "fetched_at": "2026-10-17 19:17",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
     },
-    "errors": [
-      "twse_rev: HTTP Error 502: Bad Gateway"
-    ],
+    "errors": [],
     "note": "資料為官方一手來源,經合理性與交叉驗證;有 flags 者請人工確認。"
   },
   "stocks": {
@@ -16,12 +14,12 @@ window.STOCK_DATA = {
       "name": "台積電",
       "market": "TWSE",
       "tag": "溫度計",
-      "month": null,
-      "rev": null,
-      "rev_last_year": null,
-      "yoy": null,
-      "mom": null,
-      "rev_source": null,
+      "month": "2026-09",
+      "rev": 511857.399,
+      "rev_last_year": 330980.92,
+      "yoy": 54.64861207105231,
+      "mom": -0.5726315925897248,
+      "rev_source": "上市 TWSE",
       "price": 2420.0,
       "price_date": "2026-10-16",
       "price_change": -20.0,
@@ -29,9 +27,7 @@ window.STOCK_DATA = {
       "daily_close": 2420.0,
       "daily_date": "2026-10-16",
       "price_verify": "verified",
-      "flags": [
-        "無當月營收"
-      ],
+      "flags": [],
       "price_history": [
         {
           "date": "2026-07-22",
@@ -372,12 +368,12 @@ window.STOCK_DATA = {
       "name": "台達電",
       "market": "TWSE",
       "tag": "",
-      "month": null,
-      "rev": null,
-      "rev_last_year": null,
-      "yoy": null,
-      "mom": null,
-      "rev_source": null,
+      "month": "2026-09",
+      "rev": 65399.563,
+      "rev_last_year": 57060.781,
+      "yoy": 14.613858860431652,
+      "mom": 1.2595816164571392,
+      "rev_source": "上市 TWSE",
       "price": 1635.0,
       "price_date": "2026-10-16",
       "price_change": 5.0,
@@ -385,9 +381,7 @@ window.STOCK_DATA = {
       "daily_close": 1635.0,
       "daily_date": "2026-10-16",
       "price_verify": "verified",
-      "flags": [
-        "無當月營收"
-      ],
+      "flags": [],
       "price_history": [
         {
           "date": "2026-07-22",
@@ -728,12 +722,12 @@ window.STOCK_DATA = {
       "name": "臻鼎",
       "market": "TWSE",
       "tag": "",
-      "month": null,
-      "rev": null,
-      "rev_last_year": null,
-      "yoy": null,
-      "mom": null,
-      "rev_source": null,
+      "month": "2026-09",
+      "rev": 26357.777,
+      "rev_last_year": 19362.393,
+      "yoy": 36.12871611479015,
+      "mom": 27.54102282494578,
+      "rev_source": "上市 TWSE",
       "price": 557.0,
       "price_date": "2026-10-16",
       "price_change": 38.0,
@@ -741,9 +735,7 @@ window.STOCK_DATA = {
       "daily_close": 557.0,
       "daily_date": "2026-10-16",
       "price_verify": "verified",
-      "flags": [
-        "無當月營收"
-      ],
+      "flags": [],
       "price_history": [
         {
           "date": "2026-07-23",
@@ -1084,12 +1076,12 @@ window.STOCK_DATA = {
       "name": "高力",
       "market": "TWSE",
       "tag": "",
-      "month": null,
-      "rev": null,
-      "rev_last_year": null,
-      "yoy": null,
-      "mom": null,
-      "rev_source": null,
+      "month": "2026-09",
+      "rev": 1616.11,
+      "rev_last_year": 636.816,
+      "yoy": 153.7797417150323,
+      "mom": 34.23587525219427,
+      "rev_source": "上市 TWSE",
       "price": 1570.0,
       "price_date": "2026-10-16",
       "price_change": 50.0,
@@ -1097,9 +1089,7 @@ window.STOCK_DATA = {
       "daily_close": 1570.0,
       "daily_date": "2026-10-16",
       "price_verify": "verified",
-      "flags": [
-        "無當月營收"
-      ],
+      "flags": [],
       "price_history": [
         {
           "date": "2026-07-22",
@@ -1440,12 +1430,12 @@ window.STOCK_DATA = {
       "name": "訊芯",
       "market": "TWSE",
       "tag": "",
-      "month": null,
-      "rev": null,
-      "rev_last_year": null,
-      "yoy": null,
-      "mom": null,
-      "rev_source": null,
+      "month": "2026-09",
+      "rev": 716.714,
+      "rev_last_year": 512.183,
+      "yoy": 39.933187942590834,
+      "mom": 3.594890748334521,
+      "rev_source": "上市 TWSE",
       "price": 364.0,
       "price_date": "2026-10-16",
       "price_change": 3.5,
@@ -1453,9 +1443,7 @@ window.STOCK_DATA = {
       "daily_close": 364.0,
       "daily_date": "2026-10-16",
       "price_verify": "verified",
-      "flags": [
-        "無當月營收"
-      ],
+      "flags": [],
       "price_history": [
         {
           "date": "2026-07-22",
