@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-10-28 10:39",
+    "fetched_at": "2026-10-28 21:41",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
@@ -20,20 +20,15 @@
       "yoy": 54.64861207105231,
       "mom": -0.5726315925897248,
       "rev_source": "上市 TWSE",
-      "price": 2400.0,
-      "price_date": "2026-10-27",
-      "price_change": "15.0000",
-      "price_source": "上市 TWSE 每日收盤",
+      "price": 2425.0,
+      "price_date": "2026-10-28",
+      "price_change": 25.0,
+      "price_source": "證交所即時 MIS",
       "daily_close": 2400.0,
       "daily_date": "2026-10-27",
       "price_verify": null,
       "flags": [],
       "price_history": [
-        {
-          "date": "2026-07-29",
-          "price": 2200.0,
-          "change": "-80.0000"
-        },
         {
           "date": "2026-07-30",
           "price": 2205.0,
@@ -328,6 +323,11 @@
           "date": "2026-10-27",
           "price": 2400.0,
           "change": "15.0000"
+        },
+        {
+          "date": "2026-10-28",
+          "price": 2425.0,
+          "change": 25.0
         }
       ],
       "rev_history": [
@@ -374,20 +374,15 @@
       "yoy": 14.613858860431652,
       "mom": 1.2595816164571392,
       "rev_source": "上市 TWSE",
-      "price": 1510.0,
-      "price_date": "2026-10-27",
-      "price_change": "-50.0000",
-      "price_source": "上市 TWSE 每日收盤",
+      "price": 1550.0,
+      "price_date": "2026-10-28",
+      "price_change": 40.0,
+      "price_source": "證交所即時 MIS",
       "daily_close": 1510.0,
       "daily_date": "2026-10-27",
       "price_verify": null,
       "flags": [],
       "price_history": [
-        {
-          "date": "2026-07-29",
-          "price": 1495.0,
-          "change": "-85.0000"
-        },
         {
           "date": "2026-07-30",
           "price": 1530.0,
@@ -682,6 +677,11 @@
           "date": "2026-10-27",
           "price": 1510.0,
           "change": "-50.0000"
+        },
+        {
+          "date": "2026-10-28",
+          "price": 1550.0,
+          "change": 40.0
         }
       ],
       "rev_history": [
@@ -728,20 +728,15 @@
       "yoy": 36.12871611479015,
       "mom": 27.54102282494578,
       "rev_source": "上市 TWSE",
-      "price": 520.0,
-      "price_date": "2026-10-27",
-      "price_change": "-47.0000",
-      "price_source": "上市 TWSE 每日收盤",
+      "price": 550.0,
+      "price_date": "2026-10-28",
+      "price_change": 30.0,
+      "price_source": "證交所即時 MIS",
       "daily_close": 520.0,
       "daily_date": "2026-10-27",
       "price_verify": null,
       "flags": [],
       "price_history": [
-        {
-          "date": "2026-07-30",
-          "price": 376.0,
-          "change": "-28.5000"
-        },
         {
           "date": "2026-07-31",
           "price": 413.5,
@@ -1036,6 +1031,11 @@
           "date": "2026-10-27",
           "price": 520.0,
           "change": "-47.0000"
+        },
+        {
+          "date": "2026-10-28",
+          "price": 550.0,
+          "change": 30.0
         }
       ],
       "rev_history": [
@@ -1082,20 +1082,15 @@
       "yoy": 153.7797417150323,
       "mom": 34.23587525219427,
       "rev_source": "上市 TWSE",
-      "price": 1465.0,
-      "price_date": "2026-10-27",
-      "price_change": "-95.0000",
-      "price_source": "上市 TWSE 每日收盤",
+      "price": 1585.0,
+      "price_date": "2026-10-28",
+      "price_change": 120.0,
+      "price_source": "證交所即時 MIS",
       "daily_close": 1465.0,
       "daily_date": "2026-10-27",
       "price_verify": null,
       "flags": [],
       "price_history": [
-        {
-          "date": "2026-07-29",
-          "price": 859.0,
-          "change": "-47.0000"
-        },
         {
           "date": "2026-07-30",
           "price": 778.0,
@@ -1390,6 +1385,11 @@
           "date": "2026-10-27",
           "price": 1465.0,
           "change": "-95.0000"
+        },
+        {
+          "date": "2026-10-28",
+          "price": 1585.0,
+          "change": 120.0
         }
       ],
       "rev_history": [
@@ -1436,20 +1436,15 @@
       "yoy": 39.933187942590834,
       "mom": 3.594890748334521,
       "rev_source": "上市 TWSE",
-      "price": 348.0,
-      "price_date": "2026-10-27",
-      "price_change": "-3.0000",
-      "price_source": "上市 TWSE 每日收盤",
+      "price": 368.0,
+      "price_date": "2026-10-28",
+      "price_change": 20.0,
+      "price_source": "證交所即時 MIS",
       "daily_close": 348.0,
       "daily_date": "2026-10-27",
       "price_verify": null,
       "flags": [],
       "price_history": [
-        {
-          "date": "2026-07-29",
-          "price": 342.5,
-          "change": -38.0
-        },
         {
           "date": "2026-07-30",
           "price": 322.0,
@@ -1744,6 +1739,11 @@
           "date": "2026-10-27",
           "price": 348.0,
           "change": "-3.0000"
+        },
+        {
+          "date": "2026-10-28",
+          "price": 368.0,
+          "change": 20.0
         }
       ],
       "rev_history": [
@@ -1790,20 +1790,15 @@
       "yoy": 190.16277271946402,
       "mom": 3.8471071283784433,
       "rev_source": "上櫃 TPEx",
-      "price": 2500.0,
-      "price_date": "2026-10-27",
-      "price_change": "+125.00",
-      "price_source": "上櫃 TPEx 每日收盤",
-      "daily_close": 2500.0,
-      "daily_date": "2026-10-27",
-      "price_verify": null,
+      "price": 2580.0,
+      "price_date": "2026-10-28",
+      "price_change": 80.0,
+      "price_source": "證交所即時 MIS",
+      "daily_close": 2580.0,
+      "daily_date": "2026-10-28",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
-        {
-          "date": "2026-07-29",
-          "price": 1540.0,
-          "change": "-170.00"
-        },
         {
           "date": "2026-07-30",
           "price": 1485.0,
@@ -2098,6 +2093,11 @@
           "date": "2026-10-27",
           "price": 2500.0,
           "change": "+125.00"
+        },
+        {
+          "date": "2026-10-28",
+          "price": 2580.0,
+          "change": 80.0
         }
       ],
       "rev_history": [
@@ -2144,20 +2144,15 @@
       "yoy": 28.375732734933138,
       "mom": 9.6707778679786,
       "rev_source": "上櫃 TPEx",
-      "price": 499.5,
-      "price_date": "2026-10-27",
-      "price_change": "-6.50",
-      "price_source": "上櫃 TPEx 每日收盤",
-      "daily_close": 499.5,
-      "daily_date": "2026-10-27",
-      "price_verify": null,
+      "price": 533.0,
+      "price_date": "2026-10-28",
+      "price_change": 33.5,
+      "price_source": "證交所即時 MIS",
+      "daily_close": 533.0,
+      "daily_date": "2026-10-28",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
-        {
-          "date": "2026-07-29",
-          "price": 485.5,
-          "change": "-53.50"
-        },
         {
           "date": "2026-07-30",
           "price": 437.0,
@@ -2452,6 +2447,11 @@
           "date": "2026-10-27",
           "price": 499.5,
           "change": "-6.50"
+        },
+        {
+          "date": "2026-10-28",
+          "price": 533.0,
+          "change": 33.5
         }
       ],
       "rev_history": [
