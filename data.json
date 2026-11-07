@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-11-06 22:43",
+    "fetched_at": "2026-11-07 11:19",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
@@ -24,9 +24,9 @@
       "price_date": "2026-11-06",
       "price_change": -105.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 2240.0,
-      "daily_date": "2026-11-05",
-      "price_verify": null,
+      "daily_close": 2135.0,
+      "daily_date": "2026-11-06",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -378,9 +378,9 @@
       "price_date": "2026-11-06",
       "price_change": -75.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 1130.0,
-      "daily_date": "2026-11-05",
-      "price_verify": null,
+      "daily_close": 1055.0,
+      "daily_date": "2026-11-06",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -732,9 +732,9 @@
       "price_date": "2026-11-06",
       "price_change": -21.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 394.0,
-      "daily_date": "2026-11-05",
-      "price_verify": null,
+      "daily_close": 373.0,
+      "daily_date": "2026-11-06",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -1086,9 +1086,9 @@
       "price_date": "2026-11-06",
       "price_change": -110.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 1290.0,
-      "daily_date": "2026-11-05",
-      "price_verify": null,
+      "daily_close": 1180.0,
+      "daily_date": "2026-11-06",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -1440,9 +1440,9 @@
       "price_date": "2026-11-06",
       "price_change": -26.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 269.0,
-      "daily_date": "2026-11-05",
-      "price_verify": null,
+      "daily_close": 243.0,
+      "daily_date": "2026-11-06",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
