@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-11-08 10:48",
+    "fetched_at": "2026-11-08 21:59",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
@@ -20,13 +20,13 @@
       "yoy": 54.64861207105231,
       "mom": -0.5726315925897248,
       "rev_source": "上市 TWSE",
-      "price": 2100.0,
-      "price_date": "2026-11-08",
-      "price_change": -35.0,
+      "price": 2135.0,
+      "price_date": "2026-11-06",
+      "price_change": -105.0,
       "price_source": "證交所即時 MIS",
       "daily_close": 2135.0,
       "daily_date": "2026-11-06",
-      "price_verify": null,
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -376,11 +376,11 @@
       "rev_source": "上市 TWSE",
       "price": 1055.0,
       "price_date": "2026-11-06",
-      "price_change": "-75.0000",
-      "price_source": "上市 TWSE 每日收盤",
+      "price_change": -75.0,
+      "price_source": "證交所即時 MIS",
       "daily_close": 1055.0,
       "daily_date": "2026-11-06",
-      "price_verify": null,
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -681,7 +681,7 @@
         {
           "date": "2026-11-06",
           "price": 1055.0,
-          "change": "-75.0000"
+          "change": -75.0
         }
       ],
       "rev_history": [
@@ -730,11 +730,11 @@
       "rev_source": "上市 TWSE",
       "price": 373.0,
       "price_date": "2026-11-06",
-      "price_change": "-21.0000",
-      "price_source": "上市 TWSE 每日收盤",
+      "price_change": -21.0,
+      "price_source": "證交所即時 MIS",
       "daily_close": 373.0,
       "daily_date": "2026-11-06",
-      "price_verify": null,
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -1035,7 +1035,7 @@
         {
           "date": "2026-11-06",
           "price": 373.0,
-          "change": "-21.0000"
+          "change": -21.0
         }
       ],
       "rev_history": [
@@ -1082,13 +1082,13 @@
       "yoy": 153.7797417150323,
       "mom": 34.23587525219427,
       "rev_source": "上市 TWSE",
-      "price": 1165.0,
-      "price_date": "2026-11-08",
-      "price_change": -15.0,
+      "price": 1180.0,
+      "price_date": "2026-11-06",
+      "price_change": -110.0,
       "price_source": "證交所即時 MIS",
       "daily_close": 1180.0,
       "daily_date": "2026-11-06",
-      "price_verify": null,
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -1436,13 +1436,13 @@
       "yoy": 39.933187942590834,
       "mom": 3.594890748334521,
       "rev_source": "上市 TWSE",
-      "price": 219.0,
-      "price_date": "2026-11-08",
-      "price_change": -24.0,
+      "price": 243.0,
+      "price_date": "2026-11-06",
+      "price_change": -26.0,
       "price_source": "證交所即時 MIS",
       "daily_close": 243.0,
       "daily_date": "2026-11-06",
-      "price_verify": null,
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -1790,13 +1790,13 @@
       "yoy": 190.16277271946402,
       "mom": 3.8471071283784433,
       "rev_source": "上櫃 TPEx",
-      "price": 1705.0,
-      "price_date": "2026-11-08",
-      "price_change": -45.0,
+      "price": 1750.0,
+      "price_date": "2026-11-06",
+      "price_change": -140.0,
       "price_source": "證交所即時 MIS",
       "daily_close": 1750.0,
       "daily_date": "2026-11-06",
-      "price_verify": null,
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -2144,13 +2144,13 @@
       "yoy": 28.375732734933138,
       "mom": 9.6707778679786,
       "rev_source": "上櫃 TPEx",
-      "price": 324.5,
-      "price_date": "2026-11-08",
-      "price_change": -36.0,
+      "price": 360.5,
+      "price_date": "2026-11-06",
+      "price_change": -40.0,
       "price_source": "證交所即時 MIS",
       "daily_close": 360.5,
       "daily_date": "2026-11-06",
-      "price_verify": null,
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
