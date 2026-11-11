@@ -1,11 +1,13 @@
 {
   "meta": {
-    "fetched_at": "2026-11-10 23:20",
+    "fetched_at": "2026-11-11 11:15",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
     },
-    "errors": [],
+    "errors": [
+      "twse_rev: Expecting value: line 1 column 1 (char 0)"
+    ],
     "note": "資料為官方一手來源,經合理性與交叉驗證;有 flags 者請人工確認。"
   },
   "stocks": {
@@ -14,20 +16,22 @@
       "name": "台積電",
       "market": "TWSE",
       "tag": "溫度計",
-      "month": "2026-09",
-      "rev": 511857.399,
-      "rev_last_year": 330980.92,
-      "yoy": 54.64861207105231,
-      "mom": -0.5726315925897248,
-      "rev_source": "上市 TWSE",
+      "month": null,
+      "rev": null,
+      "rev_last_year": null,
+      "yoy": null,
+      "mom": null,
+      "rev_source": null,
       "price": 2285.0,
       "price_date": "2026-11-10",
-      "price_change": 50.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 2235.0,
-      "daily_date": "2026-11-09",
+      "price_change": "50.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 2285.0,
+      "daily_date": "2026-11-10",
       "price_verify": null,
-      "flags": [],
+      "flags": [
+        "無當月營收"
+      ],
       "price_history": [
         {
           "date": "2026-08-13",
@@ -327,7 +331,7 @@
         {
           "date": "2026-11-10",
           "price": 2285.0,
-          "change": 50.0
+          "change": "50.0000"
         }
       ],
       "rev_history": [
@@ -368,20 +372,22 @@
       "name": "台達電",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-09",
-      "rev": 65399.563,
-      "rev_last_year": 57060.781,
-      "yoy": 14.613858860431652,
-      "mom": 1.2595816164571392,
-      "rev_source": "上市 TWSE",
+      "month": null,
+      "rev": null,
+      "rev_last_year": null,
+      "yoy": null,
+      "mom": null,
+      "rev_source": null,
       "price": 1275.0,
       "price_date": "2026-11-10",
-      "price_change": 115.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 1160.0,
-      "daily_date": "2026-11-09",
+      "price_change": "115.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 1275.0,
+      "daily_date": "2026-11-10",
       "price_verify": null,
-      "flags": [],
+      "flags": [
+        "無當月營收"
+      ],
       "price_history": [
         {
           "date": "2026-08-12",
@@ -681,7 +687,7 @@
         {
           "date": "2026-11-10",
           "price": 1275.0,
-          "change": 115.0
+          "change": "115.0000"
         }
       ],
       "rev_history": [
@@ -722,20 +728,22 @@
       "name": "臻鼎",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-09",
-      "rev": 26357.777,
-      "rev_last_year": 19362.393,
-      "yoy": 36.12871611479015,
-      "mom": 27.54102282494578,
-      "rev_source": "上市 TWSE",
+      "month": null,
+      "rev": null,
+      "rev_last_year": null,
+      "yoy": null,
+      "mom": null,
+      "rev_source": null,
       "price": 430.5,
       "price_date": "2026-11-10",
-      "price_change": 32.5,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 398.0,
-      "daily_date": "2026-11-09",
+      "price_change": "32.5000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 430.5,
+      "daily_date": "2026-11-10",
       "price_verify": null,
-      "flags": [],
+      "flags": [
+        "無當月營收"
+      ],
       "price_history": [
         {
           "date": "2026-08-13",
@@ -1035,7 +1043,7 @@
         {
           "date": "2026-11-10",
           "price": 430.5,
-          "change": 32.5
+          "change": "32.5000"
         }
       ],
       "rev_history": [
@@ -1076,20 +1084,22 @@
       "name": "高力",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-09",
-      "rev": 1616.11,
-      "rev_last_year": 636.816,
-      "yoy": 153.7797417150323,
-      "mom": 34.23587525219427,
-      "rev_source": "上市 TWSE",
+      "month": null,
+      "rev": null,
+      "rev_last_year": null,
+      "yoy": null,
+      "mom": null,
+      "rev_source": null,
       "price": 1405.0,
       "price_date": "2026-11-10",
-      "price_change": 125.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 1280.0,
-      "daily_date": "2026-11-09",
+      "price_change": "125.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 1405.0,
+      "daily_date": "2026-11-10",
       "price_verify": null,
-      "flags": [],
+      "flags": [
+        "無當月營收"
+      ],
       "price_history": [
         {
           "date": "2026-08-13",
@@ -1389,7 +1399,7 @@
         {
           "date": "2026-11-10",
           "price": 1405.0,
-          "change": 125.0
+          "change": "125.0000"
         }
       ],
       "rev_history": [
@@ -1430,20 +1440,22 @@
       "name": "訊芯",
       "market": "TWSE",
       "tag": "",
-      "month": "2026-09",
-      "rev": 716.714,
-      "rev_last_year": 512.183,
-      "yoy": 39.933187942590834,
-      "mom": 3.594890748334521,
-      "rev_source": "上市 TWSE",
+      "month": null,
+      "rev": null,
+      "rev_last_year": null,
+      "yoy": null,
+      "mom": null,
+      "rev_source": null,
       "price": 288.0,
       "price_date": "2026-11-10",
-      "price_change": 21.0,
-      "price_source": "證交所即時 MIS",
-      "daily_close": 267.0,
-      "daily_date": "2026-11-09",
+      "price_change": "21.0000",
+      "price_source": "上市 TWSE 每日收盤",
+      "daily_close": 288.0,
+      "daily_date": "2026-11-10",
       "price_verify": null,
-      "flags": [],
+      "flags": [
+        "無當月營收"
+      ],
       "price_history": [
         {
           "date": "2026-08-13",
@@ -1743,7 +1755,7 @@
         {
           "date": "2026-11-10",
           "price": 288.0,
-          "change": 21.0
+          "change": "21.0000"
         }
       ],
       "rev_history": [
@@ -1792,11 +1804,11 @@
       "rev_source": "上櫃 TPEx",
       "price": 2115.0,
       "price_date": "2026-11-10",
-      "price_change": 190.0,
-      "price_source": "證交所即時 MIS",
+      "price_change": "+190.00",
+      "price_source": "上櫃 TPEx 每日收盤",
       "daily_close": 2115.0,
       "daily_date": "2026-11-10",
-      "price_verify": "verified",
+      "price_verify": null,
       "flags": [],
       "price_history": [
         {
@@ -2097,7 +2109,7 @@
         {
           "date": "2026-11-10",
           "price": 2115.0,
-          "change": 190.0
+          "change": "+190.00"
         }
       ],
       "rev_history": [
@@ -2146,11 +2158,11 @@
       "rev_source": "上櫃 TPEx",
       "price": 411.0,
       "price_date": "2026-11-10",
-      "price_change": 33.5,
-      "price_source": "證交所即時 MIS",
+      "price_change": "+33.50",
+      "price_source": "上櫃 TPEx 每日收盤",
       "daily_close": 411.0,
       "daily_date": "2026-11-10",
-      "price_verify": "verified",
+      "price_verify": null,
       "flags": [],
       "price_history": [
         {
@@ -2451,7 +2463,7 @@
         {
           "date": "2026-11-10",
           "price": 411.0,
-          "change": 33.5
+          "change": "+33.50"
         }
       ],
       "rev_history": [
