@@ -1,6 +1,6 @@
 window.STOCK_DATA = {
   "meta": {
-    "fetched_at": "2026-11-13 23:00",
+    "fetched_at": "2026-11-14 11:40",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
@@ -24,9 +24,9 @@ window.STOCK_DATA = {
       "price_date": "2026-11-13",
       "price_change": 10.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 2340.0,
-      "daily_date": "2026-11-12",
-      "price_verify": null,
+      "daily_close": 2350.0,
+      "daily_date": "2026-11-13",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -385,8 +385,8 @@ window.STOCK_DATA = {
       "price_change": 0.0,
       "price_source": "證交所即時 MIS",
       "daily_close": 1240.0,
-      "daily_date": "2026-11-12",
-      "price_verify": null,
+      "daily_date": "2026-11-13",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -744,9 +744,9 @@ window.STOCK_DATA = {
       "price_date": "2026-11-13",
       "price_change": 10.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 430.0,
-      "daily_date": "2026-11-12",
-      "price_verify": null,
+      "daily_close": 440.0,
+      "daily_date": "2026-11-13",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -1104,9 +1104,9 @@ window.STOCK_DATA = {
       "price_date": "2026-11-13",
       "price_change": 15.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 1425.0,
-      "daily_date": "2026-11-12",
-      "price_verify": null,
+      "daily_close": 1440.0,
+      "daily_date": "2026-11-13",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -1464,9 +1464,9 @@ window.STOCK_DATA = {
       "price_date": "2026-11-13",
       "price_change": 9.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 276.0,
-      "daily_date": "2026-11-12",
-      "price_verify": null,
+      "daily_close": 285.0,
+      "daily_date": "2026-11-13",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
