@@ -1,6 +1,6 @@
 {
   "meta": {
-    "fetched_at": "2026-11-24 15:10",
+    "fetched_at": "2026-11-25 02:31",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
@@ -1824,9 +1824,9 @@
       "price_date": "2026-11-24",
       "price_change": 135.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 1390.0,
-      "daily_date": "2026-11-23",
-      "price_verify": null,
+      "daily_close": 1525.0,
+      "daily_date": "2026-11-24",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -2184,9 +2184,9 @@
       "price_date": "2026-11-24",
       "price_change": 24.5,
       "price_source": "證交所即時 MIS",
-      "daily_close": 247.5,
-      "daily_date": "2026-11-23",
-      "price_verify": null,
+      "daily_close": 272.0,
+      "daily_date": "2026-11-24",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
