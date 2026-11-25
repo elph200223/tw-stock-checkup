@@ -1,6 +1,6 @@
 window.STOCK_DATA = {
   "meta": {
-    "fetched_at": "2026-11-25 13:44",
+    "fetched_at": "2026-11-26 01:43",
     "sources": {
       "上市": "TWSE OpenAPI (openapi.twse.com.tw)",
       "上櫃": "櫃買中心 TPEx OpenAPI (tpex.org.tw)"
@@ -1824,9 +1824,9 @@ window.STOCK_DATA = {
       "price_date": "2026-11-25",
       "price_change": -105.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 1525.0,
-      "daily_date": "2026-11-24",
-      "price_verify": null,
+      "daily_close": 1420.0,
+      "daily_date": "2026-11-25",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
@@ -2184,9 +2184,9 @@ window.STOCK_DATA = {
       "price_date": "2026-11-25",
       "price_change": -27.0,
       "price_source": "證交所即時 MIS",
-      "daily_close": 272.0,
-      "daily_date": "2026-11-24",
-      "price_verify": null,
+      "daily_close": 245.0,
+      "daily_date": "2026-11-25",
+      "price_verify": "verified",
       "flags": [],
       "price_history": [
         {
